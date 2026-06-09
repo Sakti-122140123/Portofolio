@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Mail } from "lucide-react";
+import { ArrowDown, Mail, FileDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../icons/SocialIcons";
 import profile from "../../data/profile";
 
@@ -85,10 +85,27 @@ export default function Hero() {
               Contact Me
             </a>
             <a
+              href="/deck"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-surface text-text text-sm font-medium rounded-lg border border-border hover:border-accent hover:text-accent transition-colors"
+            >
+              <FileDown size={16} />
+              Export Portfolio as PDF
+            </a>
+          </motion.div>
+
+          {/* Social Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="flex items-center gap-4 mt-6"
+          >
+            <a
               href={profile.links.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-3 text-text-secondary text-sm font-medium hover:text-accent transition-colors"
+              className="inline-flex items-center gap-2 text-text-muted text-sm hover:text-accent transition-colors"
+              aria-label="LinkedIn"
             >
               <LinkedinIcon size={18} />
               LinkedIn
@@ -97,7 +114,8 @@ export default function Hero() {
               href={profile.links.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-3 text-text-secondary text-sm font-medium hover:text-accent transition-colors"
+              className="inline-flex items-center gap-2 text-text-muted text-sm hover:text-accent transition-colors"
+              aria-label="GitHub"
             >
               <GithubIcon size={18} />
               GitHub

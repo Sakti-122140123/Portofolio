@@ -1,58 +1,48 @@
 // ============================================
-// Skills Data — Edit your skills here
+// Skills Data — Grouped for PM + Technical
 // ============================================
 
 const skills = [
   {
-    category: "Project & Documentation",
+    category: "Project & Coordination",
     icon: "ClipboardList",
     items: [
-      "Project Coordination",
-      "Progress Tracking & Reporting",
-      "Technical Documentation",
+      "Project Scheduling",
+      "Progress Tracking",
+      "Documentation & Reporting",
       "Requirements Gathering",
+      "Stakeholder Communication",
       "Task Prioritization",
+      "Teamwork & Collaboration",
       "Meeting Notes & Action Items",
     ],
   },
   {
-    category: "Web Development",
+    category: "Technical Skills",
     icon: "Code2",
     items: [
       "React",
       "Laravel",
-      "JavaScript",
-      "PHP",
+      "JavaScript / PHP",
       "HTML & CSS",
-      "RESTful APIs",
       "MySQL / SQL Database",
-      "Responsive Design",
+      "RESTful APIs",
+      "Basic Machine Learning (Python)",
+      "Basic Data Analysis",
     ],
   },
   {
-    category: "Data & Machine Learning Basics",
-    icon: "Brain",
-    items: [
-      "Python",
-      "Scikit-learn",
-      "Data Preprocessing",
-      "Model Evaluation",
-      "Experiment Documentation",
-      "Data Visualization",
-    ],
-  },
-  {
-    category: "Tools & Collaboration",
+    category: "Tools & Platforms",
     icon: "Wrench",
     items: [
       "Git & GitHub",
       "VS Code",
       "Laragon",
-      "Figma (Basic)",
       "Google Workspace",
-      "Team Communication",
-      "Adaptability",
-      "Problem Solving",
+      "Microsoft Office",
+      "Spreadsheet / Reporting Tools",
+      "Figma (Basic)",
+      "Vercel",
     ],
   },
 ];
@@ -63,19 +53,19 @@ const skills = [
 
 const certificates = [
   {
-    name: "Coding Camp powered by DBS Foundation",
+    name: "Coding Camp — Machine Learning powered by DBS Foundation",
     issuer: "DBS Foundation",
     year: "2025",
-    link: "https://www.linkedin.com/in/saktimujahid/overlay/Position/2936555263/treasury/?profileId=ACoAADpM5ksBgLOnzRsRgZLab0D47MRF6eLHseI", 
+    link: "https://www.linkedin.com/in/saktimujahid/",
   },
   {
     name: "Digistar Program by Telkom Indonesia",
     issuer: "Telkom Indonesia",
     year: "2024",
-    link: "", // Add your certificate link here
+    link: "",
   },
   // -----------------------------------------------
-  // Add more certificates below. Example format:
+  // Add more certificates below:
   // {
   //   name: "Certificate Name",
   //   issuer: "Issuing Organization",

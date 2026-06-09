@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Hero from "./components/sections/Hero";
@@ -9,8 +10,9 @@ import Experience from "./components/sections/Experience";
 import Education from "./components/sections/Education";
 import Certificates from "./components/sections/Certificates";
 import Contact from "./components/sections/Contact";
+import PortfolioDeck from "./components/deck/PortfolioDeck";
 
-export default function App() {
+function MainSite() {
   return (
     <div className="min-h-screen bg-bg">
       <Navbar />
@@ -28,4 +30,20 @@ export default function App() {
       <Footer />
     </div>
   );
+}
+
+export default function App() {
+  const [route, setRoute] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const handlePopState = () => setRoute(window.location.pathname);
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  if (route === "/deck") {
+    return <PortfolioDeck />;
+  }
+
+  return <MainSite />;
 }

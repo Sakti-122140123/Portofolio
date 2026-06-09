@@ -103,3 +103,75 @@ h1, h2, h3, h4 {
 p {
   line-height: 1.7;
 }
+
+/* ============================================
+   Deck / Slide Layout
+   ============================================ */
+
+.deck-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.deck-slide {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ============================================
+   Print Styles — PDF Export
+   ============================================ */
+
+@media print {
+  /* Reset everything */
+  body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide non-print elements */
+  .print-hide,
+  nav,
+  footer {
+    display: none !important;
+  }
+
+  .print-pt-0 {
+    padding-top: 0 !important;
+  }
+
+  /* Page setup — landscape A4 */
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  /* Each slide = one printed page */
+  .deck-slide {
+    width: 297mm;
+    height: 210mm;
+    aspect-ratio: auto;
+    page-break-after: always;
+    break-after: page;
+    border-bottom: none;
+    padding: 40px 56px;
+  }
+
+  .deck-slide:last-child {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .deck-container {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+

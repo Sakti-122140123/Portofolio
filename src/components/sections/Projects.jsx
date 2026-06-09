@@ -83,13 +83,13 @@ function ProjectCard({ project, index }) {
                 </p>
               </div>
 
-              {/* What I Learned */}
+              {/* Key Contribution */}
               <div>
                 <h4 className="text-xs font-semibold text-text-muted uppercase tracking-wide mb-1.5">
-                  What I Learned
+                  Key Contributions
                 </h4>
                 <ul className="space-y-1">
-                  {project.learned.map((item, i) => (
+                  {project.keyContribution.map((item, i) => (
                     <li
                       key={i}
                       className="text-sm text-text-secondary flex items-start gap-2"
@@ -145,14 +145,15 @@ export default function Projects() {
         >
           {/* Section Header */}
           <p className="text-accent font-medium text-sm tracking-wide uppercase mb-2">
-            Projects
+            Selected Projects
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text mb-3">
-            Featured Work
+            Project Experience
           </h2>
           <p className="text-text-secondary mb-10 max-w-2xl">
-            A selection of projects demonstrating my experience in web
-            development, system design, documentation, and team collaboration.
+            Projects demonstrating my experience in coordination, documentation,
+            system delivery, and team collaboration — alongside technical
+            development.
           </p>
 
           {/* Project Grid */}
