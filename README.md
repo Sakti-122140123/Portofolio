@@ -6,7 +6,7 @@ A professional portfolio website built to showcase my background in web-based in
 
 ## ✨ Live Demo
 
-> _Coming soon — will be deployed to Vercel._
+🔗 **[portofolio-sakti-three.vercel.app](https://portofolio-sakti-three.vercel.app)**
 
 ## 🛠️ Tech Stack
 
