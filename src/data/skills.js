@@ -66,7 +66,7 @@ const certificates = [
     name: "Coding Camp powered by DBS Foundation",
     issuer: "DBS Foundation",
     year: "2025",
-    link: "https://drive.google.com/drive/folders/1n6Ex7LGO07wZIpzUBhYb52sB8gH9NiIR", 
+    link: "https://www.linkedin.com/in/saktimujahid/overlay/Position/2936555263/treasury/?profileId=ACoAADpM5ksBgLOnzRsRgZLab0D47MRF6eLHseI", 
   },
   {
     name: "Digistar Program by Telkom Indonesia",
