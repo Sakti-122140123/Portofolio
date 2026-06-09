@@ -33,7 +33,7 @@ const skills = [
     category: "Data & Machine Learning Basics",
     icon: "Brain",
     items: [
-      "Python (Basic)",
+      "Python",
       "Scikit-learn",
       "Data Preprocessing",
       "Model Evaluation",
@@ -63,10 +63,10 @@ const skills = [
 
 const certificates = [
   {
-    name: "Coding Camp — Machine Learning powered by DBS Foundation",
+    name: "Coding Camp powered by DBS Foundation",
     issuer: "DBS Foundation",
     year: "2025",
-    link: "", // Add your certificate link here
+    link: "https://drive.google.com/drive/folders/1n6Ex7LGO07wZIpzUBhYb52sB8gH9NiIR", 
   },
   {
     name: "Digistar Program by Telkom Indonesia",

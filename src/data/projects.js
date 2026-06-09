@@ -63,26 +63,7 @@ const projects = [
     link: "https://harmony.fti.itera.ac.id/",
     featured: true,
   },
-  {
-    id: "kyuubi-mml",
-    name: "Kyuubi — Multimodal Music Emotion Recognition",
-    shortDescription:
-      "Academic machine learning project for emotion recognition in music using audio, lyrics, and MIDI through a late fusion approach.",
-    role: "Team Member — ML Research & Documentation",
-    techStack: ["Python", "Scikit-learn", "Librosa", "Pandas", "NumPy"],
-    description:
-      "Participated in a team-based academic machine learning project focused on multimodal music emotion recognition. The project explored combining audio features, lyrics analysis, and MIDI data using a late fusion approach to classify emotional content in music.",
-    learned: [
-      "Fundamentals of machine learning pipeline design and evaluation",
-      "Working with multimodal data (audio, text, MIDI)",
-      "Structured experiment documentation and result visualization",
-      "Academic teamwork — dividing research tasks and consolidating findings",
-    ],
-    pmRelevance:
-      "Strengthened skills in structured documentation, experiment tracking, and coordinating research tasks across team members — directly applicable to project reporting and progress monitoring.",
-    link: "https://github.com/Sakti-122140123",
-    featured: true,
-  },
+  
 ];
 
 export default projects;
