@@ -1,8 +1,8 @@
-# Sakti Mujahid Imani — Personal Portfolio
+# Sakti Mujahid Imani — Personal Portofolio
 
 > Informatics student bridging web development, documentation, and project coordination.
 
-A professional portfolio website built to showcase my background in web-based information systems, project documentation, and cross-functional coordination — targeting opportunities in project management support, IT internships, and junior developer roles.
+A professional porotfolio website built to showcase my background in web-based information systems, project documentation, and cross-functional coordination — targeting opportunities in project management support, IT internships, and junior developer roles.
 
 ## ✨ Live Demo
 
