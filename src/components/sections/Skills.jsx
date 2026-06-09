@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { ClipboardList, Code2, Brain, Wrench } from "lucide-react";
+import { ClipboardList, Code2, Wrench } from "lucide-react";
 import { skills } from "../../data/skills";
 
 const iconMap = {
   ClipboardList,
   Code2,
-  Brain,
   Wrench,
 };
 
@@ -28,7 +27,7 @@ export default function Skills() {
           </h2>
 
           {/* Skill Categories */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((group, i) => {
               const Icon = iconMap[group.icon];
               return (

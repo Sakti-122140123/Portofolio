@@ -38,7 +38,7 @@ export default function Navbar() {
             href="#"
             className="text-lg font-bold text-text tracking-tight hover:text-accent transition-colors"
           >
-            Portofolio<span className="text-accent">.</span>
+            SMI<span className="text-accent">.</span>
           </a>
 
           {/* Desktop Nav */}
