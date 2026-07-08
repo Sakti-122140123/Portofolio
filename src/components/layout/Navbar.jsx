@@ -1,10 +1,12 @@
+// navbar (menu navigasi) di atas halaman — sticky, selalu kelihatan
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react"; // icon hamburger & close
+import { motion, AnimatePresence } from "framer-motion"; // untuk animasi
 
+// daftar menu navigasi — bisa ditambah/dikurangi
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Why Me", href: "#role-fit" },
+  { label: "Strengths", href: "#role-fit" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
@@ -12,18 +14,20 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // untuk menu mobile (buka/tutup)
+  const [scrolled, setScrolled] = useState(false); // deteksi apakah halaman sudah di-scroll
 
+  // setiap kali user scroll, cek posisi scroll
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLinkClick = () => setIsOpen(false);
+  const handleLinkClick = () => setIsOpen(false); // tutup menu mobile setelah klik link
 
   return (
+    // kalau sudah di-scroll, navbar punya background blur & border
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
@@ -33,7 +37,7 @@ export default function Navbar() {
     >
       <div className="section-container">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* logo kiri — SMI dengan titik accent */}
           <a
             href="#"
             className="text-lg font-bold text-text tracking-tight hover:text-accent transition-colors"
@@ -41,7 +45,7 @@ export default function Navbar() {
             SMI<span className="text-accent">.</span>
           </a>
 
-          {/* Desktop Nav */}
+          {/* menu desktop — muncul di layar besar (>768px) */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -54,7 +58,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Mobile Hamburger */}
+          {/* tombol hamburger — hanya muncul di layar kecil (mobile) */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-text-secondary hover:text-accent transition-colors"
@@ -65,7 +69,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* menu dropdown mobile — muncul dengan animasi */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

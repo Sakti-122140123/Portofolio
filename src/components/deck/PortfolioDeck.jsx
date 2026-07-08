@@ -110,9 +110,7 @@ export default function PortfolioDeck() {
             label="Role Fit"
             title="Why I Fit This Role"
           />
-          <p className="text-xs text-text-muted mb-1">
-            Target: {profile.roleFit.targetRole} — {profile.roleFit.targetCompany}
-          </p>
+
           <p className="text-sm text-text-secondary mb-6 max-w-3xl">
             {profile.roleFit.intro}
           </p>
@@ -276,9 +274,9 @@ export default function PortfolioDeck() {
           </p>
           <h2 className="text-4xl font-bold text-text mb-3">Thank You</h2>
           <p className="text-base text-text-secondary mb-8 max-w-lg">
-            Interested in discussing internship opportunities, project
-            coordination support, or collaboration? I would love to hear from
-            you.
+            Open to internship and entry-level opportunities in software
+            development, data analysis, project coordination, and technology
+            roles. I would love to hear from you.
           </p>
           <div className="flex flex-col items-center gap-3 text-sm">
             <a

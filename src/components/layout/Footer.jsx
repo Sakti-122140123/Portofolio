@@ -1,16 +1,19 @@
+// footer paling bawah halaman — copyright & link sosial
 import profile from "../../data/profile";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(); // ambil tahun sekarang otomatis
 
   return (
     <footer className="py-8 bg-bg border-t border-border">
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          {/* teks kiri — copyright */}
           <p className="text-xs text-text-muted">
             &copy; {currentYear} {profile.name}. Built with React & Tailwind
             CSS.
           </p>
+          {/* link sosial — kanan */}
           <div className="flex items-center gap-6">
             <a
               href={profile.links.linkedin}

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { GraduationCap, MapPin, Calendar } from "lucide-react";
+import { GraduationCap, MapPin, Award } from "lucide-react";
+import profile from "../../data/profile";
 
 export default function Education() {
   return (
@@ -39,13 +40,13 @@ export default function Education() {
                 <h3 className="text-base font-bold text-text mb-1">
                   Institut Teknologi Sumatera
                 </h3>
-                <p className="text-sm font-medium text-accent mb-3">
+                <p className="text-sm font-medium text-accent mb-2">
                   Informatics Engineering (Teknik Informatika)
                 </p>
-                <div className="flex flex-wrap gap-4 text-xs text-text-muted">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-text-muted">
                   <span className="flex items-center gap-1.5">
-                    <Calendar size={13} />
-                    8th Semester — Active Student
+                    <Award size={13} />
+                    {profile.semester}
                   </span>
                   <span className="flex items-center gap-1.5">
                     <MapPin size={13} />

@@ -1,7 +1,9 @@
+// ABOUT — cerita tentang diri Anda
 import { motion } from "framer-motion";
 import { BookOpen, Users, FileText } from "lucide-react";
 import profile from "../../data/profile";
 
+// 3 kartu highlight di bawah teks About
 const highlights = [
   {
     icon: BookOpen,
@@ -26,11 +28,11 @@ export default function About() {
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }} // animasi muncul saat di-scroll ke section ini
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
         >
-          {/* Section Header */}
+          {/* HEADER SECTION */}
           <p className="text-accent font-medium text-sm tracking-wide uppercase mb-2">
             About Me
           </p>
@@ -38,7 +40,7 @@ export default function About() {
             Background & Focus
           </h2>
 
-          {/* About Text */}
+          {/* 3 PARAGRAF ABOUT — ambil dari data/profile.js */}
           <div className="max-w-3xl space-y-4 mb-12">
             {profile.about.map((paragraph, i) => (
               <motion.p
@@ -54,7 +56,7 @@ export default function About() {
             ))}
           </div>
 
-          {/* Highlight Cards */}
+          {/* 3 KARTU HIGHLIGHT */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {highlights.map((item, i) => (
               <motion.div

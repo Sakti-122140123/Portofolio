@@ -1,28 +1,31 @@
-// ============================================
-// Projects Data — Edit your projects here
-// Rewritten with PM-relevant framing per project
-// ============================================
-
+// daftar proyek — mau nambah/kurang proyek, edit di sini
 const projects = [
   {
+    // id dipakai sebagai key unik, jangan ada spasi
     id: "harmony",
     name: "Harmony FTI ITERA",
+    // teks pendek yang muncul di kartu proyek
     shortDescription:
       "Integrated academic information system for Fakultas Teknologi Industri, Institut Teknologi Sumatera — supporting academic services, student-faculty workflows, and structured information delivery.",
     role: "Developer & Team Contributor",
+    // teknologi yang dipakai (muncul sebagai badge/chip)
     techStack: ["Laravel", "React", "MySQL"],
+    // deskripsi panjang — muncul pas diklik "View details"
     description:
       "Contributed to the development of an integrated information system serving the Faculty of Industrial Technology at ITERA. The platform centralizes academic services, student-faculty interactions, and structured information delivery within the faculty ecosystem.",
+    // poin-poin kontribusi Anda
     keyContribution: [
       "Translated faculty requirements into functional features through direct communication with stakeholders",
       "Built multi-user interfaces with role-based access for students and faculty",
       "Coordinated feature development and task handoffs within the team",
       "Maintained documentation for system modules and user workflows",
     ],
+    // relevansi ke project management (kalau dicari role PM)
     pmRelevance:
       "Practiced scope management, feature prioritization, stakeholder communication, and cross-functional coordination between student developers and faculty members — directly applicable to project scheduling and reporting.",
+    // link ke proyek (bisa website live atau repo GitHub)
     link: "https://harmony.fti.itera.ac.id/",
-    featured: true,
+    featured: true, // true = tampil di halaman, false = disembunyikan
   },
   {
     id: "simamang",
@@ -81,6 +84,7 @@ const projects = [
     ],
     pmRelevance:
       "Strengthened structured documentation, experiment tracking, and research task coordination — directly applicable to project reporting and progress monitoring in a professional setting.",
+    // ganti link ini ke repo GitHub spesifik kyuubi biar HR bisa lihat langsung
     link: "https://github.com/Sakti-122140123",
     featured: true,
   },

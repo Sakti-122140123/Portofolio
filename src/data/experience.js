@@ -1,15 +1,12 @@
-// ============================================
-// Experience Data — Edit your experience here
-// ============================================
-
+// daftar pengalaman — internship, organisasi, program, dsb
 const experience = [
   {
     id: "kominfo-internship",
-    title: "Web Developer Intern",
+    title: "Web Developer Intern", // jabatan Anda
     organization: "Dinas Kominfo Kota Bandar Lampung",
     location: "Bandar Lampung, Indonesia",
     period: "2024",
-    type: "Internship",
+    type: "Internship", // Internship / Organization / Program
     description:
       "Contributed to the development and maintenance of web-based information systems (SIMAMANG & SIMAS) supporting government administrative workflows. Worked closely with supervisors and internal teams to deliver digital solutions aligned with institutional requirements.",
     highlights: [

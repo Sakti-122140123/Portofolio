@@ -1,11 +1,8 @@
-// ============================================
-// Skills Data — Grouped for PM + Technical
-// ============================================
-
+// daftar skill dikelompokkan per kategori
 const skills = [
   {
     category: "Project & Coordination",
-    icon: "ClipboardList",
+    icon: "ClipboardList", // nama icon dari Lucide, ganti sesuai kebutuhan
     items: [
       "Project Scheduling",
       "Progress Tracking",
@@ -27,8 +24,8 @@ const skills = [
       "HTML & CSS",
       "MySQL / SQL Database",
       "RESTful APIs",
-      "Basic Machine Learning (Python)",
-      "Basic Data Analysis",
+      "Machine Learning (Python / Scikit-learn)",
+      "Data Analysis & Visualization",
     ],
   },
   {
@@ -47,32 +44,27 @@ const skills = [
   },
 ];
 
-// ============================================
-// Certificates Data — Add your certificates here
-// ============================================
-
+// daftar sertifikat — tambah sesuai punya Anda
 const certificates = [
   {
     name: "Coding Camp — Machine Learning powered by DBS Foundation",
     issuer: "DBS Foundation",
     year: "2025",
-    link: "https://www.linkedin.com/in/saktimujahid/",
+    link: "https://www.linkedin.com/in/saktimujahid/", // link ke sertifikat (LinkedIn / file)
   },
   {
     name: "Digistar Program by Telkom Indonesia",
     issuer: "Telkom Indonesia",
     year: "2024",
-    link: "",
+    link: "", // isi link-nya kalau punya sertifikat digital
   },
-  // -----------------------------------------------
-  // Add more certificates below:
+  // kalau mau nambah sertifikat, hapus komen di bawah ini
   // {
-  //   name: "Certificate Name",
-  //   issuer: "Issuing Organization",
+  //   name: "Nama Sertifikat",
+  //   issuer: "Penerbit",
   //   year: "2024",
-  //   link: "https://link-to-certificate",
+  //   link: "https://link-sertifikat",
   // },
-  // -----------------------------------------------
 ];
 
 export { skills, certificates };

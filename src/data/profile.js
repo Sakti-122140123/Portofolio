@@ -1,28 +1,27 @@
-// ============================================
-// Profile Data — Edit your personal info here
-// ============================================
-
+// ini file data utama — ganti teks di sini, tampilan web akan otomatis berubah
 const profile = {
+  // identitas diri
   name: "Sakti Mujahid Imani",
   location: "Jakarta, Indonesia",
   university: "Institut Teknologi Sumatera",
   major: "Informatics Engineering (Teknik Informatika)",
-  semester: "8th Semester — Active Student",
+  semester: "Graduated (GPA 3.56/4.00)",
 
-  // Headline & tagline — PM-oriented positioning
+  // headline muncul di Hero (bagian atas pertama)
   headline:
-    "Active Informatics Student with a Technical Background in Web Development and Data",
+    "Informatics Student | Web Development, Data & Project Coordination",
+  // sub-headline, teks lebih panjang di bawah nama
   subheadline:
-    "Interested in project coordination, progress tracking, documentation, and cross-functional collaboration. Combining hands-on development experience with strong communication and organizational skills.",
+    "Hands-on experience in full-stack development, data processing, and project coordination through real-world systems built for government and academic institutions. Open to roles in software engineering, data analysis, project coordination, and technology development.",
 
-  // About section paragraphs — honest, recruiter-friendly
+  // ini 3 paragraf di section About — isi sesuai keinginan
   about: [
-    "I am a final-year Informatics Engineering student at Institut Teknologi Sumatera, currently based in Jakarta. Through internship and academic projects, I have built web-based information systems for government and academic institutions using Laravel and React.",
-    "My experience goes beyond coding — I have coordinated with stakeholders, maintained project documentation, tracked progress against timelines, and communicated updates across teams. These habits were shaped by real-world project delivery and organizational involvement.",
-    "I am looking for an internship where I can apply my project coordination skills alongside a technical foundation — especially in roles that value structured reporting, cross-functional collaboration, and a willingness to learn.",
+    "I am a recent Informatics Engineering graduate from Institut Teknologi Sumatera (GPA 3.56/4.00), currently based in Jakarta. Through internship and academic projects, I have built and contributed to web-based information systems for government and academic institutions using Laravel and React, alongside experience in data processing and machine learning.",
+    "Beyond technical development, I actively coordinated with stakeholders, maintained structured documentation, tracked project progress against timelines, and facilitated communication across teams — habits shaped by real-world delivery and organizational involvement.",
+    "I am looking for opportunities where I can contribute through both technical and coordination skills — whether in software development, data analysis, project support, or roles that value structured thinking, collaboration, and a drive to learn.",
   ],
 
-  // Social & contact links
+  // link sosial dan kontak
   links: {
     email: "saktimujahid.9b@gmail.com",
     linkedin: "https://www.linkedin.com/in/saktimujahid/",
@@ -30,37 +29,35 @@ const profile = {
     portfolio: "https://sakti-mujahid.vercel.app",
   },
 
-  // Role Fit section — tailored for DBS PM Assistant Intern
+  // section "What I Bring" — 5 poin kelebihan Anda
   roleFit: {
-    targetRole: "Project Management Assistant Intern",
-    targetCompany: "PT Bank DBS Indonesia",
     intro:
-      "My background in building information systems, coordinating across teams, and maintaining structured documentation aligns with the core responsibilities of a Project Management Assistant Intern. Below is how my experience maps to the role requirements.",
+      "My experience spans technical development, data processing, and project coordination — built through internship, academic, and organizational work. Here is what I bring to the table:",
     points: [
       {
-        requirement: "Helping coordinate project schedules",
+        requirement: "Full-Stack Development & Data Handling",
         experience:
-          "Managed development timelines across multi-module web systems (SIMAMANG, Harmony ITERA), aligning feature milestones with team-agreed schedules and stakeholder expectations.",
+          "Built live web systems (SIMAMANG, Harmony ITERA) using Laravel, React, and MySQL. Worked with Python for data processing and machine learning — from data cleaning to model evaluation.",
       },
       {
-        requirement: "Tracking and reporting project progress",
+        requirement: "Project Coordination & Progress Tracking",
         experience:
-          "Monitored feature completion across sprints, documented progress updates, and communicated status to supervisors during government internship and academic projects.",
+          "Managed development timelines across multi-module systems, monitored feature completion, tracked progress against milestones, and communicated status updates to supervisors and stakeholders.",
       },
       {
-        requirement: "Supporting project reporting and documentation",
+        requirement: "Documentation & Structured Reporting",
         experience:
-          "Maintained technical documentation, system specifications, and progress reports throughout project lifecycles — a habit built from internship deliverables and coursework.",
+          "Consistently produced technical documentation, system specifications, progress reports, and experiment records — a discipline carried from internship deliverables, academic projects, and ML research documentation.",
       },
       {
-        requirement: "Cross-functional communication",
+        requirement: "Cross-Functional Communication",
         experience:
-          "Worked alongside developers, supervisors, and end-users during government and academic system development, bridging technical details with stakeholder-friendly updates.",
+          "Worked alongside developers, government supervisors, faculty members, and end-users — translating technical details into stakeholder-friendly updates and ensuring alignment across teams.",
       },
       {
-        requirement: "Understanding technical teams",
+        requirement: "Adaptability & Fast Learning",
         experience:
-          "With a foundation in full-stack development and database management, I can follow technical discussions, understand system architecture, and translate engineering progress into clear, actionable reports.",
+          "Moved across web development, data analysis, and machine learning in different environments — government internship, student organization, and industry programs — adapting quickly to new tools, workflows, and team structures.",
       },
     ],
   },

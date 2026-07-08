@@ -22,9 +22,9 @@ export default function Contact() {
             Let&apos;s Connect
           </h2>
           <p className="text-text-secondary leading-relaxed mb-10">
-            Interested in discussing internship opportunities, project
-            coordination support, or technology collaboration? Feel free to
-            reach out — I&apos;d love to hear from you.
+            Interested in discussing internship or entry-level opportunities?
+            Whether in software development, data, project coordination, or
+            technology roles — feel free to reach out.
           </p>
 
           {/* Contact Links */}
