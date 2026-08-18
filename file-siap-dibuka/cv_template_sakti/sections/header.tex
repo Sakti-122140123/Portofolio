@@ -1,0 +1,41 @@
+% ----------------------------------------------------------------------
+% HEADER — name, photo, contact line, summary
+% ----------------------------------------------------------------------
+% Best practices:
+% - Summary: 2-3 sentences, 30-50 words total
+%   Sentence 1: Who you are (degree, field, key expertise)
+%   Sentence 2: What you do (technical interests, tools, domains)
+%   Sentence 3: What you bring (soft skills, work style, goals)
+% - Photo: 3:4 portrait ratio (e.g., 1107x1476px), professional
+%   If no fig/me.png exists, a gray placeholder box is shown
+% ----------------------------------------------------------------------
+\noindent
+\begin{minipage}[b]{2.1cm}
+	\raggedright%
+	\IfFileExists{fig/me.png}
+	{\includegraphics[width=0.82in]{fig/me.png}}
+	{\color{gray!20}\rule{0.82in}{1.09in}\par\vspace{0.3em}{\tiny\color{gray}3:4 photo}\color{black}}
+\end{minipage}%
+\hspace{0.42cm}
+\begin{minipage}[b]{\dimexpr\textwidth-2.1cm-0.42cm\relax}
+	{\fontsize{24}{28}\bfseries\uppercase{\myname}\par}
+	\vspace{0.15em}
+	{\small
+		\href{mailto:\myemail}{\myemail}
+		\hspace{0.8em}$|$\hspace{0.8em}
+		\myphone
+		\hspace{0.8em}$|$\hspace{0.8em}
+		\href{https://\mylinkedin}{\mylinkedin}
+		\hspace{0.8em}$|$\hspace{0.8em}
+		\href{https://\mywebsite}{\mywebsite}
+	}
+	\vspace{0.58em}\par
+	\small
+	Fresh Informatics Engineering graduate from Institut Teknologi Sumatera
+	with hands-on experience in full-stack web development, data processing,
+	machine learning, and project coordination. Built React, Laravel, and
+	MySQL systems for campus and government workflows, with a strong habit of
+	documenting requirements, testing results, and stakeholder decisions.
+\end{minipage}
+
+\vspace{-0.1em}
