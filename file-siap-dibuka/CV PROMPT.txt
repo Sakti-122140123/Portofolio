@@ -1,0 +1,133 @@
+PENDIDIKAN
+(2022 - 2026) - Teknik Informatika - Institut Teknologi Sumatera
+IPK: 3.56
+Judul Skripsi: PENGEMBANGAN SUBSISTEM KEMAHASISWAAN PADA WEB HARMONY FTI ITERA MENGGUNAKAN METODE RUP DENGAN TOOLS KANBAN
+URI: https://repo.itera.ac.id/depan/submission/SB2606220028
+
+PENGALAMAN
+
+Organisasi
+Link: https://drive.google.com/drive/folders/1W15XCsPsJU22RpaAguuKkfCIAFqI4yw_?usp=drive_link
+(2025) - Staf Ahli Divisi Pengembangan Anggota - Himpunan Mahasiswa Informatika (HMIF) ITERA
+(2025) - Pemateri Sharing Session Merdeka Belajar Kampus Merdeka - Himpunan Mahasiswa Informatika (HMIF) ITERA
+(2024) - Staf Divisi Pengembangan Dan Pelatihan Keprofesian - Himpunan Mahasiswa Informatika (HMIF) ITERA
+
+Magang / MBKM
+(2025 - 2026) - Full Stack Developer Website Harmony FTI - Fakultas Teknologi Industri (FTI) ITERA
+(2025) - Web Developer & Staf Bidang Persandian, Keamanan Informasi dan Siber - Dinas Kominfo Bandar Lampung
+(2025) - Studi Independen (MBKM) Coding Camp - Spesialisasi Machine Learning Engineer - DBS Foundation x Dicoding
+
+Prestasi
+(2024) Penerima Hibah Penelitian dan Kewirausahaan (PHMW) dengan Judul "Burger Dengan Bun Dari Mie Ramen" - ITERA
+(2026) Lulus dengan predikat Pujian (Cumlaude) - ITERA
+
+PROJECT
+1. Skripsi - Web Harmony - FTI ITERA
+Membangun subsistem administrasi digital persuratan kampus menggunakan React (frontend), Laravel (backend), dan MySQL (database), dengan metodologi pengembangan Rational Unified Process (RUP) dan manajemen tugas Kanban. Sistem ini berhasil mempercepat proses persuratan kampus dari 7-10 hari kerja menjadi 2-5 hari kerja, serta lulus pengujian Black Box 100% dan UAT 88,57% (Sangat Baik).
+Link: https://harmony.fti.itera.ac.id/
+
+2. SIMAS (Sistem Manajemen Surat) - Kominfo Bandar Lampung
+Merancang arsitektur multi-tenant menggunakan Laravel, Inertia.js, dan React.js untuk mendigitalisasi alur validasi persuratan dan otomatisasi rekapitulasi data terpusat antar-instansi pemerintahan, sehingga proses persuratan antar instansi menjadi lebih tertata dan efisien.
+Link: https://simas.bandarlampungkota.go.id/
+
+3. SIMAMANG (Sistem Informasi Manajemen Magang) - Kominfo Bandar Lampung
+Mengembangkan portal web pendaftaran magang untuk Kominfo Bandar Lampung yang memfasilitasi pembuatan akun, unggah dokumen persyaratan, dan pelacakan status pendaftaran, sehingga proses pendaftaran magang menjadi online dan transparan bagi pendaftar.
+Link: https://simamang.bandarlampungkota.go.id/
+
+4. CashEye (Program DBS Foundation)
+Mengembangkan aplikasi aksesibilitas menggunakan Machine Learning dan Computer Vision untuk mendeteksi nominal uang Rupiah dari gambar dengan output berupa feedback audio, guna memfasilitasi kemandirian transaksi penyandang tunanetra dan lansia.
+Link: https://wahyuapriansyah1.github.io/protofolio-casheye/
+
+5. Afenter_PCD (Deteksi Area Parkir Motor)
+Membangun aplikasi Python dengan Streamlit dan OpenCV melalui 11 tahap pengolahan citra, meliputi remove background (rembg), resize, grayscale, threshold Otsu, morfologi (closing/opening), distance transform, penentuan ROI, deteksi kontur, pembagian slot parkir, hingga pengecekan occupancy tiap slot. Hasilnya adalah aplikasi yang dapat menganalisis ketersediaan slot parkir motor dari gambar dataset maupun foto yang diunggah pengguna.
+Link: https://afenter.streamlit.app/ 
+
+6. Klasifikasi Gambar Buah
+Mengimplementasikan arsitektur Convolutional Neural Network (CNN) dengan TensorFlow, dilatih pada dataset citra 5 jenis buah (Apple, Banana, Grape, Mango, Strawberry), menghasilkan model klasifikasi gambar yang dapat mengenali jenis buah dari citra yang diberikan.
+Link: https://github.com/Sakti-122140123/Klasifikasi-Gambar
+
+7. Kyuubi-MML (Multimodal Music Emotion Recognition)
+Mengklasifikasikan emosi musik ke dalam 5 klaster menggunakan strategi Late Fusion pada tiga modalitas berbeda: Audio (model PANN), Lirik (model DeBERTa), dan MIDI (BiGRU + SVM), dibangun dengan framework PyTorch, menghasilkan sistem pengenalan emosi musik yang menggabungkan tiga sumber data sekaligus.
+Link: https://github.com/Sakti-122140123/Kyuubi-MML
+
+8. Sistem Rekomendasi Buku
+Merancang dan membandingkan dua pendekatan pada dataset Book-Crossing (1 juta+ baris data): Content-Based Filtering (TF-IDF pada judul dan penulis) dan Collaborative Filtering (Cosine Similarity antar user). Collaborative Filtering terbukti jauh lebih unggul dengan Precision@5 sebesar 0.42, dibanding Content-Based Filtering yang hanya 0.04.
+Link: https://github.com/Sakti-122140123/Model-Sistem-Rekomendasi
+
+9. Prediksi Biaya Asuransi Medis
+Melakukan preprocessing (encoding, scaling) pada dataset biaya asuransi, lalu membangun dan membandingkan model Regresi Linier dan Decision Tree, dengan hyperparameter tuning via GridSearchCV pada model Regresi Linier. Regresi Linier mencapai MSE 33.596.915, lebih akurat dibanding Decision Tree yang memiliki MSE 40.153.988.
+Link: https://github.com/Sakti-122140123/Predictive-Analytics
+
+10. Clustering & Klasifikasi Demografi Regional
+Menggunakan algoritma K-Means untuk mengelompokkan data pengeluaran daerah, dengan jumlah cluster yang dioptimasi menggunakan Silhouette Score. Hasil klaster tersebut kemudian dijadikan label untuk melatih model Random Forest dan Logistic Regression, menghasilkan pemetaan klaster pengeluaran daerah beserta model klasifikasi untuk memprediksi klaster dari data baru.
+Link: https://github.com/Sakti-122140123/Belajar_Machine_Learning_Untuk_Pemula
+
+11. Analisis Sentimen "Access by KAI"
+Melakukan scraping ulasan aplikasi dari Google Play Store, membersihkan teks, lalu menerapkan ekstraksi fitur TF-IDF dan melatih tiga model: Logistic Regression, XGBoost, dan Naive Bayes. Model XGBoost memberikan performa klasifikasi sentimen terbaik dengan akurasi 97%.
+Link: https://github.com/Sakti-122140123/Analisis-Sentimen
+
+12. End-to-End ETL Pipeline
+Mengekstrak data produk fashion dari web menggunakan BeautifulSoup (50 halaman), mentransformasi data, lalu memuatnya secara serentak ke tiga tujuan: CSV, Google Sheets API, dan PostgreSQL. Seluruh alur diuji secara ketat menggunakan Pytest dan test coverage, menghasilkan pipeline ETL otomatis dan teruji yang menyimpan data ke tiga destinasi sekaligus.
+Link: https://github.com/Sakti-122140123/ETL-Pipeline
+
+13. CI/CD Pipeline untuk Model ML
+Membangun workflow otomatis di GitHub Actions untuk melatih model (dataset Wine) menggunakan MLflow untuk tracking eksperimen, lalu men-build dan mendeploy model sebagai image Docker yang di-push ke Docker Hub, menghasilkan pipeline MLOps otomatis dari training hingga deployment dengan image Docker yang tersedia publik.
+Link: https://github.com/Sakti-122140123/Workflow-CI
+
+14. Dashboard Analisis Penyewaan Sepeda
+Mengolah dataset Bike Sharing Washington D.C (2011-2012) menggunakan Pandas, lalu membangun UI Streamlit dengan sidebar interaktif untuk memfilter rentang tanggal, kondisi cuaca, dan musim, kemudian memvisualisasikannya via Seaborn/Matplotlib. Hasilnya adalah web dashboard interaktif yang menyorot insight pola penyewaan sepeda dan telah berhasil di-deploy ke Streamlit Cloud.
+Link: https://submission-sakti-codingcamp2025.streamlit.app/
+
+Pengalaman Asisten Akademik/Laboratorium 
+Link: https://drive.google.com/drive/folders/1LyO_V5Oz8avwaSnAbG6Ehwrc3VEvysJs?usp=drive_link
+(2025) - Koordinator Asisten Praktikum Fisika Dasar dan Pengantar Fisika, Semester Ganjil (2025/2026) - ITERA
+(2025) - Asisten Praktikum Fisika Dasar dan Pengantar Fisika, Semester Ganjil (2025/2026) - ITERA
+(2025) - Asisten Akademik Dasar Rekayasa Perangkat Lunak, Semester Genap (2024/2025) - Teknik Informatika ITERA
+(2025) - Asisten Akademik Kewirausahaan, Semester Genap (2024/2025) - Teknik Informatika ITERA
+(2025) - Koordinator Asisten Praktikum Fisika Dasar II, Semester Genap (2024/2025) - ITERA
+(2025) - Asisten Praktikum Fisika Dasar II, Semester Genap (2024/2025) - ITERA
+(2024) - Koordinator Asisten Praktikum Fisika Dasar I, Semester Ganjil (2024/2025) - ITERA
+(2024) - Asisten Praktikum Fisika Dasar I, Semester Ganjil (2024/2025) - ITERA
+(2024) - Asisten Praktikum Pengantar Komputer dan Software I, Semester Ganjil (2024/2025) - ITERA
+(2024) - Asisten Akademik Pengenalan Prodi Teknik Informatika, Semester Ganjil (2024/2025) - Teknik Informatika ITERA
+(2024) - Asisten Akademik Teori Bahasa Formal dan Otomata, Semester Ganjil (2024/2025) - Teknik Informatika ITERA
+(2024) - Asisten Akademik Matriks dan Ruang Vektor, Semester Ganjil (2024/2025) - Teknik Informatika ITERA
+(2024) - Asisten Akademik Agama dan Etika Islam (AEI), Semester Genap (2023/2024) - ITERA
+(2024) - Asisten Praktikum Pengantar Komputer dan Software II, Semester Genap (2023/2024) - ITERA
+(2024) - Asisten Praktikum Fisika Dasar II, Semester Genap (2023/2024) - ITERA
+(2023) - Asisten Praktikum Pengantar Komputer dan Software I, Semester Ganjil (2023/2024) - ITERA
+(2023) - Asisten Praktikum Fisika Dasar I, Semester Ganiil (2023/2024) - ITERA
+
+Pengalaman Pelatihan & Sertifikasi
+Link: https://drive.google.com/drive/folders/1w98oD8nKDvd_EydIhdku-owZlNbq6pgZ?usp=drive_link
+(2026) - Sertifikasi Prompt Engineering untuk Software Developer - Dicoding Academy
+(2026) - Sertifikasi Membangun Sistem Machine Learning - Dicoding Academy
+(2026) - Sertifikasi Penerapan Data Science dengan Microsoft Fabric - Microsoft Elevate x Dicoding Academy
+(2026) - Sertifikasi Membangun Aplikasi Gen AI dengan Microsoft Azure - Microsoft Elevate x Dicoding Academy
+(2026) - Sertifikasi Belajar Penggunaan Generative AI - Dicoding Academy
+(2026) - Sertifikasi AI Praktis untuk Produktivitas - Dicoding Academy
+(2026) - Sertifikasi Machine Learning Operations (MLOps) - Dicoding Academy
+(2025) - Sertifikasi Machine Learning Terapan - Dicoding Academy
+(2025) - Sertifikasi Belajar Pengembangan Machine Learning - Dicoding Academy
+(2025) - Sertifikasi Belajar Fundamental Pemrosesan Data - Dicoding Academy
+(2025) - Sertifikasi Belajar Machine Learning untuk Pemula - Dicoding Academy
+(2025) - Sertifikasi Belajar Analisis Data dengan Python - Dicoding Academy
+(2025) - Sertifikasi Memulai Pemrograman dengan Python - Dicoding Academy
+(2025) - Sertifikasi Financial Literacy 101 - Dicoding Academy
+(2025) - Sertifikasi Belajar Dasar Structured Query Language (SQL) - Dicoding Academy
+(2025) - Sertifikasi Belajar Dasar Visualisasi Data - Dicoding Academy
+(2025) - Sertifikasi Belajar Dasar AI - Dicoding Academy
+(2025) - Sertifikasi Pengenalan ke Logika Pemrograman (Programming Logic 101) - Dicoding Academy
+(2025) - Sertifikasi Belajar Dasar Git dengan GitHub - Dicoding Academy
+(2025) - Sertifikasi Memulai Dasar Pemrograman untuk Menjadi Pengembang Software - Dicoding Academy
+(2025) - Sertifikasi Belajar Dasar Pemrograman JavaScript - Dicoding Academy
+(2025) - Sertifikasi Belajar Prinsip Pemrograman SOLID - Dicoding Academy
+(2025) - Sertifikasi Memulai Pemrograman dengan Haskell - Dicoding Academy
+(2025) - Sertifikasi Digistar Class: Hacker (Front-End) - Telkom Indonesia
+(2025) - Sertifikasi DFIR Foundations and Techniques (Professional Skills and Readiness) - Blue Cape Security
+(2025) - Sertifikasi Intro to Data Analytics - RevoU
+(2024) - Sertifikasi Belajar Dasar Manajemen Proyek - Dicoding Academy
+(2024) - Sertifikasi Back-End Pemula dengan JavaScript - Dicoding Academy
+(2024) - Sertifikasi Memulai Pemrograman Dengan Java - Dicoding Academy
+(2024) - Sertifikasi Memulai Pemrograman Dengan C - Dicoding Academy
+(2024) - Sertifikasi Cloud Practitioner Essentials (Belajar Dasar AWS Cloud) - Dicoding Academy
