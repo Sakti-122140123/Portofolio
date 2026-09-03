@@ -108,7 +108,7 @@ export default function PortfolioDeck() {
         <Slide>
           <SlideHeader
             label="Role Fit"
-            title="Why I Fit This Role"
+            title="Why I Fit This QA Role"
           />
 
           <p className="text-sm text-text-secondary mb-6 max-w-3xl">
@@ -244,7 +244,7 @@ export default function PortfolioDeck() {
                 ))}
               </div>
             </div>
-            <div>
+              <div>
               <h3 className="text-sm font-semibold text-text mb-3">
                 Certifications & Programs
               </h3>
@@ -258,7 +258,7 @@ export default function PortfolioDeck() {
                       {cert.name}
                     </p>
                     <p className="text-xs text-text-muted">
-                      {cert.issuer} · {cert.year}
+                      {cert.category}
                     </p>
                   </div>
                 ))}
@@ -274,9 +274,9 @@ export default function PortfolioDeck() {
           </p>
           <h2 className="text-4xl font-bold text-text mb-3">Thank You</h2>
           <p className="text-base text-text-secondary mb-8 max-w-lg">
-            Open to internship and entry-level opportunities in software
-            development, data analysis, project coordination, and technology
-            roles. I would love to hear from you.
+            Open to Junior Manual QA and software testing opportunities.
+            Experienced in black-box testing, UAT, test case design, and bug
+            reporting. I would love to hear from you.
           </p>
           <div className="flex flex-col items-center gap-3 text-sm">
             <a

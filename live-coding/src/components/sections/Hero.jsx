@@ -62,7 +62,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-base text-text-muted mb-10 leading-relaxed"
+              className="text-base text-text-muted mb-10 leading-relaxed text-justify"
             >
               {profile.subheadline}
             </motion.p>

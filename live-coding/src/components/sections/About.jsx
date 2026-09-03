@@ -49,7 +49,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="text-text-secondary leading-relaxed"
+                className="text-text-secondary leading-relaxed text-justify"
               >
                 {paragraph}
               </motion.p>
