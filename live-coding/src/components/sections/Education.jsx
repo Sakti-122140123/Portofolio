@@ -41,7 +41,7 @@ export default function Education() {
                   Institut Teknologi Sumatera
                 </h3>
                 <p className="text-sm font-medium text-accent mb-2">
-                  Informatics Engineering (Teknik Informatika)
+                  Computer Science (Teknik Informatika)
                 </p>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-text-muted">
                   <span className="flex items-center gap-1.5">

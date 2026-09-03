@@ -24,7 +24,7 @@ const experience = [
     period: "2023 – Present",
     type: "Organization",
     description:
-      "Actively involved in the Informatics Student Association, contributing to event coordination, team collaboration, and student community development within the faculty.",
+      "Actively involved in the Computer Science Student Association, contributing to event coordination, team collaboration, and student community development within the faculty.",
     highlights: [
       "Supported event planning and coordination for departmental activities",
       "Collaborated with peers across different committees and divisions",

@@ -476,7 +476,7 @@ def en_content() -> list[ET.Element]:
     )
 
     profile_text = (
-        "Recent Informatics Engineering graduate from Institut Teknologi Sumatera (GPA 3.56/4.00, Cumlaude) "
+        "Recent Computer Science graduate from Institut Teknologi Sumatera (GPA 3.56/4.00, Cumlaude) "
         "with hands-on experience in institutional web systems, data processing, and project coordination. "
         "Skilled in React, Laravel, MySQL, Python, and machine learning, including a correspondence system "
         "that reduced processing time from 7-10 business days to 2-5 business days with 100% Black Box Testing "
@@ -487,13 +487,13 @@ def en_content() -> list[ET.Element]:
     return [
         image_paragraph("rIdProfileMerah"),
         title("Sakti Mujahid Imani"),
-        subtitle("Fresh Graduate in Informatics Engineering | Web Development | Data & Project Coordination"),
+        subtitle("Fresh Graduate in Computer Science | Web Development | Data & Project Coordination"),
         contact,
         section("Profile", before=42),
         paragraph(profile_text, after=32, size=18, line=220, justify="both"),
         section("Education", before=62),
         entry("Institut Teknologi Sumatera - South Lampung, Indonesia", "2022 - 2026", before=28),
-        role("Bachelor of Informatics Engineering, GPA 3.56/4.00 - Graduated Cum Laude"),
+        role("Bachelor of Computer Science, GPA 3.56/4.00 - Graduated Cum Laude"),
         bullet('Thesis: "Development of the Student Affairs Subsystem on the Harmony FTI ITERA Website Using the RUP Method with Kanban Tools."'),
         bullet_parts([run("URI: ", size=17, bold=True), hyperlink("rIdThesisRepo", "repo.itera.ac.id/depan/submission/SB2606220028", size=17)]),
         section("Work and Program Experience", before=68),
@@ -514,9 +514,9 @@ def en_content() -> list[ET.Element]:
         bullet("Handled 17 assistant and coordinator assignments across 10+ courses/practicums, including Basic Physics, Computer and Software Introduction, Software Engineering, Entrepreneurship, TBFO, and MRV."),
         bullet("Managed schedules, task allocation, grade recaps, student evaluation, and academic documentation with lecturers, laboratory staff, and assistant teams."),
         section("Organization and Leadership Experience", before=68),
-        entry("Informatics Student Association (HMIF) ITERA", "2024 - 2025", before=28),
+        entry("Computer Science Student Association (HMIF) ITERA", "2024 - 2025", before=28),
         role("Member Development Expert Staff; Professional Training Staff; MBKM Sharing Session Speaker"),
-        bullet("Held 3 organizational roles in member development, professional training, and MBKM knowledge-sharing to support Informatics students' academic and career readiness."),
+        bullet("Held 3 organizational roles in member development, professional training, and MBKM knowledge-sharing to support Computer Science students' academic and career readiness."),
         bullet("Supported activity planning, material preparation, member communication, program documentation, and collaborative event execution."),
         section("Selected Projects", before=68),
         entry("Web Harmony - Campus Correspondence Subsystem", "React, Laravel, MySQL", before=28),

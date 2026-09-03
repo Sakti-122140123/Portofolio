@@ -4,19 +4,19 @@ const profile = {
   name: "Sakti Mujahid Imani",
   location: "Jakarta, Indonesia",
   university: "Institut Teknologi Sumatera",
-  major: "Informatics Engineering (Teknik Informatika)",
+  major: "Computer Science (Teknik Informatika)",
   semester: "Graduated (GPA 3.56/4.00)",
 
   // headline muncul di Hero (bagian atas pertama)
   headline:
-    "Informatics Student | Web Development, Data & Project Coordination",
+    "Computer Science Graduate | Web Development, Data & Project Coordination",
   // sub-headline, teks lebih panjang di bawah nama
   subheadline:
     "Hands-on experience in full-stack development, data processing, and project coordination through real-world systems built for government and academic institutions. Open to roles in software engineering, data analysis, project coordination, and technology development.",
 
   // ini 3 paragraf di section About — isi sesuai keinginan
   about: [
-    "I am a recent Informatics Engineering graduate from Institut Teknologi Sumatera (GPA 3.56/4.00), currently based in Jakarta. Through internship and academic projects, I have built and contributed to web-based information systems for government and academic institutions using Laravel and React, alongside experience in data processing and machine learning.",
+    "I am a recent Computer Science graduate from Institut Teknologi Sumatera (GPA 3.56/4.00), currently based in Jakarta. Through internship and academic projects, I have built and contributed to web-based information systems for government and academic institutions using Laravel and React, alongside experience in data processing and machine learning.",
     "Beyond technical development, I actively coordinated with stakeholders, maintained structured documentation, tracked project progress against timelines, and facilitated communication across teams — habits shaped by real-world delivery and organizational involvement.",
     "I am looking for opportunities where I can contribute through both technical and coordination skills — whether in software development, data analysis, project support, or roles that value structured thinking, collaboration, and a drive to learn.",
   ],
