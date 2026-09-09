@@ -13,7 +13,8 @@ import Experience from "./components/sections/Experience";
 import Education from "./components/sections/Education";
 import Certificates from "./components/sections/Certificates";
 import Contact from "./components/sections/Contact";
-import PortfolioDeck from "./components/deck/PortfolioDeck";
+import DeckWebdev from "./components/deck/DeckWebdev";
+import DeckQa from "./components/deck/DeckQa";
 
 // halaman utama — semua section berurutan dari atas ke bawah
 function MainSite() {
@@ -37,7 +38,7 @@ function MainSite() {
 }
 
 function App() {
-  // ini untuk routing halaman /deck (PDF deck) vs halaman utama /
+  // ini untuk routing halaman /deck-webdev, /deck-qa vs halaman utama /
   const [route, setRoute] = useState(window.location.pathname);
 
   // kalau user klik tombol back/forward browser, route ikut berubah
@@ -47,9 +48,18 @@ function App() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  // kalau route = /deck, tampilkan portofolio deck (PDF)
+  // routing untuk kedua deck
+  if (route === "/deck-webdev") {
+    return <DeckWebdev />;
+  }
+  if (route === "/deck-qa") {
+    return <DeckQa />;
+  }
+
+  // backward compat: /deck lama redirect ke /deck-webdev
   if (route === "/deck") {
-    return <PortfolioDeck />;
+    window.location.replace("/deck-webdev");
+    return null;
   }
 
   // selain itu, tampilkan halaman utama

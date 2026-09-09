@@ -4,6 +4,7 @@ import profile from "../../data/profile";
 import projects from "../../data/projects";
 import { skills, certificates } from "../../data/skills";
 import experience from "../../data/experience";
+import deckData from "../../data/deckWebdevData";
 
 function Slide({ children, className = "" }) {
   return (
@@ -26,7 +27,7 @@ function SlideHeader({ label, title }) {
   );
 }
 
-export default function PortfolioDeck() {
+export default function DeckWebdev() {
   const handlePrint = () => window.print();
   const featured = projects.filter((p) => p.featured);
 
@@ -36,7 +37,7 @@ export default function PortfolioDeck() {
       <div className="print-hide fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border">
         <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
           <div>
-            <p className="text-sm font-semibold text-text">Portfolio Deck</p>
+            <p className="text-sm font-semibold text-text">Web Developer Deck</p>
             <p className="text-xs text-text-muted">
               Use Ctrl+P or the button to save as PDF (Landscape, A4)
             </p>
@@ -47,6 +48,12 @@ export default function PortfolioDeck() {
               className="text-sm text-text-muted hover:text-accent transition-colors"
             >
               ← Back to Site
+            </a>
+            <a
+              href="/deck-qa"
+              className="text-sm text-text-muted hover:text-accent transition-colors"
+            >
+              QA Deck →
             </a>
             <button
               onClick={handlePrint}
@@ -63,16 +70,16 @@ export default function PortfolioDeck() {
         {/* ============ SLIDE 1: Cover ============ */}
         <Slide className="justify-center items-center text-center">
           <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-4">
-            Portfolio
+            Web Developer Portfolio
           </p>
           <h1 className="text-5xl font-bold text-text mb-3 tracking-tight">
             {profile.name}
           </h1>
           <p className="text-xl text-text-secondary mb-2 max-w-xl">
-            {profile.headline}
+            {deckData.headline}
           </p>
           <p className="text-sm text-text-muted mb-8 max-w-lg">
-            {profile.subheadline}
+            {deckData.subheadline}
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-text-muted">
             <span>{profile.links.email}</span>
@@ -108,14 +115,14 @@ export default function PortfolioDeck() {
         <Slide>
           <SlideHeader
             label="Role Fit"
-            title="Why I Fit This QA Role"
+            title="Why I Fit a Web Developer Role"
           />
 
           <p className="text-sm text-text-secondary mb-6 max-w-3xl">
-            {profile.roleFit.intro}
+            {deckData.roleFit.intro}
           </p>
           <div className="grid grid-cols-1 gap-3 max-w-3xl">
-            {profile.roleFit.points.map((pt, i) => (
+            {deckData.roleFit.points.map((pt, i) => (
               <div
                 key={i}
                 className="flex items-start gap-3 p-3 bg-bg rounded-lg border border-border"
@@ -138,7 +145,7 @@ export default function PortfolioDeck() {
 
         {/* ============ SLIDE 4: Skills Overview ============ */}
         <Slide>
-          <SlideHeader label="Skills" title="Skills Overview" />
+          <SlideHeader label="Skills" title="Technical Skills" />
           <div className="grid grid-cols-3 gap-6">
             {skills.map((group) => (
               <div key={group.category}>
@@ -208,7 +215,7 @@ export default function PortfolioDeck() {
                   ))}
                 </ul>
                 <p className="text-xs font-semibold text-text-muted uppercase mb-1">
-                  PM Relevance
+                  Development Relevance
                 </p>
                 <p className="text-xs text-text-secondary leading-relaxed">
                   {project.pmRelevance}
@@ -244,7 +251,7 @@ export default function PortfolioDeck() {
                 ))}
               </div>
             </div>
-              <div>
+            <div>
               <h3 className="text-sm font-semibold text-text mb-3">
                 Certifications & Programs
               </h3>
@@ -274,9 +281,7 @@ export default function PortfolioDeck() {
           </p>
           <h2 className="text-4xl font-bold text-text mb-3">Thank You</h2>
           <p className="text-base text-text-secondary mb-8 max-w-lg">
-            Open to Junior Manual QA and software testing opportunities.
-            Experienced in black-box testing, UAT, test case design, and bug
-            reporting. I would love to hear from you.
+            {deckData.closingText}
           </p>
           <div className="flex flex-col items-center gap-3 text-sm">
             <a

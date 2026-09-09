@@ -89,11 +89,18 @@ export default function Hero() {
                 Contact Me
               </a>
               <a
-                href="/deck"
+                href="/deck-webdev"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-surface text-text text-sm font-medium rounded-lg border border-border hover:border-accent hover:text-accent transition-colors"
               >
                 <FileDown size={16} />
-                Export Portfolio as PDF
+                Web Dev Deck
+              </a>
+              <a
+                href="/deck-qa"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-surface text-text text-sm font-medium rounded-lg border border-border hover:border-accent hover:text-accent transition-colors"
+              >
+                <FileDown size={16} />
+                QA Deck
               </a>
             </motion.div>
 
