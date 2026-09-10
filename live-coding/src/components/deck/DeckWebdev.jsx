@@ -92,7 +92,7 @@ export default function DeckWebdev() {
         <Slide>
           <SlideHeader label="About" title="Professional Summary" />
           <div className="space-y-4 max-w-3xl">
-            {profile.about.map((p, i) => (
+            {deckData.about.map((p, i) => (
               <p key={i} className="text-base text-text-secondary leading-relaxed">
                 {p}
               </p>
@@ -218,7 +218,7 @@ export default function DeckWebdev() {
                   Development Relevance
                 </p>
                 <p className="text-xs text-text-secondary leading-relaxed">
-                  {project.pmRelevance}
+                  {project.devRelevance}
                 </p>
               </div>
             </div>

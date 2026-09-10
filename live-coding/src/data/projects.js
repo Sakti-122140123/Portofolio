@@ -20,10 +20,12 @@ const projects = [
       "Coordinated feature development and task handoffs within the team",
       "Maintained documentation for system modules and user workflows",
     ],
-    // relevansi ke project management (kalau dicari role PM)
-    pmRelevance:
-      "Practiced scope management, feature prioritization, stakeholder communication, and cross-functional coordination between student developers and faculty members — directly applicable to project scheduling and reporting.",
-    // link ke proyek (bisa website live atau repo GitHub)
+    devRelevance:
+      "Practiced full-stack development with Laravel and React, designed database schemas, built RESTful APIs, and implemented role-based access control — directly applicable to web development roles.",
+    qaRelevance:
+      "Conducted black-box testing and UAT on the correspondence system, achieving 100% test pass rate and 88.57% UAT score. Designed test cases covering functional validation, edge cases, and user workflow scenarios.",
+    relevance:
+      "Practiced full-stack development, stakeholder communication, and cross-functional coordination — building a complete information system from requirements through deployment.",
     link: "https://harmony.fti.itera.ac.id/",
     featured: true, // true = tampil di halaman, false = disembunyikan
   },
@@ -42,8 +44,12 @@ const projects = [
       "Maintained progress documentation and delivered status updates to supervisors",
       "Ensured deliverables stayed on scope and within agreed timelines",
     ],
-    pmRelevance:
-      "Demonstrated ability to coordinate with institutional stakeholders, track feature development progress, maintain documentation, and deliver within structured timelines — core skills for project management support.",
+    devRelevance:
+      "Built full-stack features with Laravel and React for a government internship management system. Gained experience in requirements gathering, iterative development, and deploying to institutional servers.",
+    qaRelevance:
+      "Performed functional testing on registration and tracking workflows. Validated features against institutional requirements and documented test results for stakeholder review.",
+    relevance:
+      "Contributed to a government digital transformation project, coordinating with institutional stakeholders and delivering features within structured timelines.",
     link: "https://simamang.bandarlampungkota.go.id/",
     featured: true,
   },
@@ -62,8 +68,12 @@ const projects = [
       "Created project documentation including user guides and technical notes",
       "Ensured the final product met defined requirements and user expectations",
     ],
-    pmRelevance:
-      "Strengthened skills in team task coordination, requirement validation, documentation, and delivering a working product that meets user needs — practical experience in project delivery support.",
+    devRelevance:
+      "Developed a React-based financial tracking app with clean UI, data visualization, and budget reporting features. Managed the project from design through deployment on GitHub Pages.",
+    qaRelevance:
+      "Conducted functional testing on income/expense tracking flows and budget visualization. Validated user interface responsiveness and data accuracy across different input scenarios.",
+    relevance:
+      "Led a team project from design through deployment, managing task distribution, documentation, and ensuring the final product met user needs.",
     link: "https://wahyuapriansyah1.github.io/protofolio-casheye/",
     featured: true,
   },
@@ -82,9 +92,12 @@ const projects = [
       "Created visualizations and reports summarizing model performance",
       "Contributed to structured academic writing and presentation materials",
     ],
-    pmRelevance:
-      "Strengthened structured documentation, experiment tracking, and research task coordination — directly applicable to project reporting and progress monitoring in a professional setting.",
-    // ganti link ini ke repo GitHub spesifik kyuubi biar HR bisa lihat langsung
+    devRelevance:
+      "Built Python data processing pipelines with Scikit-learn and Librosa for audio feature extraction. Applied software engineering practices to a machine learning project with structured code organization.",
+    qaRelevance:
+      "Systematically documented experiment procedures, parameters, and results. Tracked model performance metrics and validated outputs — transferable skills for test documentation and result reporting.",
+    relevance:
+      "Practiced structured documentation, experiment tracking, and research task coordination in a team-based academic project.",
     link: "https://github.com/Sakti-122140123",
     featured: true,
   },

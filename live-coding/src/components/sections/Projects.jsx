@@ -101,13 +101,13 @@ function ProjectCard({ project, index }) {
                 </ul>
               </div>
 
-              {/* PM Relevance */}
+              {/* Relevance */}
               <div>
                 <h4 className="text-xs font-semibold text-text-muted uppercase tracking-wide mb-1.5">
-                  Relevance to Project Management
+                  Relevance
                 </h4>
                 <p className="text-sm text-text-secondary leading-relaxed">
-                  {project.pmRelevance}
+                  {project.relevance}
                 </p>
               </div>
 
