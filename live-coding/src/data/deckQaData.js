@@ -1,6 +1,6 @@
 // Data khusus untuk deck QA role
 const deckQaData = {
-  headline: "Computer Science Graduate, Manual QA & Software Testing",
+  headline: "Computer Science Graduate | Manual QA & Software Testing",
   subheadline:
     "Detail-oriented Computer Science graduate with hands-on experience in black-box testing, UAT, and structured documentation. Proficient in test case design, bug reporting, and cross-functional collaboration. Seeking a QA role to contribute to software quality assurance.",
 
