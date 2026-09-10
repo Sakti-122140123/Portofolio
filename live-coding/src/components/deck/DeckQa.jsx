@@ -27,7 +27,7 @@ function SlideHeader({ label, title }) {
   );
 }
 
-const qaProjectIds = ["harmony", "simamang"];
+const qaProjectIds = ["harmony", "simamang", "simas"];
 const qaCertIds = [
   "Dasar Rekayasa Perangkat Lunak - Semester Genap, Teknik Informatika ITERA (2024/2025)",
   "Praktikum Fisika Dasar I - Semester Ganjil, ITERA (2023/2024)",

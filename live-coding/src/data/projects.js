@@ -1,56 +1,75 @@
 // daftar proyek — mau nambah/kurang proyek, edit di sini
 const projects = [
   {
-    // id dipakai sebagai key unik, jangan ada spasi
     id: "harmony",
     name: "Harmony FTI ITERA",
-    // teks pendek yang muncul di kartu proyek
     shortDescription:
       "Integrated academic information system for Fakultas Teknologi Industri, Institut Teknologi Sumatera, supporting academic services, student-faculty workflows, and structured information delivery.",
-    role: "Developer & Team Contributor",
-    // teknologi yang dipakai (muncul sebagai badge/chip)
-    techStack: ["Laravel", "React", "MySQL"],
-    // deskripsi panjang — muncul pas diklik "View details"
+    role: "Full Stack Developer",
+    techStack: ["Laravel", "React", "MySQL", "Postman"],
     description:
-      "Contributed to the development of an integrated information system serving the Faculty of Industrial Technology at ITERA. The platform centralizes academic services, student-faculty interactions, and structured information delivery within the faculty ecosystem.",
-    // poin-poin kontribusi Anda
+      "Developed a digital correspondence administration subsystem using React, Laravel, and MySQL, applying RUP methodology and Trello Kanban for structured software development. Improved the campus correspondence process from 7–10 working days to 2–5 working days by developing digital administrative workflows. Conducted Black Box Testing and User Acceptance Testing (UAT), including API validation with Postman, achieving 100% functional test results and an 88.57% UAT score.",
     keyContribution: [
-      "Translated faculty requirements into functional features through direct communication with stakeholders",
-      "Built multi-user interfaces with role-based access for students and faculty",
-      "Coordinated feature development and task handoffs within the team",
-      "Maintained documentation for system modules and user workflows",
+      "Reduced correspondence processing time from 7–10 days to 2–5 days through digital workflow automation",
+      "Achieved 100% functional test pass rate and 88.57% UAT score on correspondence subsystem",
+      "Conducted API validation using Postman and documented test results for stakeholder review",
+      "Applied RUP methodology and Kanban task tracking for structured development process",
     ],
     devRelevance:
-      "Practiced full-stack development with Laravel and React, designed database schemas, built RESTful APIs, and implemented role-based access control, directly applicable to web development roles.",
+      "Built full-stack features with Laravel and React, designed database schemas, implemented RESTful APIs, and deployed to institutional servers.",
     qaRelevance:
-      "Conducted black-box testing and UAT on the correspondence system, achieving 100% test pass rate and 88.57% UAT score. Designed test cases covering functional validation, edge cases, and user workflow scenarios.",
+      "Conducted Black Box Testing and UAT, achieving 100% functional test pass rate and 88.57% UAT score. Designed test cases covering functional validation, edge cases, and user workflow scenarios.",
     relevance:
-      "Practiced full-stack development, stakeholder communication, and cross-functional coordination, building a complete information system from requirements through deployment.",
+      "Full-stack development and quality assurance in an academic institution, delivering measurable process improvements.",
     link: "https://harmony.fti.itera.ac.id/",
-    featured: true, // true = tampil di halaman, false = disembunyikan
+    featured: true,
   },
   {
     id: "simamang",
     name: "SIMAMANG",
     shortDescription:
       "Web-based internship management system for Dinas Kominfo Bandar Lampung, supports internship registration, status tracking, and administrative data management.",
-    role: "Full-Stack Developer (Intern)",
+    role: "Full Stack Developer",
     techStack: ["Laravel", "React", "MySQL", "Laragon"],
     description:
-      "Contributed to a web-based system that manages internship-related workflows for Dinas Kominfo Kota Bandar Lampung. The system supports registration, status tracking, and data management through an admin dashboard, digitizing previously manual processes.",
+      "Developed SIMAMANG to support internship registration and management for more than 50 participants. Built web features using Laravel, React.js, Inertia.js, PHP, and JavaScript. Conducted functional testing, identified bugs, and verified fixes to improve system reliability. Collaborated with staff to translate administrative requirements into practical digital solutions. Supported post-deployment maintenance and quality assurance.",
     keyContribution: [
-      "Coordinated with government supervisors to gather and clarify requirements",
-      "Developed registration and tracking features aligned with institutional needs",
-      "Maintained progress documentation and delivered status updates to supervisors",
-      "Ensured deliverables stayed on scope and within agreed timelines",
+      "Supported internship registration and management for 50+ participants through a centralized system",
+      "Built full-stack features using Laravel, React.js, Inertia.js, PHP, and JavaScript",
+      "Conducted functional testing, identified bugs, and verified fixes to improve reliability",
+      "Collaborated with government staff to translate administrative requirements into digital solutions",
     ],
     devRelevance:
-      "Built full-stack features with Laravel and React for a government internship management system. Gained experience in requirements gathering, iterative development, and deploying to institutional servers.",
+      "Built full-stack features with Laravel and React.js for a government internship management system. Gained experience in requirements gathering, iterative development, and deploying to institutional servers.",
     qaRelevance:
-      "Performed functional testing on registration and tracking workflows. Validated features against institutional requirements and documented test results for stakeholder review.",
+      "Conducted functional testing, identified bugs, and verified fixes. Validated features against institutional requirements and documented test results for stakeholder review.",
     relevance:
-      "Contributed to a government digital transformation project, coordinating with institutional stakeholders and delivering features within structured timelines.",
+      "Full-stack development and quality assurance for a government digital transformation project.",
     link: "https://simamang.bandarlampungkota.go.id/",
+    featured: true,
+  },
+  {
+    id: "simas",
+    name: "SIMAS",
+    shortDescription:
+      "Web-based administrative information system for Dinas Kominfo Bandar Lampung, supporting document management, correspondence tracking, and internal workflow automation.",
+    role: "Full Stack Developer",
+    techStack: ["Laravel", "React", "MySQL", "Laragon"],
+    description:
+      "Developed SIMAS, a correspondence management system used by more than 30 government agencies. Built web features using Laravel, React.js, Inertia.js, PHP, and JavaScript. Conducted functional testing, identified bugs, and verified fixes to improve system reliability. Collaborated with staff to translate administrative requirements into practical digital solutions.",
+    keyContribution: [
+      "Developed SIMAS serving 30+ government agencies for correspondence management",
+      "Built full-stack features using Laravel, React.js, Inertia.js, PHP, and JavaScript",
+      "Conducted functional testing, identified bugs, and verified fixes to improve reliability",
+      "Collaborated with government staff to translate administrative requirements into digital solutions",
+    ],
+    devRelevance:
+      "Built full-stack features with Laravel and React.js for a government administrative system. Applied database design, API development, and iterative delivery in a structured institutional environment.",
+    qaRelevance:
+      "Conducted functional testing, identified bugs, and verified fixes. Validated feature completeness against requirements and documented test results for stakeholder review.",
+    relevance:
+      "Full-stack development and quality assurance for a government digital transformation project.",
+    link: "https://simas.bandarlampungkota.go.id/",
     featured: true,
   },
   {

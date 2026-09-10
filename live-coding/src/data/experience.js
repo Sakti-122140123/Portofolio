@@ -21,7 +21,7 @@ const experience = [
     title: "Active Member",
     organization: "HMIF, Himpunan Mahasiswa Informatika ITERA",
     location: "Lampung, Indonesia",
-    period: "2023 – Present",
+    period: "2023 – 2026",
     type: "Organization",
     description:
       "Actively involved in the Computer Science Student Association, contributing to event coordination, team collaboration, and student community development within the faculty.",
