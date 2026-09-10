@@ -75,10 +75,13 @@ const qaSkills = [
   },
 ];
 
+const qaExperienceIds = ["website-fakultas", "kominfo-internship", "hmif", "teaching-assistant"];
+
 export default function DeckQa() {
   const handlePrint = () => window.print();
   const featured = projects.filter((p) => qaProjectIds.includes(p.id));
   const filteredCerts = certificates.filter((c) => qaCertIds.includes(c.name));
+  const filteredExperience = experience.filter((e) => qaExperienceIds.includes(e.id));
 
   return (
     <>
@@ -286,7 +289,7 @@ export default function DeckQa() {
                 Experience & Activities
               </h3>
               <div className="space-y-2">
-                {experience.map((exp) => (
+                {filteredExperience.map((exp) => (
                   <div
                     key={exp.id}
                     className="p-2 bg-bg rounded border border-border"
