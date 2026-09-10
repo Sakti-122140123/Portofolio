@@ -149,6 +149,9 @@ export default function Hero() {
                   src="/foto/profile.jpg"
                   alt={profile.name}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width="256"
+                  height="256"
                 />
               </div>
               {/* border dekoratif di belakang foto (efek layer) */}

@@ -41,6 +41,13 @@ function App() {
   // ini untuk routing halaman /deck-webdev, /deck-qa vs halaman utama /
   const [route, setRoute] = useState(window.location.pathname);
 
+  // backward compat: /deck lama redirect ke /deck-webdev
+  useEffect(() => {
+    if (window.location.pathname === "/deck") {
+      window.location.replace("/deck-webdev");
+    }
+  }, []);
+
   // kalau user klik tombol back/forward browser, route ikut berubah
   useEffect(() => {
     const handlePopState = () => setRoute(window.location.pathname);
@@ -54,12 +61,6 @@ function App() {
   }
   if (route === "/deck-qa") {
     return <DeckQa />;
-  }
-
-  // backward compat: /deck lama redirect ke /deck-webdev
-  if (route === "/deck") {
-    window.location.replace("/deck-webdev");
-    return null;
   }
 
   // selain itu, tampilkan halaman utama
