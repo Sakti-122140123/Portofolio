@@ -16,6 +16,14 @@ const categories = ["Dicoding", "Teaching Assistant", "Organization", "Seminars 
 
 // encode biar file dengan spasi tetap bisa diakses
 function encodePath(path) {
+  // Google Drive links - convert to view mode
+  if (path.includes("drive.google.com")) {
+    const fileId = path.match(/id=([^&]+)/)?.[1];
+    if (fileId) {
+      return `https://drive.google.com/file/d/${fileId}/view`;
+    }
+  }
+  // Local files - encode path
   return path
     .split("/")
     .map(encodeURIComponent)
@@ -26,6 +34,7 @@ function encodePath(path) {
 function CertificateCard({ cert, index }) {
   const fileUrl = encodePath(cert.path);
   const isImage = /\.(jpg|jpeg|png|gif|webp)$/i.test(cert.path);
+  const isGoogleDrive = cert.path.includes("drive.google.com");
 
   return (
     <motion.div
@@ -49,7 +58,7 @@ function CertificateCard({ cert, index }) {
             className="inline-flex items-center gap-1 text-xs text-accent hover:text-accent-hover transition-colors font-medium"
           >
             <ExternalLink size={11} />
-            {isImage ? "View Image" : "Open PDF"}
+            {isImage ? "View Image" : isGoogleDrive ? "View" : "Open PDF"}
           </a>
         </div>
       </div>
