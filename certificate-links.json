@@ -33,19 +33,19 @@
     { "name": "Financial Literacy 101", "fileId": "1Q7QiakQgPY712YXla3sMjojet3hw5k1T", "status": "updated" }
   ],
   "Teaching Assistant": [
-    { "name": "Asisten Agama dan Etika Islam (AEI)", "fileId": "", "status": "pending" },
-    { "name": "Asisten Fisika 2 (2023-2024)", "fileId": "", "status": "pending" },
-    { "name": "Asprak Fisdas I (2023)", "fileId": "", "status": "pending" },
-    { "name": "Asprak Fisdas I (2024-2025)", "fileId": "", "status": "pending" },
-    { "name": "Asprak Fisdas II (2024-2025)", "fileId": "", "status": "pending" },
-    { "name": "Asprak Matriks dan Ruang Vektor (2024-2025)", "fileId": "", "status": "pending" },
-    { "name": "Asprak Pengenalan Prodi TI (2024-2025)", "fileId": "", "status": "pending" },
-    { "name": "Asprak PKS 1 (2023-2024)", "fileId": "", "status": "pending" },
-    { "name": "Asprak PKS 1 (2024-2025)", "fileId": "", "status": "pending" },
-    { "name": "Asprak PKS 2 (2023-2024)", "fileId": "", "status": "pending" },
-    { "name": "Asprak Teori Bahasa Formal dan Otomata (2024-2025)", "fileId": "", "status": "pending" },
-    { "name": "Kordas Fisdas I (2024-2025)", "fileId": "", "status": "pending" },
-    { "name": "Kordas Fisdas II (2024-2025)", "fileId": "", "status": "pending" }
+    { "name": "Asisten Energi ITERA (AEI)", "fileId": "1RVtN9aHeqjwTdv0RrhRfbnlYprNTtXA-", "status": "updated" },
+    { "name": "Asisten Fisika 2 (2023-2024)", "fileId": "1NxrMC-zS8HlyBQn5JmNiA3kVqpZ8jg3q", "status": "updated" },
+    { "name": "Asprak Fisdas I (2023)", "fileId": "1VXoaCN8jWGUDDuJZa9W74zEXRhjLOuHL", "status": "updated" },
+    { "name": "Asprak Fisdas I (2024-2025)", "fileId": "1hBsp4dlznid3tP1EAr7CD-uDoC7icY_8", "status": "updated" },
+    { "name": "Asprak Fisdas II (2024-2025)", "fileId": "1VzmP5AjHFu0lo2VJ7k2HuNyLBSMm4bZD", "status": "updated" },
+    { "name": "Asprak Matriks dan Ruang Vektor (2024-2025)", "fileId": "1xmXFACI3-jLcWkypL0782hQrZ77zdZks", "status": "updated" },
+    { "name": "Asprak Pengenalan Prodi TI (2024-2025)", "fileId": "1NijRjeT2W2DjcD0OjR2FUSBykdsx9GCT", "status": "updated" },
+    { "name": "Asprak PKS 1 (2023-2024)", "fileId": "1fGuwfkYkfMANan_eD2FLIy9SY74eYNwe", "status": "updated" },
+    { "name": "Asprak PKS 1 (2024-2025)", "fileId": "11Xap1XTDTtG8BGy88qVTXagFxgoXGsOB", "status": "updated" },
+    { "name": "Asprak PKS 2 (2023-2024)", "fileId": "1Fl7rfTPDew6LbvTtYmjEQfrUkVzrhH0e", "status": "updated" },
+    { "name": "Asprak Teori Bahasa Formal dan Otomata (2024-2025)", "fileId": "1abKcljUPh-N_ZibQjuY5k_u9UIkiDKyX", "status": "updated" },
+    { "name": "Kordas Fisdas I (2024-2025)", "fileId": "1k2UflaCMezH5gkXoi8o8AdpOG4nl1NDK", "status": "updated" },
+    { "name": "Kordas Fisdas II (2024-2025)", "fileId": "1KCPz-nhjB99JPG0XmmoGfowQ2Jik56P6", "status": "updated" }
   ],
   "Organization": [
     { "name": "Staff Divisi Pengembangan dan Pelatihan Keprofesian HMIF", "fileId": "", "status": "pending" },
