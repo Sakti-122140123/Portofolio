@@ -1,93 +1,18 @@
 // daftar pengalaman — diurutkan dari tahun terbaru
 const experience = [
   {
-    id: "ta-koordinator-fisika-2025",
-    title: "Lab Assistant Coordinator",
-    organization: "Basic Physics & Introduction to Physics, ITERA",
+    id: "teaching-assistant",
+    title: "Teaching Assistant & Lab Assistant Coordinator",
+    organization: "Informatics & Physics Courses, ITERA",
     location: "Lampung, Indonesia",
-    period: "2025",
+    period: "2023 – 2025",
     type: "Teaching Assistant",
     description:
-      "Coordinated lab assistants for Basic Physics and Introduction to Physics courses, Odd Semester 2025/2026. Responsible for task distribution, progress monitoring, and coordination with course instructors.",
+      "Served as academic assistant and lab coordinator for multiple courses including Software Engineering Fundamentals, Matrix & Vector Space, Formal Languages & Automata Theory, Entrepreneurship, and Basic Physics I & II. Coordinated lab sessions, guided students, and evaluated assignments.",
     highlights: [
-      "Coordinated weekly lab sessions and assistant scheduling",
-      "Distributed tasks and monitored lab report completion",
-      "Collaborated with instructors on schedules and lab materials",
-    ],
-  },
-  {
-    id: "ta-drpl",
-    title: "Academic Assistant",
-    organization: "Software Engineering Fundamentals, Informatics ITERA",
-    location: "Lampung, Indonesia",
-    period: "2025",
-    type: "Teaching Assistant",
-    description:
-      "Served as academic assistant for Software Engineering Fundamentals course, Even Semester 2024/2025. Assisted students in understanding software development concepts and testing methodologies.",
-    highlights: [
-      "Guided students in SDLC concepts and testing methodologies",
-      "Assisted in grading assignments and lab reports",
-      "Provided consultations and technical support for students",
-    ],
-  },
-  {
-    id: "ta-kewirausahaan",
-    title: "Academic Assistant",
-    organization: "Entrepreneurship, Informatics ITERA",
-    location: "Lampung, Indonesia",
-    period: "2025",
-    type: "Teaching Assistant",
-    description:
-      "Served as academic assistant for Entrepreneurship course, Even Semester 2024/2025. Assisted in the learning process and student assignment evaluation.",
-    highlights: [
-      "Assisted in course material preparation and learning activities",
-      "Graded assignments and provided feedback to students",
-      "Supported class coordination and academic administration",
-    ],
-  },
-  {
-    id: "ta-koordinator-fisika-2024",
-    title: "Lab Assistant Coordinator",
-    organization: "Basic Physics I & II, ITERA",
-    location: "Lampung, Indonesia",
-    period: "2024",
-    type: "Teaching Assistant",
-    description:
-      "Coordinated lab assistants for Basic Physics I (Odd 2024/2025) and Basic Physics II (Even 2024/2025). Responsible for lab session coordination and report evaluation.",
-    highlights: [
-      "Coordinated assistant scheduling and task distribution",
-      "Supervised laboratory session execution",
-      "Evaluated student lab reports",
-    ],
-  },
-  {
-    id: "ta-matriks",
-    title: "Academic Assistant",
-    organization: "Matrix & Vector Space, Informatics ITERA",
-    location: "Lampung, Indonesia",
-    period: "2024",
-    type: "Teaching Assistant",
-    description:
-      "Served as academic assistant for Matrix & Vector Space course, Odd Semester 2024/2025. Assisted students in understanding linear algebra concepts and applications.",
-    highlights: [
-      "Guided students in matrix and vector space concepts",
-      "Assisted in grading assignments and exams",
-      "Provided additional consultation sessions for students",
-    ],
-  },
-  {
-    id: "ta-tbfo",
-    title: "Academic Assistant",
-    organization: "Formal Languages & Automata Theory, Informatics ITERA",
-    location: "Lampung, Indonesia",
-    period: "2024",
-    type: "Teaching Assistant",
-    description:
-      "Served as academic assistant for Formal Languages & Automata Theory course, Odd Semester 2024/2025. Assisted students in understanding automata and formal language concepts.",
-    highlights: [
-      "Guided students in automata and grammar concepts",
-      "Assisted in grading assignments and projects",
-      "Provided technical support for lab sessions",
+      "Coordinated lab sessions and assistant scheduling across 6 courses",
+      "Guided students in SDLC, testing methodologies, and core concepts",
+      "Graded assignments, provided feedback, and supported academic administration",
     ],
   },
   {
@@ -108,17 +33,17 @@ const experience = [
   },
   {
     id: "hmif",
-    title: "Professional Development & Training Division Staff",
+    title: "Staff & Expert Staff — Professional Development Division",
     organization: "HMIF, Informatics Student Association ITERA",
     location: "Lampung, Indonesia",
-    period: "2023 – 2026",
+    period: "2023 – 2025",
     type: "Organization",
     description:
-      "Actively involved in the Informatics Student Association, contributing to event coordination, team collaboration, and student community development within the faculty.",
+      "Actively involved in the Informatics Student Association, contributing to professional development training and member development programs within the faculty.",
     highlights: [
-      "Coordinated planning and execution of departmental events",
+      "2024: Coordinated professional development training for students",
+      "2025: Managed member development programs and activities",
       "Collaborated with peers across different committees and divisions",
-      "Developed communication and organizational skills in a team setting",
     ],
   },
   {
