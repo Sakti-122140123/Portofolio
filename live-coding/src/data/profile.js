@@ -9,16 +9,16 @@ const profile = {
 
   // headline muncul di Hero (bagian atas pertama)
   headline:
-    "Computer Science Graduate — Developer & Engineer",
+    "Computer Science Graduate, Developer & Engineer",
   // sub-headline, teks lebih panjang di bawah nama
   subheadline:
     "Computer Science graduate with hands-on experience in web development, software testing, and cross-functional collaboration. Built and deployed information systems for government and academic institutions. Open to opportunities in software engineering, web development, and quality assurance roles.",
 
   // ini 3 paragraf di section About — isi sesuai keinginan
   about: [
-    "I am a recent Computer Science graduate from Institut Teknologi Sumatera (GPA 3.56/4.00), currently based in Jakarta. Through academic and internship projects, I have built web-based information systems using Laravel, React, and MySQL — gaining practical experience across the full development lifecycle.",
+    "I am a recent Computer Science graduate from Institut Teknologi Sumatera (GPA 3.56/4.00), currently based in Jakarta. Through academic and internship projects, I have built web-based information systems using Laravel, React, and MySQL, gaining practical experience across the full development lifecycle.",
     "During my internship at Dinas Kominfo Kota Bandar Lampung, I contributed to developing and maintaining web systems for government workflows, coordinating directly with supervisors and internal teams to deliver digital solutions aligned with institutional requirements.",
-    "Beyond technical development, I have been actively involved in student organizations, mentorship programs, and certificate courses — building strong foundations in teamwork, communication, and continuous learning. I am looking for opportunities where I can contribute my skills and grow as a software engineer.",
+    "Beyond technical development, I have been actively involved in student organizations, mentorship programs, and certificate courses, building strong foundations in teamwork, communication, and continuous learning. I am looking for opportunities where I can contribute my skills and grow as a software engineer.",
   ],
 
   // link sosial dan kontak
@@ -32,12 +32,12 @@ const profile = {
   // section "What I Bring" — 5 poin kelebihan Anda (general)
   roleFit: {
     intro:
-      "My academic and internship experience has given me a well-rounded foundation — here is what I bring to a team:",
+      "My academic and internship experience has given me a well-rounded foundation. Here is what I bring to a team:",
     points: [
       {
         requirement: "Full-Stack Development",
         experience:
-          "Built and deployed web applications using Laravel, React, and MySQL — from designing database schemas and RESTful APIs to implementing responsive user interfaces with role-based access control.",
+          "Built and deployed web applications using Laravel, React, and MySQL, from designing database schemas and RESTful APIs to implementing responsive user interfaces with role-based access control.",
       },
       {
         requirement: "Software Quality & Testing",

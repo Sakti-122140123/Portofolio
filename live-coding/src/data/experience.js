@@ -19,7 +19,7 @@ const experience = [
   {
     id: "hmif",
     title: "Active Member",
-    organization: "HMIF — Himpunan Mahasiswa Informatika ITERA",
+    organization: "HMIF, Himpunan Mahasiswa Informatika ITERA",
     location: "Lampung, Indonesia",
     period: "2023 – Present",
     type: "Organization",

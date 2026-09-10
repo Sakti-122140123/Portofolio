@@ -6,7 +6,7 @@ const projects = [
     name: "Harmony FTI ITERA",
     // teks pendek yang muncul di kartu proyek
     shortDescription:
-      "Integrated academic information system for Fakultas Teknologi Industri, Institut Teknologi Sumatera — supporting academic services, student-faculty workflows, and structured information delivery.",
+      "Integrated academic information system for Fakultas Teknologi Industri, Institut Teknologi Sumatera, supporting academic services, student-faculty workflows, and structured information delivery.",
     role: "Developer & Team Contributor",
     // teknologi yang dipakai (muncul sebagai badge/chip)
     techStack: ["Laravel", "React", "MySQL"],
@@ -21,11 +21,11 @@ const projects = [
       "Maintained documentation for system modules and user workflows",
     ],
     devRelevance:
-      "Practiced full-stack development with Laravel and React, designed database schemas, built RESTful APIs, and implemented role-based access control — directly applicable to web development roles.",
+      "Practiced full-stack development with Laravel and React, designed database schemas, built RESTful APIs, and implemented role-based access control, directly applicable to web development roles.",
     qaRelevance:
       "Conducted black-box testing and UAT on the correspondence system, achieving 100% test pass rate and 88.57% UAT score. Designed test cases covering functional validation, edge cases, and user workflow scenarios.",
     relevance:
-      "Practiced full-stack development, stakeholder communication, and cross-functional coordination — building a complete information system from requirements through deployment.",
+      "Practiced full-stack development, stakeholder communication, and cross-functional coordination, building a complete information system from requirements through deployment.",
     link: "https://harmony.fti.itera.ac.id/",
     featured: true, // true = tampil di halaman, false = disembunyikan
   },
@@ -33,11 +33,11 @@ const projects = [
     id: "simamang",
     name: "SIMAMANG",
     shortDescription:
-      "Web-based internship management system for Dinas Kominfo Bandar Lampung — supports internship registration, status tracking, and administrative data management.",
+      "Web-based internship management system for Dinas Kominfo Bandar Lampung, supports internship registration, status tracking, and administrative data management.",
     role: "Full-Stack Developer (Intern)",
     techStack: ["Laravel", "React", "MySQL", "Laragon"],
     description:
-      "Contributed to a web-based system that manages internship-related workflows for Dinas Kominfo Kota Bandar Lampung. The system supports registration, status tracking, and data management through an admin dashboard — digitizing previously manual processes.",
+      "Contributed to a web-based system that manages internship-related workflows for Dinas Kominfo Kota Bandar Lampung. The system supports registration, status tracking, and data management through an admin dashboard, digitizing previously manual processes.",
     keyContribution: [
       "Coordinated with government supervisors to gather and clarify requirements",
       "Developed registration and tracking features aligned with institutional needs",
@@ -79,10 +79,10 @@ const projects = [
   },
   {
     id: "kyuubi-mml",
-    name: "Kyuubi — Multimodal Music Emotion Recognition",
+    name: "Kyuubi, Multimodal Music Emotion Recognition",
     shortDescription:
       "Academic machine learning project exploring emotion recognition in music using audio, lyrics, and MIDI through a late fusion approach.",
-    role: "Team Member — Research & Documentation",
+    role: "Team Member, Research & Documentation",
     techStack: ["Python", "Scikit-learn", "Librosa", "Pandas", "NumPy"],
     description:
       "Participated in a team-based academic ML project focused on multimodal music emotion recognition. The project combined audio features, lyrics analysis, and MIDI data using a late fusion approach to classify emotional content in music.",
@@ -95,7 +95,7 @@ const projects = [
     devRelevance:
       "Built Python data processing pipelines with Scikit-learn and Librosa for audio feature extraction. Applied software engineering practices to a machine learning project with structured code organization.",
     qaRelevance:
-      "Systematically documented experiment procedures, parameters, and results. Tracked model performance metrics and validated outputs — transferable skills for test documentation and result reporting.",
+      "Systematically documented experiment procedures, parameters, and results. Tracked model performance metrics and validated outputs, transferable skills for test documentation and result reporting.",
     relevance:
       "Practiced structured documentation, experiment tracking, and research task coordination in a team-based academic project.",
     link: "https://github.com/Sakti-122140123",

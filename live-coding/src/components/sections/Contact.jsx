@@ -24,7 +24,7 @@ export default function Contact() {
           <p className="text-text-secondary leading-relaxed mb-10">
             Interested in discussing internship or entry-level opportunities?
             Whether in software development, data, project coordination, or
-            technology roles — feel free to reach out.
+            technology roles, feel free to reach out.
           </p>
 
           {/* Contact Links */}

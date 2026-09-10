@@ -152,7 +152,7 @@ export default function Projects() {
           </h2>
           <p className="text-text-secondary mb-10 max-w-2xl">
             Projects demonstrating my experience in coordination, documentation,
-            system delivery, and team collaboration — alongside technical
+            system delivery, and team collaboration, alongside technical
             development.
           </p>
 
