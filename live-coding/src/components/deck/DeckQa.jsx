@@ -28,9 +28,12 @@ function SlideHeader({ label, title }) {
 }
 
 const qaProjectIds = ["harmony", "simamang"];
-const qaRelevantCerts = [
-  "Teaching Assistant",
-  "Organization",
+const qaCertIds = [
+  "Dasar Rekayasa Perangkat Lunak - Semester Genap, Teknik Informatika ITERA (2024/2025)",
+  "Praktikum Fisika Dasar I - Semester Ganjil, ITERA (2023/2024)",
+  "Praktikum Fisika Dasar II - Semester Genap, ITERA (2023/2024)",
+  "Pengantar Komputer dan Software I - Semester Ganjil, ITERA (2023/2024)",
+  "Staff Divisi Pengembangan dan Pelatihan Keprofesian HMIF",
 ];
 
 const qaSkills = [
@@ -75,7 +78,7 @@ const qaSkills = [
 export default function DeckQa() {
   const handlePrint = () => window.print();
   const featured = projects.filter((p) => qaProjectIds.includes(p.id));
-  const filteredCerts = certificates.filter((c) => qaRelevantCerts.includes(c.category));
+  const filteredCerts = certificates.filter((c) => qaCertIds.includes(c.name));
 
   return (
     <>
@@ -279,39 +282,36 @@ export default function DeckQa() {
           />
           <div className="grid grid-cols-2 gap-8">
             <div>
-              <h3 className="text-sm font-semibold text-text mb-3">
+              <h3 className="text-xs font-semibold text-text-muted uppercase mb-2">
                 Experience & Activities
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {experience.map((exp) => (
                   <div
                     key={exp.id}
-                    className="p-3 bg-bg rounded-lg border border-border"
+                    className="p-2 bg-bg rounded border border-border"
                   >
-                    <p className="text-sm font-semibold text-text">
+                    <p className="text-xs font-semibold text-text">
                       {exp.title}
                     </p>
-                    <p className="text-xs text-accent">{exp.organization}</p>
-                    <p className="text-xs text-text-muted">{exp.period}</p>
+                    <p className="text-[11px] text-accent">{exp.organization}</p>
+                    <p className="text-[11px] text-text-muted">{exp.period}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-text mb-3">
-                Certifications & Programs
+              <h3 className="text-xs font-semibold text-text-muted uppercase mb-2">
+                Certifications
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {filteredCerts.map((cert, i) => (
                   <div
                     key={i}
-                    className="p-3 bg-bg rounded-lg border border-border"
+                    className="p-2 bg-bg rounded border border-border"
                   >
-                    <p className="text-sm font-semibold text-text">
+                    <p className="text-xs font-semibold text-text leading-tight">
                       {cert.name}
-                    </p>
-                    <p className="text-xs text-text-muted">
-                      {cert.category}
                     </p>
                   </div>
                 ))}
