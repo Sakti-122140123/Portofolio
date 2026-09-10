@@ -1,32 +1,122 @@
-// daftar pengalaman — internship, organisasi, program, dsb
+// daftar pengalaman — diurutkan dari tahun terbaru
 const experience = [
   {
+    id: "ta-koordinator-fisika-2025",
+    title: "Lab Assistant Coordinator",
+    organization: "Basic Physics & Introduction to Physics, ITERA",
+    location: "Lampung, Indonesia",
+    period: "2025",
+    type: "Teaching Assistant",
+    description:
+      "Coordinated lab assistants for Basic Physics and Introduction to Physics courses, Odd Semester 2025/2026. Responsible for task distribution, progress monitoring, and coordination with course instructors.",
+    highlights: [
+      "Coordinated weekly lab sessions and assistant scheduling",
+      "Distributed tasks and monitored lab report completion",
+      "Collaborated with instructors on schedules and lab materials",
+    ],
+  },
+  {
+    id: "ta-drpl",
+    title: "Academic Assistant",
+    organization: "Software Engineering Fundamentals, Informatics ITERA",
+    location: "Lampung, Indonesia",
+    period: "2025",
+    type: "Teaching Assistant",
+    description:
+      "Served as academic assistant for Software Engineering Fundamentals course, Even Semester 2024/2025. Assisted students in understanding software development concepts and testing methodologies.",
+    highlights: [
+      "Guided students in SDLC concepts and testing methodologies",
+      "Assisted in grading assignments and lab reports",
+      "Provided consultations and technical support for students",
+    ],
+  },
+  {
+    id: "ta-kewirausahaan",
+    title: "Academic Assistant",
+    organization: "Entrepreneurship, Informatics ITERA",
+    location: "Lampung, Indonesia",
+    period: "2025",
+    type: "Teaching Assistant",
+    description:
+      "Served as academic assistant for Entrepreneurship course, Even Semester 2024/2025. Assisted in the learning process and student assignment evaluation.",
+    highlights: [
+      "Assisted in course material preparation and learning activities",
+      "Graded assignments and provided feedback to students",
+      "Supported class coordination and academic administration",
+    ],
+  },
+  {
+    id: "ta-koordinator-fisika-2024",
+    title: "Lab Assistant Coordinator",
+    organization: "Basic Physics I & II, ITERA",
+    location: "Lampung, Indonesia",
+    period: "2024",
+    type: "Teaching Assistant",
+    description:
+      "Coordinated lab assistants for Basic Physics I (Odd 2024/2025) and Basic Physics II (Even 2024/2025). Responsible for lab session coordination and report evaluation.",
+    highlights: [
+      "Coordinated assistant scheduling and task distribution",
+      "Supervised laboratory session execution",
+      "Evaluated student lab reports",
+    ],
+  },
+  {
+    id: "ta-matriks",
+    title: "Academic Assistant",
+    organization: "Matrix & Vector Space, Informatics ITERA",
+    location: "Lampung, Indonesia",
+    period: "2024",
+    type: "Teaching Assistant",
+    description:
+      "Served as academic assistant for Matrix & Vector Space course, Odd Semester 2024/2025. Assisted students in understanding linear algebra concepts and applications.",
+    highlights: [
+      "Guided students in matrix and vector space concepts",
+      "Assisted in grading assignments and exams",
+      "Provided additional consultation sessions for students",
+    ],
+  },
+  {
+    id: "ta-tbfo",
+    title: "Academic Assistant",
+    organization: "Formal Languages & Automata Theory, Informatics ITERA",
+    location: "Lampung, Indonesia",
+    period: "2024",
+    type: "Teaching Assistant",
+    description:
+      "Served as academic assistant for Formal Languages & Automata Theory course, Odd Semester 2024/2025. Assisted students in understanding automata and formal language concepts.",
+    highlights: [
+      "Guided students in automata and grammar concepts",
+      "Assisted in grading assignments and projects",
+      "Provided technical support for lab sessions",
+    ],
+  },
+  {
     id: "kominfo-internship",
-    title: "Web Developer Intern", // jabatan Anda
+    title: "Quality Assurance & Developer Intern",
     organization: "Dinas Kominfo Kota Bandar Lampung",
     location: "Bandar Lampung, Indonesia",
     period: "2024",
-    type: "Internship", // Internship / Organization / Program
+    type: "Internship",
     description:
-      "Contributed to the development and maintenance of web-based information systems (SIMAMANG & SIMAS) supporting government administrative workflows. Worked closely with supervisors and internal teams to deliver digital solutions aligned with institutional requirements.",
+      "Conducted functional testing and development on administrative information systems (SIMAMANG & SIMAS) to support government administrative workflows. Collaborated with supervisors and internal teams to ensure digital solutions met institutional requirements.",
     highlights: [
-      "Developed features for internship management and administrative systems",
-      "Collaborated with government stakeholders to gather requirements",
-      "Maintained technical documentation and progress reports",
-      "Gained experience working within structured institutional environments",
+      "Conducted Black Box Testing and UAT on SIMAMANG and SIMAS systems",
+      "Designed test cases using EP and BVA techniques",
+      "Executed regression testing to verify feature stability",
+      "Validated API endpoints using Postman",
     ],
   },
   {
     id: "hmif",
-    title: "Active Member",
-    organization: "HMIF, Himpunan Mahasiswa Informatika ITERA",
+    title: "Professional Development & Training Division Staff",
+    organization: "HMIF, Informatics Student Association ITERA",
     location: "Lampung, Indonesia",
     period: "2023 – 2026",
     type: "Organization",
     description:
-      "Actively involved in the Computer Science Student Association, contributing to event coordination, team collaboration, and student community development within the faculty.",
+      "Actively involved in the Informatics Student Association, contributing to event coordination, team collaboration, and student community development within the faculty.",
     highlights: [
-      "Supported event planning and coordination for departmental activities",
+      "Coordinated planning and execution of departmental events",
       "Collaborated with peers across different committees and divisions",
       "Developed communication and organizational skills in a team setting",
     ],
