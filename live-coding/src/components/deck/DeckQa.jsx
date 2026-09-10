@@ -27,9 +27,55 @@ function SlideHeader({ label, title }) {
   );
 }
 
+const qaProjectIds = ["harmony", "simamang"];
+const qaRelevantCerts = [
+  "Teaching Assistant",
+  "Organization",
+];
+
+const qaSkills = [
+  {
+    category: "Testing & QA",
+    icon: "Bug",
+    items: [
+      "Black-Box Testing",
+      "UAT Execution",
+      "Test Case Design",
+      "Functional Testing",
+      "Edge Case Analysis",
+      "Bug Reporting",
+    ],
+  },
+  {
+    category: "Documentation & Process",
+    icon: "FileText",
+    items: [
+      "Test Documentation",
+      "Bug Report Writing",
+      "Requirements Validation",
+      "SDLC Understanding",
+      "Kanban / Agile",
+      "RUP Methodology",
+    ],
+  },
+  {
+    category: "Tools & Technical",
+    icon: "Wrench",
+    items: [
+      "Laravel",
+      "React",
+      "MySQL",
+      "Git & GitHub",
+      "VS Code",
+      "Google Workspace",
+    ],
+  },
+];
+
 export default function DeckQa() {
   const handlePrint = () => window.print();
-  const featured = projects.filter((p) => p.featured);
+  const featured = projects.filter((p) => qaProjectIds.includes(p.id));
+  const filteredCerts = certificates.filter((c) => qaRelevantCerts.includes(c.category));
 
   return (
     <>
@@ -91,23 +137,32 @@ export default function DeckQa() {
         {/* ============ SLIDE 2: Professional Summary ============ */}
         <Slide>
           <SlideHeader label="About" title="Professional Summary" />
-          <div className="space-y-4 max-w-3xl">
-            {deckData.about.map((p, i) => (
-              <p key={i} className="text-base text-text-secondary leading-relaxed">
-                {p}
-              </p>
-            ))}
-          </div>
-          <div className="mt-8 flex gap-4 text-xs text-text-muted">
-            <span className="px-3 py-1.5 bg-bg rounded-lg border border-border">
-              {profile.university}
-            </span>
-            <span className="px-3 py-1.5 bg-bg rounded-lg border border-border">
-              {profile.major}
-            </span>
-            <span className="px-3 py-1.5 bg-bg rounded-lg border border-border">
-              {profile.semester}
-            </span>
+          <div className="flex justify-between gap-8">
+            <div className="flex-1 space-y-4">
+              {deckData.about.slice(0, 2).map((p, i) => (
+                <p key={i} className="text-sm text-text-secondary leading-relaxed">
+                  {p}
+                </p>
+              ))}
+            </div>
+            <div className="flex-1 space-y-4">
+              {deckData.about.slice(2).map((p, i) => (
+                <p key={i} className="text-sm text-text-secondary leading-relaxed">
+                  {p}
+                </p>
+              ))}
+              <div className="mt-4 flex flex-wrap gap-3 text-xs text-text-muted">
+                <span className="px-3 py-1.5 bg-bg rounded-lg border border-border">
+                  {profile.university}
+                </span>
+                <span className="px-3 py-1.5 bg-bg rounded-lg border border-border">
+                  {profile.major}
+                </span>
+                <span className="px-3 py-1.5 bg-bg rounded-lg border border-border">
+                  {profile.semester}
+                </span>
+              </div>
+            </div>
           </div>
         </Slide>
 
@@ -118,36 +173,58 @@ export default function DeckQa() {
             title="Why I Fit This QA Role"
           />
 
-          <p className="text-sm text-text-secondary mb-6 max-w-3xl">
+          <p className="text-sm text-text-secondary mb-6">
             {deckData.roleFit.intro}
           </p>
-          <div className="grid grid-cols-1 gap-3 max-w-3xl">
-            {deckData.roleFit.points.map((pt, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-3 p-3 bg-bg rounded-lg border border-border"
-              >
-                <span className="text-accent font-bold text-sm mt-0.5 shrink-0">
-                  {i + 1}.
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-text mb-0.5">
-                    {pt.requirement}
-                  </p>
-                  <p className="text-xs text-text-secondary leading-relaxed">
-                    {pt.experience}
-                  </p>
+          <div className="flex justify-between gap-4">
+            <div className="flex-1 space-y-3">
+              {deckData.roleFit.points.slice(0, 3).map((pt, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-3 p-3 bg-bg rounded-lg border border-border"
+                >
+                  <span className="text-accent font-bold text-sm mt-0.5 shrink-0">
+                    {i + 1}.
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold text-text mb-0.5">
+                      {pt.requirement}
+                    </p>
+                    <p className="text-xs text-text-secondary leading-relaxed">
+                      {pt.experience}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="flex-1 space-y-3">
+              {deckData.roleFit.points.slice(3).map((pt, i) => (
+                <div
+                  key={i + 3}
+                  className="flex items-start gap-3 p-3 bg-bg rounded-lg border border-border"
+                >
+                  <span className="text-accent font-bold text-sm mt-0.5 shrink-0">
+                    {i + 4}.
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold text-text mb-0.5">
+                      {pt.requirement}
+                    </p>
+                    <p className="text-xs text-text-secondary leading-relaxed">
+                      {pt.experience}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </Slide>
 
         {/* ============ SLIDE 4: Skills Overview ============ */}
         <Slide>
-          <SlideHeader label="Skills" title="Skills Overview" />
+          <SlideHeader label="Skills" title="QA Skills Overview" />
           <div className="grid grid-cols-3 gap-6">
-            {skills.map((group) => (
+            {qaSkills.map((group) => (
               <div key={group.category}>
                 <h3 className="text-sm font-semibold text-text mb-3">
                   {group.category}
@@ -167,12 +244,12 @@ export default function DeckQa() {
           </div>
         </Slide>
 
-        {/* ============ SLIDES 5-8: Projects ============ */}
+        {/* ============ SLIDES 5-6: Projects ============ */}
         {featured.map((project) => (
           <Slide key={project.id}>
             <SlideHeader label="Project" title={project.name} />
-            <div className="grid grid-cols-2 gap-8 max-w-4xl">
-              <div>
+            <div className="flex justify-between gap-8">
+              <div className="flex-1">
                 <p className="text-xs font-semibold text-text-muted uppercase mb-1">
                   Role
                 </p>
@@ -199,7 +276,7 @@ export default function DeckQa() {
                   ))}
                 </div>
               </div>
-              <div>
+              <div className="flex-1">
                 <p className="text-xs font-semibold text-text-muted uppercase mb-1">
                   Key Contributions
                 </p>
@@ -231,8 +308,8 @@ export default function DeckQa() {
             label="Experience"
             title="Experience & Certifications"
           />
-          <div className="grid grid-cols-2 gap-8">
-            <div>
+          <div className="flex justify-between gap-8">
+            <div className="flex-1">
               <h3 className="text-sm font-semibold text-text mb-3">
                 Experience & Activities
               </h3>
@@ -251,12 +328,12 @@ export default function DeckQa() {
                 ))}
               </div>
             </div>
-            <div>
+            <div className="flex-1">
               <h3 className="text-sm font-semibold text-text mb-3">
                 Certifications & Programs
               </h3>
               <div className="space-y-3">
-                {certificates.map((cert, i) => (
+                {filteredCerts.map((cert, i) => (
                   <div
                     key={i}
                     className="p-3 bg-bg rounded-lg border border-border"
