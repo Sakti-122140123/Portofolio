@@ -31,7 +31,17 @@ const qaProjectIds = ["harmony", "simamang", "simas"];
 const qaCertIds = [
   "Dasar Rekayasa Perangkat Lunak - Semester Genap, Teknik Informatika ITERA (2024/2025)",
   "Staff Divisi Pengembangan dan Pelatihan Keprofesian HMIF",
+  "Pengantar Komputer dan Software I - Semester Ganjil, ITERA (2024/2025)",
+  "Matriks dan Ruang Vektor - Semester Ganjil, Teknik Informatika ITERA (2024/2025)",
+  "Teori Bahasa Formal dan Otomata - Semester Ganjil, Teknik Informatika ITERA (2024/2025)",
 ];
+
+function toViewLink(path) {
+  if (path.includes("drive.google.com")) {
+    return path.replace("https://drive.google.com/uc?export=download&id=", "https://drive.google.com/file/d/").replace(/$/, "/view");
+  }
+  return path;
+}
 
 const qaSkills = [
   {
@@ -308,7 +318,7 @@ export default function DeckQa() {
                 {filteredCerts.map((cert, i) => (
                   <a
                     key={i}
-                    href={cert.path}
+                    href={toViewLink(cert.path)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block p-2 bg-bg rounded border border-border hover:border-accent/30 transition-colors"

@@ -12,7 +12,7 @@ const deckQaData = {
 
   roleFit: {
     intro:
-      "My experience in web development and testing has prepared me for a QA role. Here is what I bring:",
+      "My experience in software development and testing has prepared me for a QA role. Here is what I bring:",
     points: [
       {
         requirement: "Black-Box Testing & UAT Execution",
@@ -20,9 +20,9 @@ const deckQaData = {
           "Achieved 100% black-box test pass rate and 88.57% UAT score on the Harmony FTI correspondence system. Designed and executed test cases covering functional validation, edge cases, and user workflow scenarios.",
       },
       {
-        requirement: "SDLC & Agile Understanding",
+        requirement: "SDLC & STLC Understanding",
         experience:
-          "Worked with RUP methodology and Kanban task tracking across multiple projects. Understand the full software development lifecycle from requirements gathering to testing and delivery.",
+          "Understand the full Software Development Life Cycle (SDLC) from requirements to deployment. Apply structured Software Testing Life Cycle (STLC) including test planning, test case design, execution, defect tracking, and regression testing.",
       },
       {
         requirement: "Bug Reporting & Documentation",
