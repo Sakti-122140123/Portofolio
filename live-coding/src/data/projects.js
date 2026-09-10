@@ -5,22 +5,22 @@ const projects = [
     name: "Harmony FTI ITERA",
     shortDescription:
       "Integrated academic information system for Fakultas Teknologi Industri, Institut Teknologi Sumatera, supporting academic services, student-faculty workflows, and structured information delivery.",
-    role: "Full Stack Developer",
-    techStack: ["Laravel", "React", "MySQL", "Postman"],
+    role: "Quality Assurance & Developer",
+    techStack: ["Postman", "Laravel", "React", "MySQL", "Trello"],
     description:
-      "Developed a digital correspondence administration subsystem using React, Laravel, and MySQL, applying RUP methodology and Trello Kanban for structured software development. Improved the campus correspondence process from 7–10 working days to 2–5 working days by developing digital administrative workflows. Conducted Black Box Testing and User Acceptance Testing (UAT), including API validation with Postman, achieving 100% functional test results and an 88.57% UAT score.",
+      "Conducted Black Box Testing and User Acceptance Testing (UAT) on the correspondence subsystem, achieving 100% functional test pass rate and 88.57% UAT score. Designed test scenarios and test cases using Equivalence Partitioning (EP) and Boundary Value Analysis (BVA). Executed regression testing after each sprint to ensure feature stability. Validated API endpoints using Postman for request-response verification.",
     keyContribution: [
-      "Reduced correspondence processing time from 7–10 days to 2–5 days through digital workflow automation",
       "Achieved 100% functional test pass rate and 88.57% UAT score on correspondence subsystem",
-      "Conducted API validation using Postman and documented test results for stakeholder review",
-      "Applied RUP methodology and Kanban task tracking for structured development process",
+      "Designed test cases using EP and BVA techniques covering functional validation and edge cases",
+      "Executed regression testing to verify feature stability after each development sprint",
+      "Validated API endpoints using Postman and documented test results for stakeholder review",
     ],
     devRelevance:
       "Built full-stack features with Laravel and React, designed database schemas, implemented RESTful APIs, and deployed to institutional servers.",
     qaRelevance:
-      "Conducted Black Box Testing and UAT, achieving 100% functional test pass rate and 88.57% UAT score. Designed test cases covering functional validation, edge cases, and user workflow scenarios.",
+      "Conducted Black Box Testing, UAT, EP, BVA, and regression testing. Designed test scenarios and test cases. Achieved 100% test pass rate and 88.57% UAT score.",
     relevance:
-      "Full-stack development and quality assurance in an academic institution, delivering measurable process improvements.",
+      "Quality assurance and full-stack development in an academic institution, delivering measurable testing results.",
     link: "https://harmony.fti.itera.ac.id/",
     featured: true,
   },
@@ -29,22 +29,22 @@ const projects = [
     name: "SIMAMANG",
     shortDescription:
       "Web-based internship management system for Dinas Kominfo Bandar Lampung, supports internship registration, status tracking, and administrative data management.",
-    role: "Full Stack Developer",
-    techStack: ["Laravel", "React", "MySQL", "Laragon"],
+    role: "Quality Assurance & Developer",
+    techStack: ["Postman", "Laravel", "React", "MySQL", "Trello"],
     description:
-      "Developed SIMAMANG to support internship registration and management for more than 50 participants. Built web features using Laravel, React.js, Inertia.js, PHP, and JavaScript. Conducted functional testing, identified bugs, and verified fixes to improve system reliability. Collaborated with staff to translate administrative requirements into practical digital solutions. Supported post-deployment maintenance and quality assurance.",
+      "Conducted functional testing on internship registration and management system for 50+ participants. Designed test scenarios and test cases using EP and BVA techniques. Executed regression testing to verify bug fixes and feature stability. Performed API validation using Postman. Collaborated with government staff to validate features against institutional requirements.",
     keyContribution: [
-      "Supported internship registration and management for 50+ participants through a centralized system",
-      "Built full-stack features using Laravel, React.js, Inertia.js, PHP, and JavaScript",
-      "Conducted functional testing, identified bugs, and verified fixes to improve reliability",
-      "Collaborated with government staff to translate administrative requirements into digital solutions",
+      "Designed test scenarios and test cases using EP and BVA for registration workflows",
+      "Executed regression testing to verify bug fixes and feature stability",
+      "Validated API endpoints using Postman for request-response verification",
+      "Documented test results and collaborated with staff for requirement validation",
     ],
     devRelevance:
-      "Built full-stack features with Laravel and React.js for a government internship management system. Gained experience in requirements gathering, iterative development, and deploying to institutional servers.",
+      "Built full-stack features with Laravel and React.js for a government internship management system.",
     qaRelevance:
-      "Conducted functional testing, identified bugs, and verified fixes. Validated features against institutional requirements and documented test results for stakeholder review.",
+      "Conducted functional testing, EP, BVA, and regression testing. Designed test scenarios and test cases. Validated API using Postman.",
     relevance:
-      "Full-stack development and quality assurance for a government digital transformation project.",
+      "Quality assurance for a government digital transformation project, ensuring system reliability.",
     link: "https://simamang.bandarlampungkota.go.id/",
     featured: true,
   },
@@ -53,22 +53,22 @@ const projects = [
     name: "SIMAS",
     shortDescription:
       "Web-based administrative information system for Dinas Kominfo Bandar Lampung, supporting document management, correspondence tracking, and internal workflow automation.",
-    role: "Full Stack Developer",
-    techStack: ["Laravel", "React", "MySQL", "Laragon"],
+    role: "Quality Assurance & Developer",
+    techStack: ["Postman", "Laravel", "React", "MySQL", "Trello"],
     description:
-      "Developed SIMAS, a correspondence management system used by more than 30 government agencies. Built web features using Laravel, React.js, Inertia.js, PHP, and JavaScript. Conducted functional testing, identified bugs, and verified fixes to improve system reliability. Collaborated with staff to translate administrative requirements into practical digital solutions.",
+      "Conducted functional testing on correspondence management system used by 30+ government agencies. Designed test scenarios and test cases using EP and BVA techniques. Executed regression testing to verify bug fixes and feature stability. Performed API validation using Postman. Collaborated with staff to validate features against institutional requirements.",
     keyContribution: [
-      "Developed SIMAS serving 30+ government agencies for correspondence management",
-      "Built full-stack features using Laravel, React.js, Inertia.js, PHP, and JavaScript",
-      "Conducted functional testing, identified bugs, and verified fixes to improve reliability",
-      "Collaborated with government staff to translate administrative requirements into digital solutions",
+      "Designed test scenarios and test cases using EP and BVA for correspondence workflows",
+      "Executed regression testing to verify bug fixes and feature stability",
+      "Validated API endpoints using Postman for request-response verification",
+      "Documented test results and collaborated with staff for requirement validation",
     ],
     devRelevance:
-      "Built full-stack features with Laravel and React.js for a government administrative system. Applied database design, API development, and iterative delivery in a structured institutional environment.",
+      "Built full-stack features with Laravel and React.js for a government administrative system.",
     qaRelevance:
-      "Conducted functional testing, identified bugs, and verified fixes. Validated feature completeness against requirements and documented test results for stakeholder review.",
+      "Conducted functional testing, EP, BVA, and regression testing. Designed test scenarios and test cases. Validated API using Postman.",
     relevance:
-      "Full-stack development and quality assurance for a government digital transformation project.",
+      "Quality assurance for a government digital transformation project, ensuring system reliability.",
     link: "https://simas.bandarlampungkota.go.id/",
     featured: true,
   },
