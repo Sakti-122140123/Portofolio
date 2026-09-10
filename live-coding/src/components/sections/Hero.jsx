@@ -88,6 +88,8 @@ export default function Hero() {
                 <Mail size={16} />
                 Contact Me
               </a>
+              {/* Deck buttons — akses manual via URL: /deck-webdev, /deck-qa */}
+              {/*
               <a
                 href="/deck-webdev"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-surface text-text text-sm font-medium rounded-lg border border-border hover:border-accent hover:text-accent transition-colors"
@@ -102,9 +104,11 @@ export default function Hero() {
                 <FileDown size={16} />
                 QA Deck
               </a>
+              */}
             </motion.div>
 
-            {/* LINK SOSIAL — LinkedIn & GitHub */}
+            {/* LINK SOSIAL — LinkedIn & GitHub (ada di footer) */}
+            {/*
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -132,6 +136,7 @@ export default function Hero() {
                 GitHub
               </a>
             </motion.div>
+            */}
           </div>
 
           {/* KOLOM KANAN — FOTO PROFIL */}

@@ -52,8 +52,8 @@ const qaSkills = [
       "Equivalence Partitioning (EP)",
       "Boundary Value Analysis (BVA)",
       "Regression Testing",
+      "Retesting After Bug Fix",
       "UAT Execution",
-      "Integration Testing",
     ],
   },
   {
@@ -62,10 +62,10 @@ const qaSkills = [
     items: [
       "Test Scenario Design",
       "Test Case Writing",
-      "STLC Understanding",
-      "Bug Reporting",
-      "Requirements Validation",
-      "Usability Testing",
+      "Expected vs Actual Result",
+      "Bug Reporting & Documentation",
+      "Testing Report",
+      "Multi-User/Role Testing",
     ],
   },
   {

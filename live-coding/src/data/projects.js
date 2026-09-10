@@ -8,17 +8,17 @@ const projects = [
     role: "Quality Assurance & Developer",
     techStack: ["Postman", "Laravel", "React", "MySQL", "Trello"],
     description:
-      "Conducted Black Box Testing and User Acceptance Testing (UAT) on the correspondence subsystem, achieving 100% functional test pass rate and 88.57% UAT score. Designed test scenarios and test cases using Equivalence Partitioning (EP) and Boundary Value Analysis (BVA). Executed regression testing after each sprint to ensure feature stability. Validated API endpoints using Postman for request-response verification.",
+      "Conducted Black Box Testing and User Acceptance Testing (UAT) on the correspondence subsystem, achieving 100% functional test pass rate and 88.57% UAT score. Designed test scenarios and test cases using Equivalence Partitioning (EP) and Boundary Value Analysis (BVA). Validated input, process, and output for each feature. Compared expected vs actual results and documented all discrepancies. Tested multi-user roles (admin, faculty, students). Executed retesting after bug fixes and regression testing to ensure no impact on other user journeys.",
     keyContribution: [
       "Achieved 100% functional test pass rate and 88.57% UAT score on correspondence subsystem",
-      "Designed test cases using EP and BVA techniques covering functional validation and edge cases",
-      "Executed regression testing to verify feature stability after each development sprint",
-      "Validated API endpoints using Postman and documented test results for stakeholder review",
+      "Designed test cases using EP and BVA, validated input/process/output, and compared expected vs actual results",
+      "Tested multi-user roles (admin, faculty, lecturer, students) to ensure correct access and workflows",
+      "Executed retesting after bug fixes and regression testing to verify feature stability",
     ],
     devRelevance:
       "Built full-stack features with Laravel and React, designed database schemas, implemented RESTful APIs, and deployed to institutional servers.",
     qaRelevance:
-      "Conducted Black Box Testing, UAT, EP, BVA, and regression testing. Designed test scenarios and test cases. Achieved 100% test pass rate and 88.57% UAT score.",
+      "Conducted Black Box Testing, UAT, EP, BVA, retesting, regression testing. Validated input/process/output. Compared expected vs actual results. Tested multi-user roles.",
     relevance:
       "Quality assurance and full-stack development in an academic institution, delivering measurable testing results.",
     link: "https://harmony.fti.itera.ac.id/",
@@ -32,17 +32,17 @@ const projects = [
     role: "Quality Assurance & Developer",
     techStack: ["Postman", "Laravel", "React", "MySQL", "Trello"],
     description:
-      "Conducted functional testing on internship registration and management system for 50+ participants. Designed test scenarios and test cases using EP and BVA techniques. Executed regression testing to verify bug fixes and feature stability. Performed API validation using Postman. Collaborated with government staff to validate features against institutional requirements.",
+      "Conducted functional testing on internship registration and management system for 50+ participants. Designed test scenarios and test cases using EP and BVA techniques. Validated input, process, and output for each feature. Compared expected vs actual results and documented all discrepancies. Tested multi-user roles (admin, applicants). Executed retesting after bug fixes and regression testing to ensure no impact on other user journeys.",
     keyContribution: [
       "Designed test scenarios and test cases using EP and BVA for registration workflows",
-      "Executed regression testing to verify bug fixes and feature stability",
-      "Validated API endpoints using Postman for request-response verification",
-      "Documented test results and collaborated with staff for requirement validation",
+      "Validated input/process/output and compared expected vs actual results",
+      "Tested multi-user roles (admin, applicants) to ensure correct access and workflows",
+      "Executed retesting after bug fixes and regression testing to verify feature stability",
     ],
     devRelevance:
       "Built full-stack features with Laravel and React.js for a government internship management system.",
     qaRelevance:
-      "Conducted functional testing, EP, BVA, and regression testing. Designed test scenarios and test cases. Validated API using Postman.",
+      "Conducted functional testing, EP, BVA, retesting, regression testing. Validated input/process/output. Compared expected vs actual results. Tested multi-user roles.",
     relevance:
       "Quality assurance for a government digital transformation project, ensuring system reliability.",
     link: "https://simamang.bandarlampungkota.go.id/",
@@ -56,17 +56,17 @@ const projects = [
     role: "Quality Assurance & Developer",
     techStack: ["Postman", "Laravel", "React", "MySQL", "Trello"],
     description:
-      "Conducted functional testing on correspondence management system used by 30+ government agencies. Designed test scenarios and test cases using EP and BVA techniques. Executed regression testing to verify bug fixes and feature stability. Performed API validation using Postman. Collaborated with staff to validate features against institutional requirements.",
+      "Conducted functional testing on correspondence management system used by 30+ government agencies. Designed test scenarios and test cases using EP and BVA techniques. Validated input, process, and output for each feature. Compared expected vs actual results and documented all discrepancies. Tested multi-user roles (admin, staff). Executed retesting after bug fixes and regression testing to ensure no impact on other user journeys.",
     keyContribution: [
       "Designed test scenarios and test cases using EP and BVA for correspondence workflows",
-      "Executed regression testing to verify bug fixes and feature stability",
-      "Validated API endpoints using Postman for request-response verification",
-      "Documented test results and collaborated with staff for requirement validation",
+      "Validated input/process/output and compared expected vs actual results",
+      "Tested multi-user roles (admin, staff) to ensure correct access and workflows",
+      "Executed retesting after bug fixes and regression testing to verify feature stability",
     ],
     devRelevance:
       "Built full-stack features with Laravel and React.js for a government administrative system.",
     qaRelevance:
-      "Conducted functional testing, EP, BVA, and regression testing. Designed test scenarios and test cases. Validated API using Postman.",
+      "Conducted functional testing, EP, BVA, retesting, regression testing. Validated input/process/output. Compared expected vs actual results. Tested multi-user roles.",
     relevance:
       "Quality assurance for a government digital transformation project, ensuring system reliability.",
     link: "https://simas.bandarlampungkota.go.id/",
