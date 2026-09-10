@@ -30,9 +30,6 @@ function SlideHeader({ label, title }) {
 const qaProjectIds = ["harmony", "simamang", "simas"];
 const qaCertIds = [
   "Dasar Rekayasa Perangkat Lunak - Semester Genap, Teknik Informatika ITERA (2024/2025)",
-  "Praktikum Fisika Dasar I - Semester Ganjil, ITERA (2023/2024)",
-  "Praktikum Fisika Dasar II - Semester Genap, ITERA (2023/2024)",
-  "Pengantar Komputer dan Software I - Semester Ganjil, ITERA (2023/2024)",
   "Staff Divisi Pengembangan dan Pelatihan Keprofesian HMIF",
 ];
 
@@ -309,14 +306,17 @@ export default function DeckQa() {
               </h3>
               <div className="space-y-2">
                 {filteredCerts.map((cert, i) => (
-                  <div
+                  <a
                     key={i}
-                    className="p-2 bg-bg rounded border border-border"
+                    href={cert.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-2 bg-bg rounded border border-border hover:border-accent/30 transition-colors"
                   >
                     <p className="text-xs font-semibold text-text leading-tight">
                       {cert.name}
                     </p>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
