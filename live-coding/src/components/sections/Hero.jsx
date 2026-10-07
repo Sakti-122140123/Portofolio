@@ -1,7 +1,6 @@
 // HERO — bagian pertama yang dilihat user (full screen)
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, FileDown } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "../icons/SocialIcons";
+import { ArrowDown, Mail } from "lucide-react";
 import profile from "../../data/profile";
 
 export default function Hero() {

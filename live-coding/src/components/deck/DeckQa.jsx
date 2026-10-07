@@ -2,7 +2,7 @@ import { FileDown, Mail, ExternalLink } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../icons/SocialIcons";
 import profile from "../../data/profile";
 import projects from "../../data/projects";
-import { skills, certificates } from "../../data/skills";
+import { certificates } from "../../data/skills";
 import experience from "../../data/experience";
 import deckData from "../../data/deckQaData";
 
