@@ -30,3 +30,6 @@ npm-debug.log*
 
 # Private - jangan push ke repo
 file-siap-dibuka/
+
+# Agent lokal - hanya dibaca dari folder, tidak perlu di-push
+AGENTS.md
