@@ -27,3 +27,6 @@ npm-debug.log*
 
 # Playwright
 .playwright-mcp/
+
+# Private - jangan push ke repo
+file-siap-dibuka/
