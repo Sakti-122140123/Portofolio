@@ -168,14 +168,20 @@ p {
    ============================================ */
 
 @media print {
+  /* Page setup — landscape A4 */
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
   /* Reset everything */
   body {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     background: white !important;
     color: #1A1A2E !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
   /* Hide non-print elements */
@@ -189,34 +195,37 @@ p {
     padding-top: 0 !important;
   }
 
-  /* Page setup — landscape A4 */
-  @page {
-    size: A4 landscape;
-    margin: 0;
-  }
-
   /* Each slide = one printed page */
   .deck-slide {
     width: 297mm !important;
     height: 210mm !important;
+    max-height: 210mm !important;
     aspect-ratio: auto !important;
-    page-break-after: always;
-    break-after: page;
+    page-break-after: always !important;
+    break-after: page !important;
     border-bottom: none !important;
-    padding: 40px 56px !important;
+    padding: 16mm 22mm !important;
     background: white !important;
     color: #1A1A2E !important;
     overflow: hidden !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
   }
 
   .deck-slide:last-child {
-    page-break-after: avoid;
-    break-after: avoid;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
   }
 
   .deck-container {
     max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
+  }
+
+  .deck-print-center {
+    justify-content: center !important;
   }
 }
