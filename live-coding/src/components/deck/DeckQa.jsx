@@ -28,7 +28,7 @@ import deckData from "../../data/deckQaData";
 function Slide({ children, className = "" }) {
   return (
     <div
-      className={`deck-slide bg-surface px-6 py-6 sm:px-10 sm:py-8 lg:px-12 lg:py-7 print:px-0 print:py-0 ${className}`}
+      className={`deck-slide bg-surface px-6 py-5 sm:px-10 sm:py-7 lg:px-12 lg:py-6.5 print:px-0 print:py-0 flex flex-col justify-between ${className}`}
     >
       {children}
     </div>
@@ -37,7 +37,7 @@ function Slide({ children, className = "" }) {
 
 function SlideHeader({ label, title, subtitle }) {
   return (
-    <div className="mb-3 sm:mb-4 lg:mb-4 print:mb-2 shrink-0">
+    <div className="mb-2 sm:mb-3 print:mb-2 shrink-0">
       <div className="flex items-center gap-2 mb-1 print:mb-0.5">
         <span className="h-2 w-2 rounded-full bg-accent inline-block" />
         <p className="text-accent text-[11px] sm:text-xs font-bold uppercase tracking-widest print:text-[9.5px]">
@@ -58,7 +58,7 @@ function SlideHeader({ label, title, subtitle }) {
 
 function SlideFooter({ slideNumber, totalSlides = 8 }) {
   return (
-    <div className="mt-auto pt-2.5 sm:pt-3 print:pt-1.5 border-t border-border flex items-center justify-between text-[10px] sm:text-[11px] text-text-muted print:text-[8.5px] shrink-0">
+    <div className="mt-auto pt-2.5 sm:pt-3 print:pt-2 border-t border-border flex items-center justify-between text-[10px] sm:text-[11px] text-text-muted print:text-[8.5px] shrink-0">
       <span className="font-medium text-text-secondary">
         {profile.name} — Quality Assurance & Software Testing Portfolio
       </span>
@@ -164,10 +164,10 @@ export default function DeckQa() {
 
   return (
     <>
-      {/* Responsive Print Toolbar */}
+      {/* Top Navigation Toolbar */}
       <div className="print-hide fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-border shadow-xs">
-        <div className="max-w-6xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-2 sm:gap-3">
-          {/* Sisi Kiri: Branding & Context (Responsif) */}
+        <div className="max-w-6xl mx-auto px-3 sm:px-6 py-2.5 flex items-center justify-between gap-2">
+          {/* Sisi Kiri: Branding & Label Deck */}
           <div className="flex items-center gap-2 sm:gap-3 min-w-0">
             <a
               href="/"
@@ -176,19 +176,14 @@ export default function DeckQa() {
             >
               SMI<span className="text-accent">.</span>
             </a>
-            <span className="hidden xs:inline-block h-4 w-px bg-border shrink-0" />
-            <div className="min-w-0">
-              <div className="flex items-center gap-1.5">
-                <span className="px-2 py-0.5 text-[10.5px] sm:text-xs font-bold bg-accent-lighter text-accent rounded-md shrink-0">
-                  QA Deck
-                </span>
-                <span className="text-xs sm:text-sm font-semibold text-text truncate hidden md:inline">
-                  — {profile.name}
-                </span>
-              </div>
-              <p className="text-[10px] text-text-muted hidden lg:block truncate">
-                Landscape A4 · Optimized for HR & Technical Recruiter Review
-              </p>
+            <span className="h-4 w-px bg-border shrink-0" />
+            <div className="flex items-center gap-1.5 min-w-0">
+              <span className="px-2 py-0.5 text-[11px] font-bold bg-accent-lighter text-accent rounded-md shrink-0">
+                QA Deck
+              </span>
+              <span className="text-xs text-text-muted truncate hidden lg:inline">
+                Landscape A4 Portfolio
+              </span>
             </div>
           </div>
 
@@ -197,17 +192,17 @@ export default function DeckQa() {
             {/* Tombol Back ke Home */}
             <a
               href="/"
-              className="inline-flex items-center gap-1 px-2 sm:px-2.5 py-1.5 text-xs text-text-secondary hover:text-accent hover:bg-bg rounded-lg border border-border transition-colors font-medium shrink-0"
+              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs text-text-secondary hover:text-accent hover:bg-bg rounded-lg border border-border transition-colors font-medium shrink-0"
               title="Back to Home"
             >
               <ArrowLeft size={13} />
               <span className="hidden sm:inline">Home</span>
             </a>
 
-            {/* Tombol ke Web Dev Deck (SELALU MUNCUL, TIDAK HILANG LAGI) */}
+            {/* Tombol ke Web Dev Deck (SELALU MUNCUL) */}
             <a
               href="/deck-webdev"
-              className="inline-flex items-center gap-1 px-2 sm:px-2.5 py-1.5 text-xs text-text-secondary hover:text-accent hover:bg-bg rounded-lg border border-border transition-colors font-medium shrink-0"
+              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs text-text-secondary hover:text-accent hover:bg-bg rounded-lg border border-border transition-colors font-medium shrink-0"
               title="Switch to Web Developer Deck"
             >
               <span className="hidden sm:inline">Web Dev Deck</span>
@@ -218,7 +213,7 @@ export default function DeckQa() {
             {/* Tombol Export PDF */}
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 bg-accent text-white text-xs font-semibold rounded-lg hover:bg-accent-hover transition-colors cursor-pointer shadow-xs active:scale-95 shrink-0"
+              className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 bg-accent text-white text-xs font-semibold rounded-lg hover:bg-accent-hover transition-colors cursor-pointer shadow-xs active:scale-95 shrink-0"
               title="Export as Landscape A4 PDF"
             >
               <FileDown size={14} />
@@ -236,7 +231,7 @@ export default function DeckQa() {
         {/* ========================================================================= */}
         {/* SLIDE 1: Cover                                                            */}
         {/* ========================================================================= */}
-        <Slide className="justify-between">
+        <Slide>
           <div className="flex-1 flex flex-col justify-center my-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 print:grid-cols-12 gap-8 lg:gap-10 print:gap-8 items-center">
               {/* Kolom Kiri: Foto Profil */}
@@ -252,7 +247,7 @@ export default function DeckQa() {
                   </div>
                   <div className="absolute -bottom-2 -right-2 w-full h-full rounded-2xl border-2 border-accent/30 -z-10 hidden sm:block print:hidden" />
                 </div>
-                <div className="mt-3.5 px-3 py-1.5 rounded-lg bg-bg border border-border text-center print:text-left w-44 sm:w-52 print:w-44">
+                <div className="mt-3 px-3 py-1.5 rounded-lg bg-bg border border-border text-center print:text-left w-44 sm:w-52 print:w-44">
                   <p className="text-[10.5px] font-semibold text-accent print:text-[9.5px]">
                     Open to QA Opportunities
                   </p>
@@ -279,12 +274,12 @@ export default function DeckQa() {
                   {deckData.headline}
                 </p>
 
-                <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-5 print:text-[11.5px] print:mb-3.5 max-w-2xl text-justify lg:text-left print:text-left">
+                <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-4 print:text-[11.5px] print:mb-3 max-w-2xl text-justify lg:text-left print:text-left">
                   {deckData.tagline}. Focused on functional verification, black-box testing techniques, structured STLC documentation, and cross-functional defect resolution.
                 </p>
 
                 {/* Skill Badges */}
-                <div className="flex flex-wrap justify-center lg:justify-start print:justify-start gap-1.5 sm:gap-2 mb-5 print:mb-4">
+                <div className="flex flex-wrap justify-center lg:justify-start print:justify-start gap-1.5 sm:gap-2 mb-4 print:mb-3">
                   {deckData.coverBadges.map((badge) => (
                     <span
                       key={badge}
@@ -296,18 +291,18 @@ export default function DeckQa() {
                 </div>
 
                 {/* 3 Quick Facts Grid */}
-                <div className="grid grid-cols-3 gap-2.5 sm:gap-3 mb-5 print:mb-3 max-w-xl text-left">
-                  <div className="p-2.5 sm:p-3 bg-bg rounded-xl border border-border print:p-2">
+                <div className="grid grid-cols-3 gap-2.5 sm:gap-3 mb-4 print:mb-3 max-w-xl text-left">
+                  <div className="p-2.5 bg-bg rounded-xl border border-border print:p-2">
                     <p className="text-[10px] text-text-muted font-medium uppercase print:text-[8.5px]">Education</p>
                     <p className="text-xs font-bold text-text mt-0.5 print:text-[10.5px]">CS Graduate</p>
                     <p className="text-[10px] text-accent print:text-[9px]">ITERA · GPA 3.56</p>
                   </div>
-                  <div className="p-2.5 sm:p-3 bg-bg rounded-xl border border-border print:p-2">
+                  <div className="p-2.5 bg-bg rounded-xl border border-border print:p-2">
                     <p className="text-[10px] text-text-muted font-medium uppercase print:text-[8.5px]">Focus</p>
                     <p className="text-xs font-bold text-text mt-0.5 print:text-[10.5px]">Black Box & UAT</p>
                     <p className="text-[10px] text-accent print:text-[9px]">EP, BVA, Retest</p>
                   </div>
-                  <div className="p-2.5 sm:p-3 bg-bg rounded-xl border border-border print:p-2">
+                  <div className="p-2.5 bg-bg rounded-xl border border-border print:p-2">
                     <p className="text-[10px] text-text-muted font-medium uppercase print:text-[8.5px]">Core Tools</p>
                     <p className="text-xs font-bold text-text mt-0.5 print:text-[10.5px]">Postman, Jira</p>
                     <p className="text-[10px] text-accent print:text-[9px]">Git, MySQL, Trello</p>
@@ -335,23 +330,23 @@ export default function DeckQa() {
         {/* ========================================================================= */}
         {/* SLIDE 2: At a Glance & Testing Impact                                     */}
         {/* ========================================================================= */}
-        <Slide className="justify-between">
-          <div className="flex-1 flex flex-col justify-between">
-            <SlideHeader
-              label="Overview"
-              title="At a Glance: Executive Summary & Testing Impact"
-              subtitle="Demonstrated QA experience across academic and government production systems with measurable validation outcomes."
-            />
+        <Slide>
+          <SlideHeader
+            label="Overview"
+            title="At a Glance: Executive Summary & Testing Impact"
+            subtitle="Demonstrated QA experience across academic and government production systems with measurable validation outcomes."
+          />
 
+          <div className="flex-1 flex flex-col justify-center gap-3 print:gap-2 my-auto">
             {/* 4 Featured Metrics Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 print:grid-cols-4 gap-3 sm:gap-4 print:gap-3 my-2 print:my-1.5">
+            <div className="grid grid-cols-2 lg:grid-cols-4 print:grid-cols-4 gap-3 sm:gap-4 print:gap-2.5">
               {deckData.metrics.map((m) => (
                 <div
                   key={m.label}
-                  className="deck-metric-card p-4 sm:p-4.5 bg-bg rounded-xl border border-border text-left print:p-3"
+                  className="deck-metric-card p-3.5 sm:p-4 bg-bg rounded-xl border border-border text-left print:p-2.5"
                 >
-                  <div className="flex items-baseline justify-between mb-1">
-                    <p className="text-2xl sm:text-3xl font-black text-accent tracking-tight print:text-[23px]">
+                  <div className="flex items-baseline justify-between mb-0.5">
+                    <p className="text-2xl sm:text-3xl font-black text-accent tracking-tight print:text-[22px]">
                       {m.value}
                     </p>
                     <span className="h-2 w-2 rounded-full bg-accent/40" />
@@ -370,16 +365,16 @@ export default function DeckQa() {
             </div>
 
             {/* Middle Section: Summary & Core Pillars */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 print:grid-cols-12 gap-4 sm:gap-5 print:gap-3 my-2 print:my-1.5 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-12 print:grid-cols-12 gap-3.5 sm:gap-4 print:gap-2.5 items-stretch">
               {/* Kolom Kiri: Ringkasan Profil */}
-              <div className="lg:col-span-7 print:col-span-7 p-4 sm:p-5 bg-bg rounded-xl border border-border flex flex-col justify-between print:p-3">
-                <p className="text-xs font-bold text-text uppercase tracking-wider mb-2 print:text-[10px] flex items-center gap-1.5">
+              <div className="lg:col-span-7 print:col-span-7 p-4 bg-bg rounded-xl border border-border flex flex-col justify-between print:p-2.5">
+                <p className="text-xs font-bold text-text uppercase tracking-wider mb-1.5 print:text-[10px] flex items-center gap-1.5">
                   <FileText size={14} className="text-accent" /> Professional Background & Focus
                 </p>
-                <p className="text-xs sm:text-sm text-text-secondary leading-relaxed text-justify print:text-[10.5px] print:leading-normal mb-3">
+                <p className="text-xs sm:text-sm text-text-secondary leading-relaxed text-justify print:text-[10px] print:leading-normal mb-2.5">
                   {deckData.shortSummary}
                 </p>
-                <div className="flex flex-wrap gap-2 text-xs text-text-muted print:gap-1.5 print:text-[9.5px] pt-2 border-t border-border-light">
+                <div className="flex flex-wrap gap-2 text-xs text-text-muted print:gap-1.5 print:text-[9px] pt-2 border-t border-border-light">
                   <span className="font-semibold text-text">Target Roles:</span>
                   <span className="px-2 py-0.5 bg-surface rounded border border-border">Manual QA</span>
                   <span className="px-2 py-0.5 bg-surface rounded border border-border">QA Engineer</span>
@@ -387,12 +382,12 @@ export default function DeckQa() {
                 </div>
               </div>
 
-              {/* Kolom Kanan: 4 Core Competencies */}
-              <div className="lg:col-span-5 print:col-span-5 p-4 sm:p-5 bg-bg rounded-xl border border-border flex flex-col justify-between print:p-3">
-                <p className="text-xs font-bold text-text uppercase tracking-wider mb-2 print:text-[10px] flex items-center gap-1.5">
+              {/* Kolom Kanan: 3 Core Competencies */}
+              <div className="lg:col-span-5 print:col-span-5 p-4 bg-bg rounded-xl border border-border flex flex-col justify-between print:p-2.5">
+                <p className="text-xs font-bold text-text uppercase tracking-wider mb-1.5 print:text-[10px] flex items-center gap-1.5">
                   <ShieldCheck size={14} className="text-accent" /> Key Testing Principles
                 </p>
-                <div className="space-y-2 print:space-y-1.5 text-xs print:text-[10px]">
+                <div className="space-y-1.5 text-xs print:text-[9.5px]">
                   <div className="flex items-start gap-2">
                     <CheckCircle2 size={13} className="text-accent mt-0.5 shrink-0" />
                     <p className="text-text-secondary leading-tight">
@@ -416,7 +411,7 @@ export default function DeckQa() {
             </div>
 
             {/* Bottom: Academic & Institutional Credential Bar */}
-            <div className="p-3 bg-bg rounded-xl border border-border flex flex-wrap items-center justify-between gap-2 text-xs text-text-muted print:p-2 print:text-[9.5px]">
+            <div className="p-2.5 bg-bg rounded-xl border border-border flex flex-wrap items-center justify-between gap-2 text-xs text-text-muted print:p-2 print:text-[9px]">
               <div className="flex items-center gap-2">
                 <GraduationCap size={15} className="text-accent" />
                 <span className="font-semibold text-text">{profile.university}</span>
@@ -430,22 +425,23 @@ export default function DeckQa() {
               </div>
             </div>
           </div>
+
           <SlideFooter slideNumber={2} />
         </Slide>
 
         {/* ========================================================================= */}
         {/* SLIDE 3: Role Fit (6 Pillars Grid)                                        */}
         {/* ========================================================================= */}
-        <Slide className="justify-between">
-          <div className="flex-1 flex flex-col justify-between">
-            <SlideHeader
-              label="Role Fit"
-              title="Why I Am Prepared for This QA Role"
-              subtitle={deckData.roleFit.intro}
-            />
+        <Slide>
+          <SlideHeader
+            label="Role Fit"
+            title="Why I Am Prepared for This QA Role"
+            subtitle={deckData.roleFit.intro}
+          />
 
-            {/* 6 Grid Cards (3x2) filling canvas */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 gap-3.5 sm:gap-4 print:gap-2.5 my-auto">
+          <div className="flex-1 flex flex-col justify-center my-auto">
+            {/* 6 Grid Cards (3x2) Filling Canvas Harmoniously */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 gap-3.5 sm:gap-4 print:gap-2.5">
               {deckData.roleFit.points.map((pt, i) => {
                 const Icon = roleFitIcons[pt.icon] || ShieldCheck;
                 return (
@@ -454,7 +450,7 @@ export default function DeckQa() {
                     className="p-4 sm:p-4.5 bg-bg rounded-xl border border-border flex flex-col justify-between print:p-3"
                   >
                     <div>
-                      <div className="flex items-center gap-2.5 mb-2.5 print:mb-1.5">
+                      <div className="flex items-center gap-2.5 mb-2 print:mb-1.5">
                         <div className="w-8 h-8 rounded-lg bg-accent-lighter flex items-center justify-center shrink-0 print:w-6 print:h-6">
                           <Icon size={16} className="text-accent" strokeWidth={2} />
                         </div>
@@ -466,7 +462,7 @@ export default function DeckQa() {
                         {pt.experience}
                       </p>
                     </div>
-                    <div className="mt-3 pt-2 border-t border-border-light flex items-center justify-between text-[10px] text-accent font-semibold print:text-[8.5px]">
+                    <div className="mt-2.5 pt-2 border-t border-border-light flex items-center justify-between text-[10px] text-accent font-semibold print:text-[8.5px]">
                       <span>Verified in Production</span>
                       <span>STLC Pillar #{i + 1}</span>
                     </div>
@@ -475,28 +471,29 @@ export default function DeckQa() {
               })}
             </div>
           </div>
+
           <SlideFooter slideNumber={3} />
         </Slide>
 
         {/* ========================================================================= */}
-        {/* SLIDE 4: Skills & Testing Toolkit Architecture                            */}
+        {/* SLIDE 4: Skills & Testing Toolkit Architecture (NO WEIRD GAPS!)          */}
         {/* ========================================================================= */}
-        <Slide className="justify-between">
-          <div className="flex-1 flex flex-col justify-between">
-            <SlideHeader
-              label="Skills & Toolkit"
-              title="Comprehensive QA Competencies & Tooling"
-              subtitle="Methodologies, processes, and tools practiced across academic and governmental testing lifecycles."
-            />
+        <Slide>
+          <SlideHeader
+            label="Skills & Toolkit"
+            title="Comprehensive QA Competencies & Tooling"
+            subtitle="Methodologies, processes, and tools practiced across academic and governmental testing lifecycles."
+          />
 
+          <div className="flex-1 flex flex-col justify-center gap-3.5 sm:gap-4 print:gap-2.5 my-auto">
             {/* 3 Main Skill Columns */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 print:grid-cols-3 gap-4 sm:gap-5 print:gap-3 my-2 print:my-1.5">
+            <div className="grid grid-cols-1 sm:grid-cols-3 print:grid-cols-3 gap-3.5 sm:gap-4 print:gap-2.5">
               {detailedSkills.map((group) => {
                 const Icon = skillCategoryIcons[group.icon] || Bug;
                 return (
                   <div
                     key={group.category}
-                    className="p-4 sm:p-5 bg-bg rounded-xl border border-border flex flex-col justify-between print:p-3"
+                    className="p-4 sm:p-4.5 bg-bg rounded-xl border border-border flex flex-col justify-between print:p-3"
                   >
                     <div>
                       <div className="flex items-center gap-2.5 mb-3 print:mb-2 pb-2.5 border-b border-border-light">
@@ -523,8 +520,8 @@ export default function DeckQa() {
               })}
             </div>
 
-            {/* Testing Workflow Pipeline Bar (Filling the bottom canvas) */}
-            <div className="p-3.5 sm:p-4 bg-bg rounded-xl border border-border print:p-2.5">
+            {/* Testing Workflow Pipeline Bar (Linked harmoniously without giant gap!) */}
+            <div className="p-3 sm:p-3.5 bg-bg rounded-xl border border-border print:p-2.5">
               <p className="text-[10.5px] font-bold text-text uppercase tracking-wider mb-2 print:text-[9.5px] flex items-center gap-1.5">
                 <Layers size={13} className="text-accent" /> End-to-End Testing Workflow Cycle
               </p>
@@ -552,133 +549,132 @@ export default function DeckQa() {
               </div>
             </div>
           </div>
+
           <SlideFooter slideNumber={4} />
         </Slide>
 
         {/* ========================================================================= */}
-        {/* SLIDE 5: Featured Project — Harmony FTI ITERA (GAMBAR TIDAK TERPOTONG)   */}
+        {/* SLIDE 5: Featured Project — Harmony FTI ITERA (2-COLUMN BALANCED SPLIT)  */}
         {/* ========================================================================= */}
-        <Slide className="justify-between">
-          <div className="flex-1 flex flex-col justify-between">
-            <SlideHeader
-              label="Featured Project"
-              title="Harmony FTI ITERA — Academic Subsystem QA"
-              subtitle="Integrated academic correspondence system serving 11,000+ students and 300+ faculty members across Fakultas Teknologi Industri."
-            />
+        <Slide>
+          <SlideHeader
+            label="Featured Project"
+            title="Harmony FTI ITERA — Academic Subsystem QA"
+            subtitle="Integrated academic correspondence system serving 11,000+ students and 300+ faculty members across Fakultas Teknologi Industri."
+          />
 
-            {/* Top: Browser Mockup Frame dengan Screenshot Harmony 100% UTUH & Proporsional */}
-            <div className="w-full bg-slate-900 rounded-xl border border-border overflow-hidden shadow-xs my-0.5 print:my-0.5">
-              {/* Browser Window Header */}
-              <div className="px-3 py-1 print:py-0.5 bg-slate-800/90 border-b border-slate-700/60 flex items-center justify-between text-xs text-slate-300">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-rose-500/80 inline-block" />
-                  <span className="w-2 h-2 rounded-full bg-amber-500/80 inline-block" />
-                  <span className="w-2 h-2 rounded-full bg-emerald-500/80 inline-block" />
-                  <span className="ml-2 text-[10.5px] font-mono text-slate-400 print:text-[9px]">
-                    https://harmony.fti.itera.ac.id
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="px-2 py-0.5 rounded text-[9.5px] bg-emerald-500/20 text-emerald-300 font-semibold print:text-[8px]">
+          <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 print:grid-cols-12 gap-5 print:gap-4 items-center my-auto">
+            {/* Kolom Kiri (7 Kolom): Screenshot Asli Pas 100% Tanpa Black Bars! */}
+            <div className="lg:col-span-7 print:col-span-7 flex flex-col gap-2.5">
+              <div className="rounded-xl overflow-hidden border border-border shadow-xs bg-bg">
+                {/* Clean Browser Bar (Warna terang/surface, harmonis!) */}
+                <div className="px-3 py-1.5 bg-surface border-b border-border flex items-center justify-between text-xs text-text-muted">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-rose-400 inline-block" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block" />
+                    <span className="ml-2 text-[11px] font-mono text-text-secondary print:text-[9px]">
+                      harmony.fti.itera.ac.id
+                    </span>
+                  </div>
+                  <span className="px-2 py-0.5 rounded text-[10px] bg-accent-lighter text-accent font-semibold print:text-[8px]">
                     Production Deployed
                   </span>
                 </div>
+
+                {/* Screenshot Frame Pas (Rasio 1024/475 identik dengan resolusi asli gambar!) */}
+                <div className="w-full aspect-[1024/475] overflow-hidden bg-slate-900">
+                  <img
+                    src="/projects/harmony.jpg"
+                    alt="Harmony FTI ITERA UI Full Screenshot"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
 
-              {/* Screenshot Asli (Aspect Ratio 1024 / 475) -> 100% Tampak Utuh, Dibatasi tinggi agar tidak mendorong footer */}
-              <div className="w-full aspect-[1024/475] max-h-[220px] print:max-h-[160px] bg-black flex items-center justify-center">
-                <img
-                  src="/projects/harmony.jpg"
-                  alt="Harmony FTI ITERA UI Full Screenshot"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Bottom: 3 Balanced Analytical Information Columns */}
-            <div className="grid grid-cols-1 md:grid-cols-3 print:grid-cols-3 gap-3 print:gap-2 mt-1.5 print:mt-1">
-              {/* Kolom 1: Project & Tech Stack */}
-              <div className="p-3 sm:p-3.5 bg-bg rounded-xl border border-border print:p-2">
-                <p className="text-[11px] sm:text-xs font-bold text-text uppercase tracking-wider mb-1 print:text-[9.5px]">
-                  System Context & Role
-                </p>
-                <p className="text-[11px] sm:text-xs text-text-secondary leading-relaxed mb-2 print:text-[9px] print:leading-tight">
-                  <strong className="text-text">Role:</strong> Quality Assurance & Developer.<br />
-                  Academic correspondence workflow handling formal document approvals, student submissions, and deanery sign-offs.
-                </p>
-                <p className="text-[10px] font-semibold text-text-muted uppercase mb-1 print:text-[8px]">
-                  Tech & Testing Stack
-                </p>
+              {/* Tech Stack Bar di bawah screenshot */}
+              <div className="p-2.5 sm:p-3 bg-bg rounded-xl border border-border flex items-center justify-between gap-2">
+                <span className="text-[10.5px] font-bold text-text-muted uppercase print:text-[8.5px]">
+                  Testing & Tech Stack:
+                </span>
                 <div className="flex flex-wrap gap-1">
                   {["Postman", "Laravel", "React", "MySQL", "Trello"].map((t) => (
                     <span
                       key={t}
-                      className="px-1.5 py-0.5 text-[10px] font-medium text-accent bg-accent-lighter rounded print:text-[8px]"
+                      className="px-2 py-0.5 text-[10px] font-medium text-accent bg-accent-lighter rounded print:text-[8px]"
                     >
                       {t}
                     </span>
                   ))}
                 </div>
               </div>
+            </div>
 
-              {/* Kolom 2: QA Focus & Techniques */}
-              <div className="p-3 sm:p-3.5 bg-bg rounded-xl border border-border print:p-2">
-                <p className="text-[11px] sm:text-xs font-bold text-text uppercase tracking-wider mb-1 print:text-[9.5px]">
-                  Testing Scope & Methods
+            {/* Kolom Kanan (5 Kolom): Metrik & Detail Pengujian */}
+            <div className="lg:col-span-5 print:col-span-5 flex flex-col gap-2.5">
+              {/* Box Metrik Hasil Terukur */}
+              <div className="p-3.5 bg-bg rounded-xl border border-border">
+                <p className="text-[11px] font-bold text-accent uppercase tracking-wider mb-2 print:text-[9.5px]">
+                  Measurable QA Results
                 </p>
-                <ul className="space-y-1 text-[11px] sm:text-xs text-text-secondary print:text-[9px] print:space-y-0.5">
+                <div className="grid grid-cols-2 gap-2 mb-2">
+                  <div className="p-2 bg-surface rounded-lg border border-border-light text-center">
+                    <p className="text-xl sm:text-2xl font-black text-accent print:text-lg">100%</p>
+                    <p className="text-[10px] font-semibold text-text print:text-[8.5px]">Black-Box Pass Rate</p>
+                  </div>
+                  <div className="p-2 bg-surface rounded-lg border border-border-light text-center">
+                    <p className="text-xl sm:text-2xl font-black text-accent print:text-lg">88.57%</p>
+                    <p className="text-[10px] font-semibold text-text print:text-[8.5px]">UAT Stakeholder Score</p>
+                  </div>
+                </div>
+                <p className="text-[10px] text-text-muted print:text-[8.5px] leading-tight text-center">
+                  Full functional validation with zero regression leakage prior to production release.
+                </p>
+              </div>
+
+              {/* Box Testing Scope & Techniques */}
+              <div className="p-3.5 bg-bg rounded-xl border border-border">
+                <p className="text-[11px] font-bold text-text uppercase tracking-wider mb-2 print:text-[9.5px]">
+                  Testing Scope & Techniques
+                </p>
+                <ul className="space-y-1.5 text-xs text-text-secondary print:text-[9.5px] print:space-y-1">
                   <li className="flex items-start gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
-                    <span>Applied Equivalence Partitioning & Boundary Value Analysis.</span>
+                    <CheckCircle2 size={13} className="text-accent mt-0.5 shrink-0" />
+                    <span>Designed test cases with <strong>Equivalence Partitioning & BVA</strong>.</span>
                   </li>
                   <li className="flex items-start gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
-                    <span>Tested multi-role permission boundaries (Admin, Faculty, Student).</span>
+                    <CheckCircle2 size={13} className="text-accent mt-0.5 shrink-0" />
+                    <span>Tested multi-role permission boundaries (Admin, Faculty, Students).</span>
                   </li>
                   <li className="flex items-start gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
-                    <span>Input/process/output validation with Postman API tests.</span>
+                    <CheckCircle2 size={13} className="text-accent mt-0.5 shrink-0" />
+                    <span>Input/process/output validation via Postman REST API suites.</span>
+                  </li>
+                  <li className="flex items-start gap-1.5">
+                    <CheckCircle2 size={13} className="text-accent mt-0.5 shrink-0" />
+                    <span>Executed retesting on bug fixes and verified zero regression.</span>
                   </li>
                 </ul>
               </div>
-
-              {/* Kolom 3: Quantifiable Impact */}
-              <div className="p-3 sm:p-3.5 bg-bg rounded-xl border border-border print:p-2">
-                <p className="text-[11px] sm:text-xs font-bold text-accent uppercase tracking-wider mb-1 print:text-[9.5px]">
-                  Measurable QA Results
-                </p>
-                <div className="space-y-1.5 print:space-y-1">
-                  <div className="flex items-baseline justify-between p-1.5 bg-surface rounded-lg border border-border-light">
-                    <span className="text-[11px] font-semibold text-text print:text-[9.5px]">Black-Box Pass Rate</span>
-                    <span className="text-sm font-black text-accent print:text-xs">100%</span>
-                  </div>
-                  <div className="flex items-baseline justify-between p-1.5 bg-surface rounded-lg border border-border-light">
-                    <span className="text-[11px] font-semibold text-text print:text-[9.5px]">UAT Stakeholder Score</span>
-                    <span className="text-sm font-black text-accent print:text-xs">88.57%</span>
-                  </div>
-                  <p className="text-[9.5px] text-text-muted print:text-[8px] leading-tight">
-                    Executed full retesting after fixes with zero regression leakage prior to production deployment.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
+
           <SlideFooter slideNumber={5} />
         </Slide>
 
         {/* ========================================================================= */}
         {/* SLIDE 6: Government Systems QA — SIMAMANG & SIMAS                         */}
         {/* ========================================================================= */}
-        <Slide className="justify-between">
-          <div className="flex-1 flex flex-col justify-between">
-            <SlideHeader
-              label="Government Systems"
-              title="Dinas Kominfo Kota Bandar Lampung — Production QA"
-              subtitle="Ensuring operational reliability, document security, and access control integrity for local government digital services."
-            />
+        <Slide>
+          <SlideHeader
+            label="Government Systems"
+            title="Dinas Kominfo Kota Bandar Lampung — Production QA"
+            subtitle="Ensuring operational reliability, document security, and access control integrity for local government digital services."
+          />
 
-            {/* 2 Big Cards Grid Filling the Canvas */}
-            <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4 sm:gap-5 print:gap-3 my-auto">
+          <div className="flex-1 flex flex-col justify-center my-auto">
+            {/* 2 Big Cards Grid Filling Canvas */}
+            <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4 sm:gap-5 print:gap-3">
               {/* Kartu SIMAMANG */}
               {(() => {
                 const project = projects.find((p) => p.id === "simamang");
@@ -822,22 +818,23 @@ export default function DeckQa() {
               })()}
             </div>
           </div>
+
           <SlideFooter slideNumber={6} />
         </Slide>
 
         {/* ========================================================================= */}
         {/* SLIDE 7: Experience & QA Certifications                                   */}
         {/* ========================================================================= */}
-        <Slide className="justify-between">
-          <div className="flex-1 flex flex-col justify-between">
-            <SlideHeader
-              label="Background"
-              title="Experience & Certified QA Foundations"
-              subtitle="Practical development and testing tenure paired with formal software engineering certifications."
-            />
+        <Slide>
+          <SlideHeader
+            label="Background"
+            title="Experience & Certified QA Foundations"
+            subtitle="Practical development and testing tenure paired with formal software engineering certifications."
+          />
 
+          <div className="flex-1 flex flex-col justify-center my-auto">
             {/* 2 Full Columns Filling Canvas */}
-            <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4 sm:gap-5 print:gap-3 my-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4 sm:gap-5 print:gap-3">
               {/* Kolom Kiri: Experience (4 items) */}
               <div>
                 <h3 className="text-xs font-bold text-text uppercase tracking-wider mb-2.5 print:mb-1.5 print:text-[10px] flex items-center gap-1.5">
@@ -902,13 +899,14 @@ export default function DeckQa() {
               </div>
             </div>
           </div>
+
           <SlideFooter slideNumber={7} />
         </Slide>
 
         {/* ========================================================================= */}
         {/* SLIDE 8: Closing / Contact                                                */}
         {/* ========================================================================= */}
-        <Slide className="justify-between">
+        <Slide>
           <div className="flex-1 flex flex-col justify-center my-auto max-w-4xl mx-auto w-full text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-lighter border border-accent/20 mb-3 mx-auto">
               <span className="text-accent text-[11px] font-bold uppercase tracking-wider print:text-[9.5px]">
@@ -920,18 +918,18 @@ export default function DeckQa() {
               Let&apos;s Build Reliable Software Together
             </h2>
 
-            <p className="text-xs sm:text-sm text-text-secondary mb-6 sm:mb-7 max-w-xl mx-auto print:text-[11px] print:mb-4 leading-relaxed">
+            <p className="text-xs sm:text-sm text-text-secondary mb-5 sm:mb-6 max-w-xl mx-auto print:text-[11px] print:mb-3.5 leading-relaxed">
               {deckData.closingText}
             </p>
 
             {/* 4 Contact Grid Cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 print:grid-cols-4 gap-3 print:gap-2.5 mb-6 print:mb-4 text-left">
+            <div className="grid grid-cols-2 sm:grid-cols-4 print:grid-cols-4 gap-3 print:gap-2.5 mb-5 print:mb-3.5 text-left">
               <a
                 href={`mailto:${profile.links.email}`}
-                className="p-3.5 bg-bg rounded-xl border border-border hover:border-accent transition-colors block print:p-2.5"
+                className="p-3 bg-bg rounded-xl border border-border hover:border-accent transition-colors block print:p-2.5"
               >
-                <div className="w-7 h-7 rounded-lg bg-accent-lighter flex items-center justify-center mb-2">
-                  <Mail size={15} className="text-accent" />
+                <div className="w-7 h-7 rounded-lg bg-accent-lighter flex items-center justify-center mb-1.5">
+                  <Mail size={14} className="text-accent" />
                 </div>
                 <p className="text-[10px] text-text-muted uppercase font-medium">Email</p>
                 <p className="text-xs font-bold text-text truncate mt-0.5">{profile.links.email}</p>
@@ -941,10 +939,10 @@ export default function DeckQa() {
                 href={profile.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3.5 bg-bg rounded-xl border border-border hover:border-accent transition-colors block print:p-2.5"
+                className="p-3 bg-bg rounded-xl border border-border hover:border-accent transition-colors block print:p-2.5"
               >
-                <div className="w-7 h-7 rounded-lg bg-accent-lighter flex items-center justify-center mb-2">
-                  <LinkedinIcon size={15} className="text-accent" />
+                <div className="w-7 h-7 rounded-lg bg-accent-lighter flex items-center justify-center mb-1.5">
+                  <LinkedinIcon size={14} className="text-accent" />
                 </div>
                 <p className="text-[10px] text-text-muted uppercase font-medium">LinkedIn</p>
                 <p className="text-xs font-bold text-text truncate mt-0.5">/in/saktimujahid</p>
@@ -954,10 +952,10 @@ export default function DeckQa() {
                 href={profile.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3.5 bg-bg rounded-xl border border-border hover:border-accent transition-colors block print:p-2.5"
+                className="p-3 bg-bg rounded-xl border border-border hover:border-accent transition-colors block print:p-2.5"
               >
-                <div className="w-7 h-7 rounded-lg bg-accent-lighter flex items-center justify-center mb-2">
-                  <GithubIcon size={15} className="text-accent" />
+                <div className="w-7 h-7 rounded-lg bg-accent-lighter flex items-center justify-center mb-1.5">
+                  <GithubIcon size={14} className="text-accent" />
                 </div>
                 <p className="text-[10px] text-text-muted uppercase font-medium">GitHub</p>
                 <p className="text-xs font-bold text-text truncate mt-0.5">Sakti-122140123</p>
@@ -967,10 +965,10 @@ export default function DeckQa() {
                 href={profile.links.portfolio}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3.5 bg-bg rounded-xl border border-border hover:border-accent transition-colors block print:p-2.5"
+                className="p-3 bg-bg rounded-xl border border-border hover:border-accent transition-colors block print:p-2.5"
               >
-                <div className="w-7 h-7 rounded-lg bg-accent-lighter flex items-center justify-center mb-2">
-                  <ExternalLink size={15} className="text-accent" />
+                <div className="w-7 h-7 rounded-lg bg-accent-lighter flex items-center justify-center mb-1.5">
+                  <ExternalLink size={14} className="text-accent" />
                 </div>
                 <p className="text-[10px] text-text-muted uppercase font-medium">Portfolio</p>
                 <p className="text-xs font-bold text-text truncate mt-0.5">sakti-mujahid.vercel.app</p>
@@ -978,10 +976,11 @@ export default function DeckQa() {
             </div>
 
             {/* Recruiter Summary Pill */}
-            <div className="p-3.5 bg-bg rounded-xl border border-border text-xs text-text-secondary max-w-2xl mx-auto print:p-2.5 print:text-[10px] leading-relaxed">
+            <div className="p-3 bg-bg rounded-xl border border-border text-xs text-text-secondary max-w-2xl mx-auto print:p-2.5 print:text-[10px] leading-relaxed">
               <strong className="text-text">Key Value Proposition:</strong> Computer Science graduate (GPA 3.56) combining deep STLC understanding, hands-on black-box & UAT execution, full-stack technical background, and disciplined defect reporting for high-performing engineering teams.
             </div>
           </div>
+
           <SlideFooter slideNumber={8} />
         </Slide>
       </div>
