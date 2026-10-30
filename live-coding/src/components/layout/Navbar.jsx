@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, FileText, ExternalLink, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "../common/ThemeToggle";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -44,7 +45,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation (> md) */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-8 mr-11 sm:mr-12">
+          <div className="hidden md:flex items-center gap-5 lg:gap-7">
             <div className="flex items-center gap-5 lg:gap-7">
               {navLinks.map((link) => (
                 <a
@@ -57,18 +58,24 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Quick CTA to Deck QA */}
-            <a
-              href="/deck-qa"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-accent-lighter text-accent hover:bg-accent hover:text-white transition-all text-xs font-semibold border border-accent/20 shadow-2xs"
-            >
-              <FileText size={13} />
-              <span>QA Deck</span>
-            </a>
+            <div className="flex items-center gap-2 pl-2 border-l border-border">
+              {/* Quick CTA to Deck QA */}
+              <a
+                href="/deck-qa"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-accent-lighter text-accent hover:bg-accent hover:text-white transition-all text-xs font-semibold border border-accent/20 shadow-2xs shrink-0"
+              >
+                <FileText size={13} />
+                <span>QA Deck</span>
+              </a>
+
+              {/* Theme Toggle (Sejajar sempurna dalam flexbox) */}
+              <ThemeToggle />
+            </div>
           </div>
 
-          {/* Mobile Action Area: Hamburger Button (berdampingan aman dengan ThemeToggle) */}
-          <div className="flex md:hidden items-center mr-11">
+          {/* Mobile Action Area: Hamburger Button & Theme Toggle */}
+          <div className="flex md:hidden items-center gap-2">
+            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg bg-surface/80 border border-border text-text-secondary hover:text-accent hover:bg-bg transition-colors cursor-pointer"

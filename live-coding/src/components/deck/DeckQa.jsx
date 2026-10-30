@@ -15,8 +15,10 @@ import {
   Award,
   Layers,
   ArrowLeft,
+  ArrowRight,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../icons/SocialIcons";
+import ThemeToggle from "../common/ThemeToggle";
 import profile from "../../data/profile";
 import projects from "../../data/projects";
 import { certificates } from "../../data/skills";
@@ -190,31 +192,42 @@ export default function DeckQa() {
             </div>
           </div>
 
-          {/* Sisi Kanan: Action Buttons & Navigation (Responsif terhadap ThemeToggle) */}
-          <div className="flex items-center gap-1.5 sm:gap-2.5 mr-11 sm:mr-12 shrink-0">
+          {/* Sisi Kanan: Action Buttons, Switch Deck, Export, & Theme Toggle */}
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+            {/* Tombol Back ke Home */}
             <a
               href="/"
-              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs text-text-secondary hover:text-accent hover:bg-bg rounded-lg border border-transparent hover:border-border transition-colors font-medium"
-              title="Back to Main Site"
+              className="inline-flex items-center gap-1 px-2 sm:px-2.5 py-1.5 text-xs text-text-secondary hover:text-accent hover:bg-bg rounded-lg border border-border transition-colors font-medium shrink-0"
+              title="Back to Home"
             >
-              <ArrowLeft size={14} />
-              <span className="hidden sm:inline">Back</span>
+              <ArrowLeft size={13} />
+              <span className="hidden sm:inline">Home</span>
             </a>
+
+            {/* Tombol ke Web Dev Deck (SELALU MUNCUL, TIDAK HILANG LAGI) */}
             <a
               href="/deck-webdev"
-              className="hidden sm:inline-flex items-center px-2.5 py-1.5 text-xs text-text-secondary hover:text-accent hover:bg-bg rounded-lg border border-border transition-colors font-medium"
+              className="inline-flex items-center gap-1 px-2 sm:px-2.5 py-1.5 text-xs text-text-secondary hover:text-accent hover:bg-bg rounded-lg border border-border transition-colors font-medium shrink-0"
+              title="Switch to Web Developer Deck"
             >
-              Web Dev Deck →
+              <span className="hidden sm:inline">Web Dev Deck</span>
+              <span className="sm:hidden">Web Dev</span>
+              <ArrowRight size={13} />
             </a>
+
+            {/* Tombol Export PDF */}
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 bg-accent text-white text-xs font-semibold rounded-lg hover:bg-accent-hover transition-colors cursor-pointer shadow-xs active:scale-95"
+              className="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 bg-accent text-white text-xs font-semibold rounded-lg hover:bg-accent-hover transition-colors cursor-pointer shadow-xs active:scale-95 shrink-0"
               title="Export as Landscape A4 PDF"
             >
               <FileDown size={14} />
-              <span className="hidden xs:inline">Export PDF</span>
-              <span className="xs:hidden">PDF</span>
+              <span className="hidden sm:inline">Export PDF</span>
+              <span className="sm:hidden">PDF</span>
             </button>
+
+            {/* Tombol Dark Mode / Theme Toggle (SEJAJAR SEMPURNA DALAM NAVBAR) */}
+            <ThemeToggle />
           </div>
         </div>
       </div>

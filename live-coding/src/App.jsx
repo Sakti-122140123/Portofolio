@@ -15,7 +15,6 @@ import Certificates from "./components/sections/Certificates";
 import Contact from "./components/sections/Contact";
 import DeckWebdev from "./components/deck/DeckWebdev";
 import DeckQa from "./components/deck/DeckQa";
-import ThemeToggle from "./components/common/ThemeToggle";
 
 // halaman utama — semua section berurutan dari atas ke bawah
 function MainSite() {
@@ -69,12 +68,7 @@ function App() {
     return <MainSite />;
   };
 
-  return (
-    <>
-      <ThemeToggle />
-      {renderContent()}
-    </>
-  );
+  return renderContent();
 }
 
 export default App;
