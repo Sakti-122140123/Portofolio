@@ -20,7 +20,7 @@ import deckData from "../../data/deckQaData";
 function Slide({ children, className = "" }) {
   return (
     <div
-      className={`deck-slide bg-surface flex flex-col justify-center px-6 py-10 sm:px-10 sm:py-12 lg:px-16 lg:py-12 print:px-0 print:py-0 ${className}`}
+      className={`deck-slide bg-surface flex flex-col justify-center px-6 py-8 sm:px-10 sm:py-10 lg:px-14 lg:py-10 print:px-0 print:py-0 ${className}`}
     >
       {children}
     </div>
@@ -29,7 +29,7 @@ function Slide({ children, className = "" }) {
 
 function SlideHeader({ label, title }) {
   return (
-    <div className="mb-4 sm:mb-6 lg:mb-8 print:mb-3">
+    <div className="mb-4 sm:mb-5 lg:mb-6 print:mb-3">
       <p className="text-accent text-xs font-semibold uppercase tracking-widest mb-1 print:mb-0.5 print:text-[10px]">
         {label}
       </p>
@@ -166,43 +166,43 @@ export default function DeckQa() {
       <div className="deck-container pt-16 print-pt-0">
         {/* ============ SLIDE 1: Cover ============ */}
         <Slide className="justify-center deck-print-center">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
-            {/* Foto profil */}
+          <div className="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-14">
+            {/* Foto profil - diperbaiki agar kepala atas tidak terpotong (object-top) */}
             <div className="shrink-0">
               <div className="relative">
-                <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-border shadow-lg print:w-32 print:h-32">
+                <div className="w-40 h-48 sm:w-48 sm:h-56 rounded-2xl overflow-hidden border-2 border-border shadow-md print:w-36 print:h-44 print:shadow-none bg-slate-50">
                   <img
                     src="/foto/profile.jpg"
                     alt={profile.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                     loading="eager"
                   />
                 </div>
-                <div className="absolute -bottom-2.5 -right-2.5 w-full h-full rounded-2xl border-2 border-accent/25 -z-10 hidden sm:block print:hidden" />
+                <div className="absolute -bottom-2 -right-2 w-full h-full rounded-2xl border-2 border-accent/25 -z-10 hidden sm:block print:hidden" />
               </div>
             </div>
 
             {/* Info Profil */}
             <div className="text-center lg:text-left flex-1 max-w-xl">
-              <p className="text-accent text-xs font-semibold uppercase tracking-widest mb-2 print:text-[10px]">
+              <p className="text-accent text-xs font-semibold uppercase tracking-widest mb-2 print:text-[11px]">
                 QA Portfolio
               </p>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text mb-2 tracking-tight print:text-3xl">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-text mb-2 tracking-tight print:text-[32px]">
                 {profile.name}
               </h1>
-              <p className="text-base sm:text-lg text-text-secondary font-medium mb-1 print:text-sm">
+              <p className="text-base sm:text-lg text-text-secondary font-medium mb-1 print:text-[15px]">
                 {deckData.headline}
               </p>
-              <p className="text-xs sm:text-sm text-text-muted mb-4 print:text-xs print:mb-2">
+              <p className="text-xs sm:text-sm text-text-muted mb-4 print:text-[12px] print:mb-3">
                 {deckData.tagline}
               </p>
 
               {/* Cover skill badges */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-1.5 sm:gap-2 mb-5 print:mb-3 print:gap-1.5">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-1.5 sm:gap-2 mb-5 print:mb-4 print:gap-1.5">
                 {deckData.coverBadges.map((badge) => (
                   <span
                     key={badge}
-                    className="px-2.5 py-1 text-xs font-medium text-accent bg-accent-lighter rounded-lg border border-accent/15 print:px-2 print:py-0.5 print:text-[10px]"
+                    className="px-2.5 py-1 text-xs font-medium text-accent bg-accent-lighter rounded-lg border border-accent/20 print:px-2 print:py-0.5 print:text-[10px]"
                   >
                     {badge}
                   </span>
@@ -210,7 +210,7 @@ export default function DeckQa() {
               </div>
 
               {/* Kontak ringkas */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-x-5 gap-y-1.5 text-xs text-text-muted print:text-[10px] print:gap-x-4">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-x-5 gap-y-1.5 text-xs text-text-muted print:text-[10.5px] print:gap-x-4">
                 <span className="flex items-center gap-1.5">
                   <Mail size={13} className="text-accent shrink-0" />{" "}
                   {profile.links.email}
@@ -233,18 +233,18 @@ export default function DeckQa() {
           <SlideHeader label="Overview" title="At a Glance" />
 
           {/* Short summary */}
-          <p className="text-xs sm:text-sm text-text-secondary leading-relaxed max-w-3xl mb-5 sm:mb-6 text-justify print:text-[11px] print:mb-3">
+          <p className="text-xs sm:text-sm text-text-secondary leading-relaxed max-w-3xl mb-5 sm:mb-6 text-justify print:text-[11px] print:mb-3.5">
             {deckData.shortSummary}
           </p>
 
           {/* Featured metrics grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 print:grid-cols-4 gap-3 sm:gap-4 print:gap-2.5 mb-5 sm:mb-6 print:mb-3">
+          <div className="grid grid-cols-2 lg:grid-cols-4 print:grid-cols-4 gap-3 sm:gap-4 print:gap-3 mb-5 sm:mb-6 print:mb-4">
             {deckData.metrics.map((m) => (
               <div
                 key={m.label}
-                className="deck-metric-card p-4 sm:p-5 bg-bg rounded-xl border border-border text-center print:p-2.5"
+                className="deck-metric-card p-4 sm:p-5 bg-bg rounded-xl border border-border text-center print:p-3"
               >
-                <p className="text-2xl sm:text-3xl font-extrabold text-accent mb-1 print:text-xl">
+                <p className="text-2xl sm:text-3xl font-extrabold text-accent mb-1 print:text-[22px]">
                   {m.value}
                 </p>
                 <p className="text-xs font-semibold text-text mb-0.5 print:text-[10px]">
@@ -259,13 +259,13 @@ export default function DeckQa() {
 
           {/* Academic credentials */}
           <div className="flex flex-wrap gap-2 text-xs text-text-muted print:gap-1.5">
-            <span className="px-3 py-1.5 bg-bg rounded-lg border border-border print:px-2 print:py-1 print:text-[10px]">
+            <span className="px-3 py-1.5 bg-bg rounded-lg border border-border print:px-2.5 print:py-1 print:text-[10.5px]">
               {profile.university}
             </span>
-            <span className="px-3 py-1.5 bg-bg rounded-lg border border-border print:px-2 print:py-1 print:text-[10px]">
+            <span className="px-3 py-1.5 bg-bg rounded-lg border border-border print:px-2.5 print:py-1 print:text-[10.5px]">
               {profile.major}
             </span>
-            <span className="px-3 py-1.5 bg-bg rounded-lg border border-border print:px-2 print:py-1 print:text-[10px]">
+            <span className="px-3 py-1.5 bg-bg rounded-lg border border-border print:px-2.5 print:py-1 print:text-[10.5px]">
               {profile.semester}
             </span>
           </div>
@@ -275,11 +275,11 @@ export default function DeckQa() {
         <Slide>
           <SlideHeader label="Role Fit" title="Why I Fit This QA Role" />
 
-          <p className="text-xs sm:text-sm text-text-secondary mb-4 sm:mb-5 max-w-3xl print:mb-2.5 print:text-xs">
+          <p className="text-xs sm:text-sm text-text-secondary mb-4 sm:mb-5 max-w-3xl print:mb-3 print:text-[11px]">
             {deckData.roleFit.intro}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 gap-3 print:gap-2 max-w-4xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 gap-3 print:gap-2.5 max-w-4xl">
             {deckData.roleFit.points.map((pt, i) => {
               const Icon = roleFitIcons[pt.icon] || ShieldCheck;
               return (
@@ -287,8 +287,8 @@ export default function DeckQa() {
                   key={i}
                   className="p-3.5 sm:p-4 bg-bg rounded-xl border border-border print:p-2.5"
                 >
-                  <div className="flex items-center gap-2.5 mb-2 print:mb-1.5">
-                    <div className="w-7 h-7 rounded-lg bg-accent-lighter flex items-center justify-center shrink-0 print:w-5 print:h-5">
+                  <div className="flex items-center gap-2 mb-2 print:mb-1.5">
+                    <div className="w-7 h-7 rounded-lg bg-accent-lighter flex items-center justify-center shrink-0 print:w-6 print:h-6">
                       <Icon
                         size={15}
                         className="text-accent"
@@ -299,7 +299,7 @@ export default function DeckQa() {
                       {pt.requirement}
                     </h3>
                   </div>
-                  <p className="text-[11px] sm:text-xs text-text-secondary leading-relaxed text-justify print:text-[9.5px] print:leading-tight">
+                  <p className="text-[11px] sm:text-xs text-text-secondary leading-relaxed text-justify print:text-[9.5px] print:leading-normal">
                     {pt.experience}
                   </p>
                 </div>
@@ -321,14 +321,14 @@ export default function DeckQa() {
                   className="p-4 sm:p-5 bg-bg rounded-xl border border-border print:p-3"
                 >
                   <div className="flex items-center gap-2 mb-3 print:mb-2">
-                    <div className="w-7 h-7 rounded-lg bg-accent-lighter flex items-center justify-center shrink-0 print:w-5 print:h-5">
+                    <div className="w-7 h-7 rounded-lg bg-accent-lighter flex items-center justify-center shrink-0 print:w-6 print:h-6">
                       <Icon
                         size={15}
                         className="text-accent"
                         strokeWidth={1.8}
                       />
                     </div>
-                    <h3 className="text-sm font-semibold text-text print:text-xs">
+                    <h3 className="text-sm font-semibold text-text print:text-[11.5px]">
                       {group.category}
                     </h3>
                   </div>
@@ -355,37 +355,35 @@ export default function DeckQa() {
             const project = projects.find((p) => p.id === "harmony");
             const angle = deckData.projectAngles.harmony;
             return (
-              <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-6 print:gap-4 max-w-4xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-5 lg:gap-6 print:gap-4 max-w-4xl items-start">
                 <div>
-                  {/* Screenshot Placeholder */}
-                  <div className="w-full aspect-video bg-bg rounded-xl border border-border flex items-center justify-center mb-3 sm:mb-4 print:mb-2 overflow-hidden relative">
-                    <div className="text-center p-4">
-                      <ExternalLink
-                        size={22}
-                        className="text-accent mx-auto mb-1.5 opacity-80"
-                      />
-                      <p className="text-xs font-medium text-text mb-0.5 print:text-[10px]">
-                        Correspondence Subsystem
-                      </p>
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[11px] text-accent hover:text-accent-hover font-medium underline print:text-[9px]"
-                      >
-                        harmony.fti.itera.ac.id ↗
-                      </a>
-                    </div>
+                  {/* Screenshot Gambar Harmony Asli */}
+                  <div className="w-full aspect-[16/10] bg-slate-900 rounded-xl border border-border overflow-hidden mb-3 print:mb-2 shadow-sm">
+                    <img
+                      src="/projects/harmony.jpg"
+                      alt="Harmony FTI ITERA UI Screenshot"
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
 
-                  <p className="text-xs font-semibold text-text-muted uppercase mb-1.5 print:text-[10px]">
-                    Technologies & Tools
-                  </p>
+                  <div className="flex items-center justify-between mb-2 print:mb-1">
+                    <p className="text-xs font-semibold text-text-muted uppercase print:text-[9.5px]">
+                      Technologies & Tools
+                    </p>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[11px] text-accent hover:text-accent-hover font-medium flex items-center gap-1 print:text-[9.5px]"
+                    >
+                      Live System <ExternalLink size={11} />
+                    </a>
+                  </div>
                   <div className="flex flex-wrap gap-1.5 print:gap-1">
                     {project.techStack.map((t) => (
                       <span
                         key={t}
-                        className="px-2 py-0.5 text-[11px] font-medium text-accent bg-accent-lighter rounded print:px-1.5 print:text-[9px]"
+                        className="px-2 py-0.5 text-[11px] font-medium text-accent bg-accent-lighter rounded border border-accent/15 print:px-1.5 print:text-[9px]"
                       >
                         {t}
                       </span>
@@ -397,10 +395,10 @@ export default function DeckQa() {
                   <div className="inline-block px-2.5 py-1 rounded-md bg-accent-lighter text-accent font-semibold text-xs mb-2.5 print:mb-1.5 print:text-[10px]">
                     {angle.highlight}
                   </div>
-                  <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-4 text-justify print:text-[10.5px] print:leading-relaxed print:mb-2.5">
+                  <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-3.5 text-justify print:text-[10.5px] print:leading-relaxed print:mb-2">
                     {angle.summary}
                   </p>
-                  <p className="text-xs font-semibold text-text-muted uppercase mb-1.5 print:text-[10px]">
+                  <p className="text-xs font-semibold text-text-muted uppercase mb-1.5 print:text-[9.5px]">
                     Key QA Contributions
                   </p>
                   <ul className="space-y-1.5 print:space-y-1">
@@ -468,7 +466,7 @@ export default function DeckQa() {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex flex-wrap gap-1 pt-1 border-t border-border-light">
+                  <div className="flex flex-wrap gap-1 pt-1.5 border-t border-border-light">
                     {project.techStack.map((t) => (
                       <span
                         key={t}

@@ -174,14 +174,19 @@ p {
     margin: 0;
   }
 
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
   /* Reset everything */
   body {
     margin: 0 !important;
     padding: 0 !important;
-    background: white !important;
-    color: #1A1A2E !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+    background: #FFFFFF !important;
+    color: #0F172A !important;
   }
 
   /* Hide non-print elements */
@@ -203,10 +208,12 @@ p {
     aspect-ratio: auto !important;
     page-break-after: always !important;
     break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
     border-bottom: none !important;
-    padding: 16mm 22mm !important;
-    background: white !important;
-    color: #1A1A2E !important;
+    padding: 14mm 20mm !important;
+    background: #FFFFFF !important;
+    color: #0F172A !important;
     overflow: hidden !important;
     box-sizing: border-box !important;
     display: flex !important;
@@ -227,6 +234,38 @@ p {
 
   .deck-print-center {
     justify-content: center !important;
+  }
+
+  /* Card and badge background in print */
+  .deck-slide .bg-bg {
+    background-color: #F8FAFC !important;
+    border-color: #E2E8F0 !important;
+  }
+
+  .deck-slide .bg-surface {
+    background-color: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+  }
+
+  .deck-slide .bg-accent-lighter {
+    background-color: #EFF6FF !important;
+    color: #1D4ED8 !important;
+  }
+
+  .deck-slide .text-text {
+    color: #0F172A !important;
+  }
+
+  .deck-slide .text-text-secondary {
+    color: #334155 !important;
+  }
+
+  .deck-slide .text-text-muted {
+    color: #64748B !important;
+  }
+
+  .deck-slide .text-accent {
+    color: #1D4ED8 !important;
   }
 }
 
