@@ -142,23 +142,27 @@ p {
    ============================================ */
 
 .deck-container {
-  max-width: 1152px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
 .deck-slide {
   width: 100%;
-  aspect-ratio: auto;
+  min-height: auto;
   box-sizing: border-box;
   overflow: visible;
   border-bottom: 1px solid var(--color-border);
   background-color: var(--color-surface);
   color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (min-width: 1024px) {
   .deck-slide {
     aspect-ratio: 16 / 9;
+    min-height: 660px;
     overflow: hidden;
   }
 }
@@ -211,14 +215,14 @@ p {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
     border-bottom: none !important;
-    padding: 14mm 20mm !important;
+    padding: 11mm 16mm 9mm 16mm !important;
     background: #FFFFFF !important;
     color: #0F172A !important;
     overflow: hidden !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: flex-start !important;
+    justify-content: space-between !important;
   }
 
   .deck-slide:last-child {

@@ -1,114 +1,136 @@
-// Data khusus untuk deck QA role — restructured untuk visual portfolio
+// Data khusus untuk deck QA role — visual portfolio & PDF-ready
 const deckQaData = {
   // ---- Cover ----
-  headline: "Manual QA & Software Testing",
-  tagline: "Computer Science Graduate · Jakarta, Indonesia",
+  headline: "Manual QA & Software Testing Specialist",
+  tagline: "Computer Science Graduate · Institut Teknologi Sumatera · GPA 3.56/4.00",
   coverBadges: [
     "Black-Box Testing",
     "UAT Execution",
-    "Bug Reporting",
-    "Test Case Design",
+    "Test Case Design (EP & BVA)",
+    "Bug Reporting & Retesting",
+    "Multi-Role Access Testing",
   ],
 
   // ---- At a Glance — featured metrics ----
   metrics: [
-    { value: "100%", label: "Black-Box Test Pass Rate", context: "Harmony FTI ITERA" },
-    { value: "88.57%", label: "UAT Score", context: "Correspondence Subsystem" },
-    { value: "3", label: "Systems Tested & Deployed", context: "Government & Academic" },
-    { value: "50+", label: "End Users Validated", context: "Multi-Role Testing" },
+    {
+      value: "100%",
+      label: "Black-Box Pass Rate",
+      context: "Harmony FTI ITERA Subsystem",
+      detail: "Full functional test execution with EP & BVA",
+    },
+    {
+      value: "88.57%",
+      label: "UAT Acceptance Score",
+      context: "Correspondence Module",
+      detail: "Validated directly with faculty stakeholders",
+    },
+    {
+      value: "3",
+      label: "Deployed Web Systems",
+      context: "Government & Higher Ed",
+      detail: "Tested in production environments",
+    },
+    {
+      value: "50+",
+      label: "Validated Users & Roles",
+      context: "Multi-Role Workflows",
+      detail: "Admin, Faculty, Staff & Public Applicants",
+    },
   ],
 
-  // ---- Short summary (replaces 3 long paragraphs) ----
+  // ---- Short summary ----
   shortSummary:
-    "Detail-oriented Computer Science graduate (GPA 3.56/4.00) with hands-on experience in black-box testing, UAT, and structured test documentation across government and academic systems. Seeking a QA role to contribute to software quality assurance.",
+    "Detail-oriented Computer Science graduate (GPA 3.56/4.00) with proven hands-on experience in black-box testing, User Acceptance Testing (UAT), and structured STLC documentation across government and academic production systems. Committed to preventing defect leakage, ensuring seamless user journeys, and collaborating cross-functionally with engineering teams.",
 
-  // ---- About (condensed to 2 focused paragraphs) ----
-  about: [
-    "Recent Computer Science graduate from Institut Teknologi Sumatera, currently based in Jakarta. Gained practical testing experience through academic capstone projects and a government internship — designing test cases, executing multi-role testing, documenting bugs, and validating system functionality across 3 deployed web applications.",
-    "Proficient in black-box testing techniques (EP, BVA), UAT execution, retesting, and regression testing. Experienced in collaborating with developers and stakeholders to ensure delivered solutions meet requirements and quality standards.",
-  ],
-
-  // ---- Role Fit (5 poin, rewritten lebih ringkas) ----
+  // ---- Role Fit (6 poin seimbang untuk grid 3x2) ----
   roleFit: {
     intro:
-      "My academic and internship experience has built a strong foundation for a QA role:",
+      "A combination of technical software engineering background, hands-on testing execution, and structured documentation skills:",
     points: [
       {
         icon: "ShieldCheck",
         requirement: "Black-Box Testing & UAT",
         experience:
-          "Achieved 100% test pass rate and 88.57% UAT score. Designed test cases using EP and BVA techniques across 3 systems.",
+          "Achieved 100% test pass rate and 88.57% UAT score on Harmony FTI. Designed comprehensive test cases covering positive, negative, and edge-case scenarios.",
       },
       {
         icon: "GitBranch",
-        requirement: "SDLC & STLC Understanding",
+        requirement: "STLC & Test Design (EP & BVA)",
         experience:
-          "Applied structured STLC from test planning through execution, defect tracking, retesting, and regression testing.",
+          "Applied Equivalence Partitioning and Boundary Value Analysis to maximize test coverage while minimizing redundant test cycles across multiple inputs.",
       },
       {
         icon: "Bug",
-        requirement: "Bug Reporting & Documentation",
+        requirement: "Bug Reporting & Retesting",
         experience:
-          "Documented bug reports with clear reproduction steps. Performed retesting after fixes to verify resolution.",
+          "Documented high-quality bug reports with unambiguous reproduction steps, expected vs actual outcomes, and retested fixes to verify zero regression.",
       },
       {
         icon: "Users",
-        requirement: "Multi-Role Testing",
+        requirement: "Multi-Role & Access Control Testing",
         experience:
-          "Tested features across admin, faculty, staff, and applicant roles — validating access control and data integrity.",
+          "Validated permission boundaries and role-based workflows across Admin, Faculty, Staff, and Applicant personas to protect data integrity.",
       },
       {
         icon: "ClipboardCheck",
         requirement: "Input/Process/Output Validation",
         experience:
-          "Systematic approach to validating data flow: input constraints, processing logic, and output accuracy.",
+          "Enforced systematic end-to-end data flow validation: frontend constraints, backend processing logic, and accurate database mutations.",
+      },
+      {
+        icon: "Code2",
+        requirement: "Developer Collaboration & Root Cause",
+        experience:
+          "Leveraged full-stack programming background (Laravel, React, MySQL) to understand underlying system architecture and communicate effectively with developers.",
       },
     ],
   },
 
-  // ---- Project angles (rewritten untuk membedakan tiap project) ----
+  // ---- Project angles ----
   projectAngles: {
     harmony: {
-      angle: "Comprehensive Testing with Measurable Results",
-      highlight: "100% test pass rate · 88.57% UAT score",
+      angle: "High-Impact Academic Information System",
+      highlight: "100% Black-Box Pass Rate · 88.57% UAT Acceptance",
       summary:
-        "Led quality assurance on the correspondence subsystem of an academic information system. Designed comprehensive test cases covering functional validation, edge cases, and multi-user workflows (admin, faculty, students). Achieved measurable testing outcomes with systematic EP and BVA techniques.",
+        "Led Quality Assurance on the correspondence subsystem of Harmony FTI ITERA, an integrated academic platform serving thousands of campus users. Spearheaded functional validation, boundary value analysis, multi-role access control, and user acceptance testing with faculty stakeholders.",
       keyPoints: [
-        "Achieved 100% functional test pass rate and 88.57% UAT score",
-        "Designed test cases using Equivalence Partitioning and Boundary Value Analysis",
-        "Validated input/process/output across admin, faculty, and student roles",
-        "Executed retesting and regression testing after bug fixes",
+        "Achieved 100% functional test pass rate across all correspondence modules",
+        "Achieved 88.57% UAT score measured across multi-stakeholder evaluations",
+        "Designed test scenarios using Equivalence Partitioning & Boundary Value Analysis",
+        "Conducted multi-role testing for Admin, Faculty, and Student workflows",
+        "Performed retesting after bug resolution and verified zero regression impact",
       ],
     },
     simamang: {
-      angle: "Government System Testing at Scale",
-      highlight: "50+ participants · Multi-role access testing",
+      angle: "Government Internship Management System",
+      highlight: "50+ Participants · Public Registration & Admin Workflows",
       summary:
-        "Conducted functional testing on a government internship management system used by 50+ participants. Focused on registration workflow validation and multi-role access control (admin, applicants), ensuring system reliability for public-facing government services.",
+        "Executed functional QA for the official internship management system of Dinas Kominfo Kota Bandar Lampung. Verified registration workflows, status tracking, and administrative verification pipelines.",
       keyPoints: [
-        "Tested registration workflows serving 50+ internship participants",
-        "Validated multi-role access control (admin, applicants)",
-        "Designed structured test scenarios with EP and BVA techniques",
-        "Ensured system reliability for government public services",
+        "Tested public applicant registration workflows for 50+ participants",
+        "Validated multi-role permissions and data visibility (Admin vs Applicants)",
+        "Tested input validation boundaries on file uploads and form submissions",
+        "Collaborated with government supervisors and developers on defect fixes",
       ],
     },
     simas: {
-      angle: "Cross-Agency Correspondence System",
-      highlight: "30+ government agencies · Document workflow testing",
+      angle: "Inter-Agency Administrative Information System",
+      highlight: "30+ Government Agencies · Official Correspondence Workflow",
       summary:
-        "Tested a correspondence management system used by 30+ government agencies. Focused on document workflow accuracy, multi-user role integrity (admin, staff), and ensuring the system met institutional requirements for administrative operations.",
+        "Conducted end-to-end testing on an internal correspondence management system deployed across 30+ regional government agencies (OPD) in Bandar Lampung. Ensured reliable document tracking and administrative compliance.",
       keyPoints: [
-        "Validated correspondence workflows across 30+ government agencies",
-        "Tested document management and tracking accuracy",
-        "Verified multi-role integrity (admin, staff) and access permissions",
-        "Collaborated with developers on defect resolution and retesting",
+        "Validated official document tracking across 30+ regional government bodies",
+        "Verified multi-tier document approval and role-based access permissions",
+        "Tested document status transitions, audit logs, and data accuracy",
+        "Executed regression testing cycles prior to institutional release",
       ],
     },
   },
 
   // ---- Closing ----
   closingText:
-    "Open to Junior Manual QA and software testing opportunities. Experienced in black-box testing, UAT, test case design, and bug reporting. I would love to hear from you.",
+    "Open to Junior Manual QA, QA Engineer, and Software Testing opportunities. Equipped with proven black-box testing methodologies, structured STLC documentation, and a quality-driven mindset. Available for full-time on-site (Jakarta) and remote roles.",
 };
 
 export default deckQaData;
