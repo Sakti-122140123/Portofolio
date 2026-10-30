@@ -229,3 +229,23 @@ p {
     justify-content: center !important;
   }
 }
+
+/* ============================================
+   Deck — Additional Styles
+   ============================================ */
+
+.deck-metric-card {
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.deck-metric-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+@media print {
+  .deck-metric-card:hover {
+    transform: none;
+  }
+}
+
