@@ -566,27 +566,27 @@ export default function DeckQa() {
               subtitle="Integrated academic correspondence system serving 11,000+ students and 300+ faculty members across Fakultas Teknologi Industri."
             />
 
-            {/* Top: Browser Mockup Frame dengan Screenshot Harmony 100% UTUH */}
-            <div className="w-full bg-slate-900 rounded-xl border border-border overflow-hidden shadow-sm my-1 print:my-1">
+            {/* Top: Browser Mockup Frame dengan Screenshot Harmony 100% UTUH & Proporsional */}
+            <div className="w-full bg-slate-900 rounded-xl border border-border overflow-hidden shadow-xs my-0.5 print:my-0.5">
               {/* Browser Window Header */}
-              <div className="px-3.5 py-1.5 bg-slate-800/90 border-b border-slate-700/60 flex items-center justify-between text-xs text-slate-300">
+              <div className="px-3 py-1 print:py-0.5 bg-slate-800/90 border-b border-slate-700/60 flex items-center justify-between text-xs text-slate-300">
                 <div className="flex items-center gap-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
-                  <span className="ml-2 text-[11px] font-mono text-slate-400 print:text-[9.5px]">
+                  <span className="w-2 h-2 rounded-full bg-rose-500/80 inline-block" />
+                  <span className="w-2 h-2 rounded-full bg-amber-500/80 inline-block" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500/80 inline-block" />
+                  <span className="ml-2 text-[10.5px] font-mono text-slate-400 print:text-[9px]">
                     https://harmony.fti.itera.ac.id
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 font-semibold print:text-[8.5px]">
+                  <span className="px-2 py-0.5 rounded text-[9.5px] bg-emerald-500/20 text-emerald-300 font-semibold print:text-[8px]">
                     Production Deployed
                   </span>
                 </div>
               </div>
 
-              {/* Screenshot Asli (Aspect Ratio 1024 / 475) -> 100% Tampak Utuh Tanpa Terpotong */}
-              <div className="w-full aspect-[1024/475] bg-black">
+              {/* Screenshot Asli (Aspect Ratio 1024 / 475) -> 100% Tampak Utuh, Dibatasi tinggi agar tidak mendorong footer */}
+              <div className="w-full aspect-[1024/475] max-h-[220px] print:max-h-[160px] bg-black flex items-center justify-center">
                 <img
                   src="/projects/harmony.jpg"
                   alt="Harmony FTI ITERA UI Full Screenshot"
@@ -596,24 +596,24 @@ export default function DeckQa() {
             </div>
 
             {/* Bottom: 3 Balanced Analytical Information Columns */}
-            <div className="grid grid-cols-1 md:grid-cols-3 print:grid-cols-3 gap-3.5 sm:gap-4 print:gap-2.5 mt-2 print:mt-1.5">
+            <div className="grid grid-cols-1 md:grid-cols-3 print:grid-cols-3 gap-3 print:gap-2 mt-1.5 print:mt-1">
               {/* Kolom 1: Project & Tech Stack */}
-              <div className="p-3.5 sm:p-4 bg-bg rounded-xl border border-border print:p-2.5">
-                <p className="text-xs font-bold text-text uppercase tracking-wider mb-1.5 print:text-[10px]">
+              <div className="p-3 sm:p-3.5 bg-bg rounded-xl border border-border print:p-2">
+                <p className="text-[11px] sm:text-xs font-bold text-text uppercase tracking-wider mb-1 print:text-[9.5px]">
                   System Context & Role
                 </p>
-                <p className="text-xs text-text-secondary leading-relaxed mb-3 print:text-[9.5px] print:leading-tight">
+                <p className="text-[11px] sm:text-xs text-text-secondary leading-relaxed mb-2 print:text-[9px] print:leading-tight">
                   <strong className="text-text">Role:</strong> Quality Assurance & Developer.<br />
                   Academic correspondence workflow handling formal document approvals, student submissions, and deanery sign-offs.
                 </p>
-                <p className="text-[10.5px] font-semibold text-text-muted uppercase mb-1 print:text-[8.5px]">
+                <p className="text-[10px] font-semibold text-text-muted uppercase mb-1 print:text-[8px]">
                   Tech & Testing Stack
                 </p>
                 <div className="flex flex-wrap gap-1">
                   {["Postman", "Laravel", "React", "MySQL", "Trello"].map((t) => (
                     <span
                       key={t}
-                      className="px-2 py-0.5 text-[10.5px] font-medium text-accent bg-accent-lighter rounded print:text-[8.5px]"
+                      className="px-1.5 py-0.5 text-[10px] font-medium text-accent bg-accent-lighter rounded print:text-[8px]"
                     >
                       {t}
                     </span>
@@ -622,11 +622,11 @@ export default function DeckQa() {
               </div>
 
               {/* Kolom 2: QA Focus & Techniques */}
-              <div className="p-3.5 sm:p-4 bg-bg rounded-xl border border-border print:p-2.5">
-                <p className="text-xs font-bold text-text uppercase tracking-wider mb-1.5 print:text-[10px]">
+              <div className="p-3 sm:p-3.5 bg-bg rounded-xl border border-border print:p-2">
+                <p className="text-[11px] sm:text-xs font-bold text-text uppercase tracking-wider mb-1 print:text-[9.5px]">
                   Testing Scope & Methods
                 </p>
-                <ul className="space-y-1.5 text-xs text-text-secondary print:text-[9.5px] print:space-y-1">
+                <ul className="space-y-1 text-[11px] sm:text-xs text-text-secondary print:text-[9px] print:space-y-0.5">
                   <li className="flex items-start gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
                     <span>Applied Equivalence Partitioning & Boundary Value Analysis.</span>
@@ -643,20 +643,20 @@ export default function DeckQa() {
               </div>
 
               {/* Kolom 3: Quantifiable Impact */}
-              <div className="p-3.5 sm:p-4 bg-bg rounded-xl border border-border print:p-2.5">
-                <p className="text-xs font-bold text-accent uppercase tracking-wider mb-1.5 print:text-[10px]">
+              <div className="p-3 sm:p-3.5 bg-bg rounded-xl border border-border print:p-2">
+                <p className="text-[11px] sm:text-xs font-bold text-accent uppercase tracking-wider mb-1 print:text-[9.5px]">
                   Measurable QA Results
                 </p>
-                <div className="space-y-2 print:space-y-1.5">
-                  <div className="flex items-baseline justify-between p-2 bg-surface rounded-lg border border-border-light">
-                    <span className="text-xs font-semibold text-text print:text-[10px]">Black-Box Pass Rate</span>
-                    <span className="text-base font-black text-accent print:text-sm">100%</span>
+                <div className="space-y-1.5 print:space-y-1">
+                  <div className="flex items-baseline justify-between p-1.5 bg-surface rounded-lg border border-border-light">
+                    <span className="text-[11px] font-semibold text-text print:text-[9.5px]">Black-Box Pass Rate</span>
+                    <span className="text-sm font-black text-accent print:text-xs">100%</span>
                   </div>
-                  <div className="flex items-baseline justify-between p-2 bg-surface rounded-lg border border-border-light">
-                    <span className="text-xs font-semibold text-text print:text-[10px]">UAT Stakeholder Score</span>
-                    <span className="text-base font-black text-accent print:text-sm">88.57%</span>
+                  <div className="flex items-baseline justify-between p-1.5 bg-surface rounded-lg border border-border-light">
+                    <span className="text-[11px] font-semibold text-text print:text-[9.5px]">UAT Stakeholder Score</span>
+                    <span className="text-sm font-black text-accent print:text-xs">88.57%</span>
                   </div>
-                  <p className="text-[10px] text-text-muted print:text-[8.5px] leading-tight">
+                  <p className="text-[9.5px] text-text-muted print:text-[8px] leading-tight">
                     Executed full retesting after fixes with zero regression leakage prior to production deployment.
                   </p>
                 </div>
