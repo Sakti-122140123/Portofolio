@@ -93,7 +93,7 @@ export default function DeckWebdev() {
           <SlideHeader label="About" title="Professional Summary" />
           <div className="space-y-3 sm:space-y-4 max-w-3xl">
             {deckData.about.map((p, i) => (
-              <p key={i} className="text-sm sm:text-base text-text-secondary leading-relaxed">
+              <p key={i} className="text-sm sm:text-base text-text-secondary leading-relaxed text-justify">
                 {p}
               </p>
             ))}
@@ -118,7 +118,7 @@ export default function DeckWebdev() {
             title="Why I Fit a Web Developer Role"
           />
 
-          <p className="text-xs sm:text-sm text-text-secondary mb-4 sm:mb-6 max-w-3xl">
+          <p className="text-xs sm:text-sm text-text-secondary mb-4 sm:mb-6 max-w-3xl text-justify">
             {deckData.roleFit.intro}
           </p>
           <div className="grid grid-cols-1 gap-2.5 sm:gap-3 max-w-3xl">
@@ -134,7 +134,7 @@ export default function DeckWebdev() {
                   <p className="text-xs sm:text-sm font-semibold text-text mb-0.5">
                     {pt.requirement}
                   </p>
-                  <p className="text-[11px] sm:text-xs text-text-secondary leading-relaxed">
+                  <p className="text-[11px] sm:text-xs text-text-secondary leading-relaxed text-justify">
                     {pt.experience}
                   </p>
                 </div>
@@ -176,13 +176,13 @@ export default function DeckWebdev() {
                 <p className="text-xs font-semibold text-text-muted uppercase mb-1">
                   Role
                 </p>
-                <p className="text-sm text-text-secondary mb-3 sm:mb-4">
+                <p className="text-sm text-text-secondary mb-3 sm:mb-4 text-justify">
                   {project.role}
                 </p>
                 <p className="text-xs font-semibold text-text-muted uppercase mb-1">
                   Description
                 </p>
-                <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-3 sm:mb-4">
+                <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-3 sm:mb-4 text-justify">
                   {project.description}
                 </p>
                 <p className="text-xs font-semibold text-text-muted uppercase mb-1">
@@ -207,7 +207,7 @@ export default function DeckWebdev() {
                   {project.keyContribution.map((c, i) => (
                     <li
                       key={i}
-                      className="text-xs text-text-secondary flex items-start gap-2"
+                      className="text-xs text-text-secondary flex items-start gap-2 text-justify"
                     >
                       <span className="w-1 h-1 rounded-full bg-accent mt-1.5 shrink-0" />
                       {c}
@@ -217,7 +217,7 @@ export default function DeckWebdev() {
                 <p className="text-xs font-semibold text-text-muted uppercase mb-1">
                   Development Relevance
                 </p>
-                <p className="text-xs text-text-secondary leading-relaxed">
+                <p className="text-xs text-text-secondary leading-relaxed text-justify">
                   {project.devRelevance}
                 </p>
               </div>
