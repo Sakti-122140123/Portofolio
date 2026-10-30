@@ -16,6 +16,20 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sakti-mujahid.vercel.app" />
 
+    <!-- Prevent Theme Flicker -->
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

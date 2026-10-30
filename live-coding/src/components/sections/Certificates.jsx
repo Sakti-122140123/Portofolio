@@ -5,11 +5,16 @@ import { certificates } from "../../data/skills";
 
 // warna tab untuk tiap kategori
 const categoryColors = {
-  Dicoding: "bg-blue-50 text-blue-700 border-blue-200 hover:border-blue-300",
-  "Teaching Assistant": "bg-emerald-50 text-emerald-700 border-emerald-200 hover:border-emerald-300",
-  Organization: "bg-purple-50 text-purple-700 border-purple-200 hover:border-purple-300",
-  "Seminars & Workshops": "bg-amber-50 text-amber-700 border-amber-200 hover:border-amber-300",
-  Others: "bg-slate-50 text-slate-700 border-slate-200 hover:border-slate-300",
+  Dicoding:
+    "bg-blue-50 text-blue-700 border-blue-200 hover:border-blue-300 dark:bg-blue-950/50 dark:text-blue-300 dark:border-blue-800",
+  "Teaching Assistant":
+    "bg-emerald-50 text-emerald-700 border-emerald-200 hover:border-emerald-300 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800",
+  Organization:
+    "bg-purple-50 text-purple-700 border-purple-200 hover:border-purple-300 dark:bg-purple-950/50 dark:text-purple-300 dark:border-purple-800",
+  "Seminars & Workshops":
+    "bg-amber-50 text-amber-700 border-amber-200 hover:border-amber-300 dark:bg-amber-950/50 dark:text-amber-300 dark:border-amber-800",
+  Others:
+    "bg-slate-50 text-slate-700 border-slate-200 hover:border-slate-300 dark:bg-slate-800/80 dark:text-slate-200 dark:border-slate-700",
 };
 
 const categories = ["Dicoding", "Teaching Assistant", "Organization", "Seminars & Workshops", "Others"];

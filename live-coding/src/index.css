@@ -4,20 +4,52 @@
    Design System — Sakti Mujahid Imani Portofolio
    ============================================ */
 
+:root {
+  color-scheme: light;
+  --theme-bg: #FAFAFA;
+  --theme-bg-alt: #F3F4F6;
+  --theme-surface: #FFFFFF;
+  --theme-text: #1A1A2E;
+  --theme-text-secondary: #4A5568;
+  --theme-text-muted: #718096;
+  --theme-accent: #2563EB;
+  --theme-accent-hover: #1D4ED8;
+  --theme-accent-light: #DBEAFE;
+  --theme-accent-lighter: #EFF6FF;
+  --theme-border: #E5E7EB;
+  --theme-border-light: #F3F4F6;
+}
+
+.dark {
+  color-scheme: dark;
+  --theme-bg: #0B0F19;
+  --theme-bg-alt: #111827;
+  --theme-surface: #172136;
+  --theme-text: #F8FAFC;
+  --theme-text-secondary: #94A3B8;
+  --theme-text-muted: #64748B;
+  --theme-accent: #3B82F6;
+  --theme-accent-hover: #60A5FA;
+  --theme-accent-light: rgba(59, 130, 246, 0.2);
+  --theme-accent-lighter: rgba(59, 130, 246, 0.12);
+  --theme-border: #223049;
+  --theme-border-light: #182238;
+}
+
 @theme {
   /* Colors */
-  --color-bg: #FAFAFA;
-  --color-bg-alt: #F3F4F6;
-  --color-surface: #FFFFFF;
-  --color-text: #1A1A2E;
-  --color-text-secondary: #4A5568;
-  --color-text-muted: #718096;
-  --color-accent: #2563EB;
-  --color-accent-hover: #1D4ED8;
-  --color-accent-light: #DBEAFE;
-  --color-accent-lighter: #EFF6FF;
-  --color-border: #E5E7EB;
-  --color-border-light: #F3F4F6;
+  --color-bg: var(--theme-bg);
+  --color-bg-alt: var(--theme-bg-alt);
+  --color-surface: var(--theme-surface);
+  --color-text: var(--theme-text);
+  --color-text-secondary: var(--theme-text-secondary);
+  --color-text-muted: var(--theme-text-muted);
+  --color-accent: var(--theme-accent);
+  --color-accent-hover: var(--theme-accent-hover);
+  --color-accent-light: var(--theme-accent-light);
+  --color-accent-lighter: var(--theme-accent-lighter);
+  --color-border: var(--theme-border);
+  --color-border-light: var(--theme-border-light);
 
   /* Fonts */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -36,6 +68,7 @@ body {
   font-family: var(--font-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -119,6 +152,8 @@ p {
   box-sizing: border-box;
   overflow: hidden;
   border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
 }
 
 /* ============================================
@@ -130,7 +165,8 @@ p {
   body {
     margin: 0;
     padding: 0;
-    background: white;
+    background: white !important;
+    color: #1A1A2E !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -161,6 +197,8 @@ p {
     break-after: page;
     border-bottom: none;
     padding: 40px 56px;
+    background: white !important;
+    color: #1A1A2E !important;
   }
 
   .deck-slide:last-child {
@@ -174,4 +212,3 @@ p {
     padding: 0;
   }
 }
-

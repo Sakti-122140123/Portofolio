@@ -15,6 +15,7 @@ import Certificates from "./components/sections/Certificates";
 import Contact from "./components/sections/Contact";
 import DeckWebdev from "./components/deck/DeckWebdev";
 import DeckQa from "./components/deck/DeckQa";
+import ThemeToggle from "./components/common/ThemeToggle";
 
 // halaman utama — semua section berurutan dari atas ke bawah
 function MainSite() {
@@ -55,16 +56,25 @@ function App() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  // routing untuk kedua deck
-  if (route === "/deck-webdev") {
-    return <DeckWebdev />;
-  }
-  if (route === "/deck-qa") {
-    return <DeckQa />;
-  }
+  const renderContent = () => {
+    // routing untuk kedua deck
+    if (route === "/deck-webdev") {
+      return <DeckWebdev />;
+    }
+    if (route === "/deck-qa") {
+      return <DeckQa />;
+    }
 
-  // selain itu, tampilkan halaman utama
-  return <MainSite />;
+    // selain itu, tampilkan halaman utama
+    return <MainSite />;
+  };
+
+  return (
+    <>
+      <ThemeToggle />
+      {renderContent()}
+    </>
+  );
 }
 
 export default App;

@@ -46,7 +46,7 @@ export default function Navbar() {
           </a>
 
           {/* menu desktop — muncul di layar besar (>768px) */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 mr-12">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -61,7 +61,7 @@ export default function Navbar() {
           {/* tombol hamburger — hanya muncul di layar kecil (mobile) */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-text-secondary hover:text-accent transition-colors"
+            className="md:hidden p-2 mr-11 text-text-secondary hover:text-accent transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={22} /> : <Menu size={22} />}

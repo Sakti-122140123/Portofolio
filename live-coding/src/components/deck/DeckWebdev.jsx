@@ -9,7 +9,7 @@ import deckData from "../../data/deckWebdevData";
 function Slide({ children, className = "" }) {
   return (
     <div
-      className={`deck-slide bg-white flex flex-col justify-center px-16 py-12 ${className}`}
+      className={`deck-slide bg-surface flex flex-col justify-center px-16 py-12 ${className}`}
     >
       {children}
     </div>
@@ -34,7 +34,7 @@ export default function DeckWebdev() {
   return (
     <>
       {/* Print Button — hidden during print */}
-      <div className="print-hide fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border">
+      <div className="print-hide fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-border">
         <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
           <div>
             <p className="text-sm font-semibold text-text">Web Developer Deck</p>
@@ -42,7 +42,7 @@ export default function DeckWebdev() {
               Use Ctrl+P or the button to save as PDF (Landscape, A4)
             </p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 mr-12">
             <a
               href="/"
               className="text-sm text-text-muted hover:text-accent transition-colors"
