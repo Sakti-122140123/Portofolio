@@ -148,12 +148,19 @@ p {
 
 .deck-slide {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: auto;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
   border-bottom: 1px solid var(--color-border);
   background-color: var(--color-surface);
   color: var(--color-text);
+}
+
+@media (min-width: 1024px) {
+  .deck-slide {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
 }
 
 /* ============================================
@@ -190,15 +197,16 @@ p {
 
   /* Each slide = one printed page */
   .deck-slide {
-    width: 297mm;
-    height: 210mm;
-    aspect-ratio: auto;
+    width: 297mm !important;
+    height: 210mm !important;
+    aspect-ratio: auto !important;
     page-break-after: always;
     break-after: page;
-    border-bottom: none;
-    padding: 40px 56px;
+    border-bottom: none !important;
+    padding: 40px 56px !important;
     background: white !important;
     color: #1A1A2E !important;
+    overflow: hidden !important;
   }
 
   .deck-slide:last-child {
@@ -207,8 +215,8 @@ p {
   }
 
   .deck-container {
-    max-width: none;
-    margin: 0;
-    padding: 0;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
