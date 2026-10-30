@@ -14,6 +14,7 @@ import {
   GraduationCap,
   Award,
   Layers,
+  ArrowLeft,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../icons/SocialIcons";
 import profile from "../../data/profile";
@@ -161,36 +162,58 @@ export default function DeckQa() {
 
   return (
     <>
-      {/* Print Toolbar */}
+      {/* Responsive Print Toolbar */}
       <div className="print-hide fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-border shadow-xs">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
-          <div className="min-w-0">
-            <p className="text-sm font-semibold text-text truncate">
-              QA Creative Portfolio — {profile.name}
-            </p>
-            <p className="text-xs text-text-muted hidden sm:block">
-              Print / Save as PDF: Set to Landscape, A4, Margins: None (or Default)
-            </p>
-          </div>
-          <div className="flex items-center gap-2 sm:gap-3 mr-11 sm:mr-12 shrink-0">
+        <div className="max-w-6xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-2 sm:gap-3">
+          {/* Sisi Kiri: Branding & Context (Responsif) */}
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
             <a
               href="/"
-              className="text-xs sm:text-sm text-text-muted hover:text-accent transition-colors"
+              className="text-base sm:text-lg font-black text-text tracking-tight hover:text-accent transition-colors shrink-0"
+              title="Return to Main Site"
             >
-              ← Back
+              SMI<span className="text-accent">.</span>
+            </a>
+            <span className="hidden xs:inline-block h-4 w-px bg-border shrink-0" />
+            <div className="min-w-0">
+              <div className="flex items-center gap-1.5">
+                <span className="px-2 py-0.5 text-[10.5px] sm:text-xs font-bold bg-accent-lighter text-accent rounded-md shrink-0">
+                  QA Deck
+                </span>
+                <span className="text-xs sm:text-sm font-semibold text-text truncate hidden md:inline">
+                  — {profile.name}
+                </span>
+              </div>
+              <p className="text-[10px] text-text-muted hidden lg:block truncate">
+                Landscape A4 · Optimized for HR & Technical Recruiter Review
+              </p>
+            </div>
+          </div>
+
+          {/* Sisi Kanan: Action Buttons & Navigation (Responsif terhadap ThemeToggle) */}
+          <div className="flex items-center gap-1.5 sm:gap-2.5 mr-11 sm:mr-12 shrink-0">
+            <a
+              href="/"
+              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs text-text-secondary hover:text-accent hover:bg-bg rounded-lg border border-transparent hover:border-border transition-colors font-medium"
+              title="Back to Main Site"
+            >
+              <ArrowLeft size={14} />
+              <span className="hidden sm:inline">Back</span>
             </a>
             <a
               href="/deck-webdev"
-              className="text-xs sm:text-sm text-text-muted hover:text-accent transition-colors"
+              className="hidden sm:inline-flex items-center px-2.5 py-1.5 text-xs text-text-secondary hover:text-accent hover:bg-bg rounded-lg border border-border transition-colors font-medium"
             >
               Web Dev Deck →
             </a>
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-1.5 sm:py-2 bg-accent text-white text-xs sm:text-sm font-medium rounded-lg hover:bg-accent-hover transition-colors cursor-pointer shadow-xs"
+              className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 bg-accent text-white text-xs font-semibold rounded-lg hover:bg-accent-hover transition-colors cursor-pointer shadow-xs active:scale-95"
+              title="Export as Landscape A4 PDF"
             >
-              <FileDown size={15} />
-              <span>Export PDF (A4)</span>
+              <FileDown size={14} />
+              <span className="hidden xs:inline">Export PDF</span>
+              <span className="xs:hidden">PDF</span>
             </button>
           </div>
         </div>
