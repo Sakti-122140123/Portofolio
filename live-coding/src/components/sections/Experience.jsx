@@ -10,21 +10,25 @@ const typeIcon = {
 
 export default function Experience() {
   return (
-    <section id="experience" className="section-padding bg-bg">
+    <section id="experience" className="section-padding bg-surface/40 border-t border-border">
       <div className="section-container">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
+          className="text-left"
         >
           {/* Section Header */}
-          <p className="text-accent font-medium text-sm tracking-wide uppercase mb-2">
-            Experience
+          <p className="text-accent font-semibold text-xs tracking-wider uppercase mb-2">
+            Track Record
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-10">
-            Journey So Far
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-text tracking-tight mb-3">
+            Professional & Academic Experience
           </h2>
+          <p className="text-sm sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-10">
+            Internships, institutional software development, and campus leadership roles that built my engineering foundation.
+          </p>
 
           {/* Timeline */}
           <div className="relative">
@@ -44,48 +48,47 @@ export default function Experience() {
                     className="relative flex gap-4 sm:gap-6"
                   >
                     {/* Timeline Dot */}
-                    <div className="hidden sm:flex shrink-0 w-[31px] items-start justify-center pt-1.5 relative z-10">
-                      <div className="w-[9px] h-[9px] rounded-full bg-accent ring-4 ring-bg" />
+                    <div className="hidden sm:flex shrink-0 w-[31px] items-start justify-center pt-2 relative z-10">
+                      <div className="w-2.5 h-2.5 rounded-full bg-accent ring-4 ring-bg" />
                     </div>
 
                     {/* Card */}
-                    <div className="flex-1 p-5 bg-surface rounded-xl border border-border hover:border-accent/30 transition-colors">
-                      <div className="flex items-start justify-between gap-3 mb-2">
+                    <div className="flex-1 p-5 sm:p-6 bg-surface rounded-2xl border border-border hover:border-accent/40 transition-all duration-300 shadow-2xs">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                         <div className="flex items-center gap-2">
-                          <Icon
-                            size={16}
-                            className="text-accent shrink-0"
-                            strokeWidth={1.8}
-                          />
-                          <h3 className="text-sm font-bold text-text">
+                          <div className="w-7 h-7 rounded-lg bg-accent-lighter text-accent flex items-center justify-center shrink-0">
+                            <Icon size={15} strokeWidth={2} />
+                          </div>
+                          <h3 className="text-base font-bold text-text">
                             {item.title}
                           </h3>
                         </div>
-                        <span className="text-xs text-text-muted font-medium whitespace-nowrap">
+                        <span className="text-xs text-text-muted font-medium">
                           {item.period}
                         </span>
                       </div>
 
-                      <p className="text-xs font-medium text-accent mb-1">
-                        {item.organization}
-                      </p>
-                      <p className="text-xs text-text-muted mb-3">
-                        {item.location}
-                      </p>
+                      <div className="flex items-center gap-2 mb-3 text-xs">
+                        <span className="font-semibold text-accent">
+                          {item.organization}
+                        </span>
+                        <span className="text-text-muted">·</span>
+                        <span className="text-text-muted">{item.location}</span>
+                      </div>
 
-                      <p className="text-sm text-text-secondary leading-relaxed mb-3">
+                      <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-4 text-left">
                         {item.description}
                       </p>
 
                       {/* Highlights */}
-                      <ul className="space-y-1">
+                      <ul className="space-y-1.5 pt-2 border-t border-border/50">
                         {item.highlights.map((h, j) => (
                           <li
                             key={j}
-                            className="text-xs text-text-muted flex items-start gap-2"
+                            className="text-xs text-text-muted flex items-start gap-2 text-left"
                           >
-                            <span className="w-1 h-1 rounded-full bg-accent mt-1.5 shrink-0" />
-                            {h}
+                            <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
+                            <span>{h}</span>
                           </li>
                         ))}
                       </ul>

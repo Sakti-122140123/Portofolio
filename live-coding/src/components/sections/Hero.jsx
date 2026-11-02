@@ -1,165 +1,216 @@
-// HERO — bagian pertama yang dilihat user (full screen)
+// HERO — bagian pertama yang dilihat user (full screen, minimalis & elegan)
 import { motion } from "framer-motion";
-import { ArrowDown, Mail } from "lucide-react";
+import {
+  ArrowDown,
+  Mail,
+  FileText,
+  ExternalLink,
+  MapPin,
+  CheckCircle2,
+} from "lucide-react";
 import profile from "../../data/profile";
+import { GithubIcon, LinkedinIcon } from "../icons/SocialIcons";
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center relative overflow-hidden"
+      className="min-h-screen flex items-center relative overflow-hidden pt-20 pb-16 lg:py-0"
     >
-      {/* background dengan titik-titik subtle (dekoratif) */}
-      <div className="absolute inset-0 bg-bg">
+      {/* background ambient halus */}
+      <div className="absolute inset-0 bg-bg pointer-events-none">
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.035]"
           style={{
             backgroundImage:
               "radial-gradient(circle at 1px 1px, var(--color-text) 1px, transparent 0)",
-            backgroundSize: "40px 40px",
+            backgroundSize: "36px 36px",
+          }}
+        />
+        <div
+          className="absolute top-0 right-1/4 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
           }}
         />
       </div>
 
-      <div className="section-container relative z-10 pt-24 pb-16">
-        {/* layout 2 kolom — teks kiri, foto kanan */}
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          {/* KOLOM KIRI — teks */}
-          <div className="flex-1 max-w-2xl">
-            {/* "Hello, I'm" dengan animasi fade + naik */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
+      <div className="section-container relative z-10 w-full py-8 sm:py-12">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-14">
+          {/* KOLOM KIRI — Typography & Information */}
+          <div className="flex-1 max-w-2xl text-left">
+            {/* Status Pill */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-accent font-medium text-sm tracking-wide uppercase mb-4"
+              transition={{ duration: 0.4 }}
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-border text-xs font-medium text-text-secondary shadow-2xs mb-5"
             >
-              Hello, I&apos;m
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+              </span>
+              <span>Available for Opportunities · Jakarta / Remote</span>
+            </motion.div>
+
+            {/* Sub-label Institusi */}
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.08 }}
+              className="text-xs uppercase tracking-widest font-semibold text-accent mb-2"
+            >
+              Institut Teknologi Sumatera · Computer Science (GPA 3.56)
             </motion.p>
 
-            {/* NAMA — besar & tebal */}
+            {/* Nama Utama */}
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text mb-4 tracking-tight"
+              transition={{ duration: 0.4, delay: 0.14 }}
+              className="text-3xl sm:text-5xl lg:text-6xl font-black text-text tracking-tight leading-[1.1] mb-3"
             >
               {profile.name}
             </motion.h1>
 
-            {/* HEADLINE — teks dari data/profile.js */}
+            {/* Positioning / Headline */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg sm:text-xl text-text-secondary mb-3 leading-relaxed"
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="text-lg sm:text-xl lg:text-2xl font-semibold text-text-secondary tracking-tight mb-4"
             >
               {profile.headline}
             </motion.p>
 
-            {/* SUB-HEADLINE — teks lebih panjang */}
+            {/* Subheadline / Bio Naratif */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-base text-text-muted mb-10 leading-relaxed text-justify"
+              transition={{ duration: 0.4, delay: 0.26 }}
+              className="text-sm sm:text-base text-text-muted leading-relaxed max-w-xl mb-6 text-left"
             >
               {profile.subheadline}
             </motion.p>
 
-            {/* TOMBOL CTA — View Projects, Contact Me, Export PDF */}
+            {/* Proof Points / Credibility Strip */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex flex-wrap gap-3"
+              transition={{ duration: 0.4, delay: 0.32 }}
+              className="flex flex-wrap items-center gap-x-5 gap-y-2 py-2.5 px-4 rounded-xl bg-surface/80 border border-border backdrop-blur-xs mb-8 max-w-xl"
+            >
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 size={14} className="text-accent" />
+                <span className="text-xs font-bold text-text">11,000+ Users</span>
+                <span className="text-[11px] text-text-muted">ITERA System</span>
+              </div>
+              <div className="hidden sm:block h-3.5 w-px bg-border" />
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 size={14} className="text-accent" />
+                <span className="text-xs font-bold text-text">2 Systems</span>
+                <span className="text-[11px] text-text-muted">Diskominfo</span>
+              </div>
+              <div className="hidden sm:block h-3.5 w-px bg-border" />
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 size={14} className="text-accent" />
+                <span className="text-xs font-bold text-text">Full-Stack & QA</span>
+              </div>
+            </motion.div>
+
+            {/* Main Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.38 }}
+              className="flex flex-wrap items-center gap-3 mb-6"
             >
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white text-sm font-medium rounded-lg hover:bg-accent-hover transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white text-xs sm:text-sm font-semibold rounded-lg hover:bg-accent-hover transition-all shadow-xs"
               >
-                View Projects
-                <ArrowDown size={16} />
+                <span>Explore Projects</span>
+                <ArrowDown size={15} />
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-surface text-text text-sm font-medium rounded-lg border border-border hover:border-accent hover:text-accent transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-surface text-text text-xs sm:text-sm font-medium rounded-lg border border-border hover:border-accent hover:text-accent transition-colors"
               >
-                <Mail size={16} />
-                Contact Me
+                <Mail size={15} />
+                <span>Contact Me</span>
               </a>
-              {/* Deck buttons — akses manual via URL: /deck-webdev, /deck-qa */}
-              {/*
-              <a
-                href="/deck-webdev"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-surface text-text text-sm font-medium rounded-lg border border-border hover:border-accent hover:text-accent transition-colors"
-              >
-                <FileDown size={16} />
-                Web Dev Deck
-              </a>
+              <div className="flex items-center gap-2 ml-1">
+                <a
+                  href={profile.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-lg bg-surface border border-border text-text-muted hover:text-text hover:border-text-secondary transition-colors"
+                  aria-label="GitHub Profile"
+                >
+                  <GithubIcon size={16} />
+                </a>
+                <a
+                  href={profile.links.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-lg bg-surface border border-border text-text-muted hover:text-accent hover:border-accent transition-colors"
+                  aria-label="LinkedIn Profile"
+                >
+                  <LinkedinIcon size={16} />
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Specialized Decks Quick Access */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.44 }}
+              className="flex flex-wrap items-center gap-2 text-xs text-text-muted"
+            >
+              <span className="font-medium text-text-secondary">Specialized Decks:</span>
               <a
                 href="/deck-qa"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-surface text-text text-sm font-medium rounded-lg border border-border hover:border-accent hover:text-accent transition-colors"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-accent-lighter text-accent font-semibold hover:bg-accent hover:text-white transition-colors border border-accent/25"
               >
-                <FileDown size={16} />
-                QA Deck
-              </a>
-              */}
-            </motion.div>
-
-            {/* LINK SOSIAL — LinkedIn & GitHub (ada di footer) */}
-            {/*
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="flex items-center gap-4 mt-6"
-            >
-              <a
-                href={profile.links.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-text-muted text-sm hover:text-accent transition-colors"
-                aria-label="LinkedIn"
-              >
-                <LinkedinIcon size={18} />
-                LinkedIn
+                <FileText size={12} />
+                <span>QA Pitch Deck (PDF Ready)</span>
               </a>
               <a
-                href={profile.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-text-muted text-sm hover:text-accent transition-colors"
-                aria-label="GitHub"
+                href="/deck-webdev"
+                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface text-text-secondary font-medium hover:text-accent border border-border transition-colors"
               >
-                <GithubIcon size={18} />
-                GitHub
+                <span>Web Dev Deck</span>
+                <ExternalLink size={11} />
               </a>
             </motion.div>
-            */}
           </div>
 
-          {/* KOLOM KANAN — FOTO PROFIL */}
+          {/* KOLOM KANAN — Portrait Card */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="shrink-0"
           >
-            {/* foto dengan efek border & shadow */}
-            <div className="relative">
-              <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border-2 border-border shadow-lg">
-                {/* ganti src kalau nama file foto berbeda */}
+            <div className="relative group">
+              <div className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border border-border bg-surface shadow-md">
                 <img
                   src="/foto/profile.jpg"
                   alt={profile.name}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width="256"
-                  height="256"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
+                  loading="eager"
+                  width="288"
+                  height="288"
                 />
               </div>
-              {/* border dekoratif di belakang foto (efek layer) */}
-              <div className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-accent/20 -z-10" />
+
+              {/* Floating Badge */}
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-surface/95 backdrop-blur-md border border-border shadow-xs flex items-center gap-1.5 text-[11px] font-medium text-text-secondary whitespace-nowrap">
+                <MapPin size={12} className="text-accent" />
+                <span>Jakarta, Indonesia</span>
+              </div>
             </div>
           </motion.div>
         </div>

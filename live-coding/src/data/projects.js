@@ -3,10 +3,17 @@ const projects = [
   {
     id: "harmony",
     name: "Harmony FTI ITERA",
+    category: "Academic Information System",
+    image: "/projects/harmony.jpg",
     shortDescription:
-      "Integrated academic information system for Fakultas Teknologi Industri, Institut Teknologi Sumatera, supporting academic services, student-faculty workflows, and structured information delivery.",
+      "Integrated academic information system for Fakultas Teknologi Industri, Institut Teknologi Sumatera, supporting academic correspondence, multi-role approval workflows, and structured document delivery.",
     role: "Quality Assurance & Developer",
     techStack: ["Postman", "Laravel", "React", "MySQL", "Trello"],
+    metrics: [
+      { label: "Testing Pass Rate", value: "100%" },
+      { label: "UAT Stakeholder Score", value: "88.6%" },
+      { label: "Target Audience", value: "11,000+ Users" },
+    ],
     description:
       "Conducted Black Box Testing and User Acceptance Testing (UAT) on the correspondence subsystem, achieving 100% functional test pass rate and 88.57% UAT score. Designed test scenarios and test cases using Equivalence Partitioning (EP) and Boundary Value Analysis (BVA). Validated input, process, and output for each feature. Compared expected vs actual results and documented all discrepancies. Tested multi-user roles (admin, faculty, students). Executed retesting after bug fixes and regression testing to ensure no impact on other user journeys.",
     keyContribution: [
@@ -27,10 +34,17 @@ const projects = [
   {
     id: "simamang",
     name: "SIMAMANG",
+    category: "Government Information System",
+    image: null,
     shortDescription:
-      "Web-based internship management system for Dinas Kominfo Bandar Lampung, supports internship registration, status tracking, and administrative data management.",
+      "Web-based internship management system for Dinas Kominfo Kota Bandar Lampung, supporting internship registration, status tracking, evaluation workflows, and administrative records.",
     role: "Quality Assurance & Developer",
     techStack: ["Postman", "Laravel", "React", "MySQL", "Trello"],
+    metrics: [
+      { label: "Participants Managed", value: "50+ Interns" },
+      { label: "Architecture", value: "Laravel + React" },
+      { label: "Methodology", value: "EP & BVA Testing" },
+    ],
     description:
       "Conducted functional testing on internship registration and management system for 50+ participants. Designed test scenarios and test cases using EP and BVA techniques. Validated input, process, and output for each feature. Compared expected vs actual results and documented all discrepancies. Tested multi-user roles (admin, applicants). Executed retesting after bug fixes and regression testing to ensure no impact on other user journeys.",
     keyContribution: [
@@ -51,10 +65,17 @@ const projects = [
   {
     id: "simas",
     name: "SIMAS",
+    category: "Government Workflow & Archiving",
+    image: null,
     shortDescription:
-      "Web-based administrative information system for Dinas Kominfo Bandar Lampung, supporting document management, correspondence tracking, and internal workflow automation.",
+      "Web-based administrative information system for Dinas Kominfo Kota Bandar Lampung, supporting digital document management, inter-agency correspondence, and internal workflow automation.",
     role: "Quality Assurance & Developer",
     techStack: ["Postman", "Laravel", "React", "MySQL", "Trello"],
+    metrics: [
+      { label: "Government Agencies", value: "30+ OPD" },
+      { label: "System Scope", value: "Digital Archive & Flow" },
+      { label: "Verification", value: "Role Permission Matrix" },
+    ],
     description:
       "Conducted functional testing on correspondence management system used by 30+ government agencies. Designed test scenarios and test cases using EP and BVA techniques. Validated input, process, and output for each feature. Compared expected vs actual results and documented all discrepancies. Tested multi-user roles (admin, staff). Executed retesting after bug fixes and regression testing to ensure no impact on other user journeys.",
     keyContribution: [
@@ -75,10 +96,17 @@ const projects = [
   {
     id: "casheye",
     name: "CashEye",
+    category: "Frontend Web Application",
+    image: null,
     shortDescription:
-      "Financial tracking application designed to help users monitor income, expenses, and budgets with clear data visualization and reporting.",
+      "Personal financial tracking web application designed to help users monitor income, categorize expenditures, and track budgets with intuitive visual reporting.",
     role: "Developer & Documentation Lead",
     techStack: ["React", "JavaScript", "CSS", "GitHub Pages"],
+    metrics: [
+      { label: "Category", value: "Personal Finance" },
+      { label: "Interface", value: "Responsive React UI" },
+      { label: "Deployment", value: "GitHub Pages" },
+    ],
     description:
       "Developed a financial tracking web application as a team project, focusing on user-friendly interfaces for income and expense monitoring. The project emphasized clear data presentation and practical reporting features.",
     keyContribution: [
@@ -98,11 +126,18 @@ const projects = [
   },
   {
     id: "kyuubi-mml",
-    name: "Kyuubi, Multimodal Music Emotion Recognition",
+    name: "Kyuubi — Multimodal Music Emotion",
+    category: "Machine Learning & Research",
+    image: null,
     shortDescription:
-      "Academic machine learning project exploring emotion recognition in music using audio, lyrics, and MIDI through a late fusion approach.",
+      "Academic machine learning research project exploring emotion classification in music by integrating audio features, lyrics semantics, and MIDI data through a late fusion model.",
     role: "Team Member, Research & Documentation",
     techStack: ["Python", "Scikit-learn", "Librosa", "Pandas", "NumPy"],
+    metrics: [
+      { label: "Architecture", value: "Late Fusion ML" },
+      { label: "Modalities", value: "Audio, Lyrics, MIDI" },
+      { label: "Core Tooling", value: "Scikit-learn & Librosa" },
+    ],
     description:
       "Participated in a team-based academic ML project focused on multimodal music emotion recognition. The project combined audio features, lyrics analysis, and MIDI data using a late fusion approach to classify emotional content in music.",
     keyContribution: [

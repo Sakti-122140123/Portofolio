@@ -8,17 +8,16 @@ const profile = {
   semester: "Graduated (GPA 3.56/4.00)",
 
   // headline muncul di Hero (bagian atas pertama)
-  headline:
-    "Computer Science Graduate, Developer & Engineer",
+  headline: "Software Engineer · Web Development & System Quality",
   // sub-headline, teks lebih panjang di bawah nama
   subheadline:
-    "Computer Science graduate with hands-on experience in web development, software testing, and cross-functional collaboration. Built and deployed information systems for government and academic institutions. Open to opportunities in software engineering, web development, and quality assurance roles.",
+    "Computer Science graduate from Institut Teknologi Sumatera (GPA 3.56/4.00). Experienced in developing full-stack web applications and executing structured software quality assurance for government and academic institutions. Dedicated to building reliable, high-performance, and user-centered digital solutions.",
 
   // ini 3 paragraf di section About — isi sesuai keinginan
   about: [
-    "I am a recent Computer Science graduate from Institut Teknologi Sumatera (GPA 3.56/4.00), currently based in Jakarta. Through academic and internship projects, I have built web-based information systems using Laravel, React, and MySQL, gaining practical experience across the full development lifecycle.",
-    "During my internship at Dinas Kominfo Kota Bandar Lampung, I contributed to developing and maintaining web systems for government workflows, coordinating directly with supervisors and internal teams to deliver digital solutions aligned with institutional requirements.",
-    "Beyond technical development, I have been actively involved in student organizations, mentorship programs, and certificate courses, building strong foundations in teamwork, communication, and continuous learning. I am looking for opportunities where I can contribute my skills and grow as a software engineer.",
+    "I am a Computer Science graduate from Institut Teknologi Sumatera (GPA 3.56/4.00) based in Jakarta. My background bridges hands-on full-stack web development with rigorous software quality assurance, having engineered and tested production systems using Laravel, React, and MySQL.",
+    "During my internship at Dinas Komunikasi dan Informatika Kota Bandar Lampung, I developed and verified web-based administrative systems, collaborating directly with municipal stakeholders to streamline public service workflows and data integrity.",
+    "Across academic leadership in HMIF and technical mentorship, I cultivated strong habits in clear documentation, cross-functional communication, and test-driven reliability. I am eager to contribute to forward-thinking engineering teams as a software engineer or quality assurance specialist.",
   ],
 
   // link sosial dan kontak
