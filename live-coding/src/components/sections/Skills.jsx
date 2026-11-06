@@ -26,7 +26,7 @@ export default function Skills() {
           <h2 className="text-2xl sm:text-4xl font-extrabold text-text tracking-tight mb-3">
             Core Competencies & Technologies
           </h2>
-          <p className="text-sm sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-10">
+          <p className="text-sm sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-10 text-justify">
             Disciplines, frameworks, and tooling practiced across production systems,
             academic instruction, and structured testing lifecycles.
           </p>

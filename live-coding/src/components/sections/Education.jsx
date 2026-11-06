@@ -20,7 +20,7 @@ export default function Education() {
           <h2 className="text-2xl sm:text-4xl font-extrabold text-text tracking-tight mb-3">
             Academic Background
           </h2>
-          <p className="text-sm sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-8">
+          <p className="text-sm sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-8 text-justify">
             Formal computer science education focusing on software engineering principles, algorithms, and system design.
           </p>
 

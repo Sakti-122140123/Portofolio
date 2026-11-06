@@ -93,7 +93,7 @@ export default function Certificates() {
           <h2 className="text-3xl sm:text-4xl font-bold text-text mb-3">
             Certificates & Programs
           </h2>
-          <p className="text-sm text-text-muted mb-8 max-w-2xl">
+          <p className="text-sm text-text-muted mb-8 max-w-2xl text-justify">
             Professional certificates from Dicoding, academic assistantships,
             organizational roles, seminars, and other programs.
           </p>

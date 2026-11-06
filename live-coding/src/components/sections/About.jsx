@@ -33,7 +33,7 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="text-sm sm:text-base text-text-secondary leading-relaxed text-left"
+                  className="text-sm sm:text-base text-text-secondary leading-relaxed text-justify"
                 >
                   {paragraph}
                 </motion.p>
@@ -93,10 +93,10 @@ export default function About() {
                     <h3 className="text-sm font-bold text-text mt-0.5">
                       Dinas Kominfo Kota Bandar Lampung
                     </h3>
-                    <p className="text-xs text-text-secondary mt-1">
+                    <p className="text-xs text-text-secondary mt-1 text-justify">
                       Engineered & tested SIMAMANG & SIMAS production systems.
                     </p>
-                    <p className="text-[11px] text-text-muted mt-0.5">
+                    <p className="text-[11px] text-text-muted mt-0.5 text-justify">
                       Bridging developer code with municipal administrative needs.
                     </p>
                   </div>
@@ -116,10 +116,10 @@ export default function About() {
                     <h3 className="text-sm font-bold text-text mt-0.5">
                       Reliability Through Rigorous Testing
                     </h3>
-                    <p className="text-xs text-text-secondary mt-1">
+                    <p className="text-xs text-text-secondary mt-1 text-justify">
                       Equivalence Partitioning, boundary validation, and clear documentation.
                     </p>
-                    <p className="text-[11px] text-text-muted mt-0.5">
+                    <p className="text-[11px] text-text-muted mt-0.5 text-justify">
                       Zero tolerance for unverified production deployments.
                     </p>
                   </div>

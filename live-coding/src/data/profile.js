@@ -11,7 +11,7 @@ const profile = {
   headline: "Software Engineer · Web Development & System Quality",
   // sub-headline, teks lebih panjang di bawah nama
   subheadline:
-    "Computer Science graduate from Institut Teknologi Sumatera (GPA 3.56/4.00). Experienced in developing full-stack web applications and executing structured software quality assurance for government and academic institutions. Dedicated to building reliable, high-performance, and user-centered digital solutions.",
+    "I am a Computer Science graduate from Institut Teknologi Sumatera (GPA 3.56/4.00) based in Jakarta. My background bridges hands-on full-stack web development with rigorous software quality assurance, having engineered and tested production systems using Laravel, React, and MySQL.",
 
   // ini 3 paragraf di section About — isi sesuai keinginan
   about: [

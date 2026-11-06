@@ -72,7 +72,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.26 }}
-              className="text-sm sm:text-base text-text-muted leading-relaxed max-w-xl mb-6 text-left"
+              className="text-sm sm:text-base text-text-muted leading-relaxed max-w-xl mb-6 text-justify"
             >
               {profile.subheadline}
             </motion.p>

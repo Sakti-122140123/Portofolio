@@ -39,7 +39,7 @@ export default function RoleFit() {
             What I Bring to an Engineering Team
           </h2>
 
-          <p className="text-sm sm:text-base text-text-secondary leading-relaxed max-w-2xl mb-10">
+          <p className="text-sm sm:text-base text-text-secondary leading-relaxed max-w-2xl mb-10 text-justify">
             {roleFit.intro}
           </p>
 
@@ -69,7 +69,7 @@ export default function RoleFit() {
                       {point.requirement}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-text-secondary leading-relaxed text-left">
+                    <p className="text-xs sm:text-sm text-text-secondary leading-relaxed text-justify">
                       {point.experience}
                     </p>
                   </div>

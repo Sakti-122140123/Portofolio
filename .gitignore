@@ -40,3 +40,5 @@ file-siap-dibuka/
 
 # Agent lokal - hanya dibaca dari folder, tidak perlu di-push
 AGENTS.md
+.agents/
+.agent/

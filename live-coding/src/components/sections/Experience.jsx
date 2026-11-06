@@ -26,7 +26,7 @@ export default function Experience() {
           <h2 className="text-2xl sm:text-4xl font-extrabold text-text tracking-tight mb-3">
             Professional & Academic Experience
           </h2>
-          <p className="text-sm sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-10">
+          <p className="text-sm sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-10 text-justify">
             Internships, institutional software development, and campus leadership roles that built my engineering foundation.
           </p>
 
@@ -76,7 +76,7 @@ export default function Experience() {
                         <span className="text-text-muted">{item.location}</span>
                       </div>
 
-                      <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-4 text-left">
+                      <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-4 text-justify">
                         {item.description}
                       </p>
 
@@ -85,7 +85,7 @@ export default function Experience() {
                         {item.highlights.map((h, j) => (
                           <li
                             key={j}
-                            className="text-xs text-text-muted flex items-start gap-2 text-left"
+                            className="text-xs text-text-muted flex items-start gap-2 text-justify"
                           >
                             <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
                             <span>{h}</span>

@@ -122,7 +122,7 @@ function ProjectCard({ project, index }) {
           </div>
 
           {/* Short Description */}
-          <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-4 text-left">
+          <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-4 text-justify">
             {project.shortDescription}
           </p>
 
@@ -195,7 +195,7 @@ function ProjectCard({ project, index }) {
                 <h4 className="text-[11px] font-bold text-text-muted uppercase tracking-wider mb-1.5">
                   Scope & Context
                 </h4>
-                <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
+                <p className="text-xs sm:text-sm text-text-secondary leading-relaxed text-justify">
                   {project.description}
                 </p>
               </div>
@@ -209,7 +209,7 @@ function ProjectCard({ project, index }) {
                   {project.keyContribution.map((item, i) => (
                     <li
                       key={i}
-                      className="text-xs text-text-secondary flex items-start gap-2"
+                      className="text-xs text-text-secondary flex items-start gap-2 text-justify"
                     >
                       <CheckCircle2
                         size={13}
@@ -227,7 +227,7 @@ function ProjectCard({ project, index }) {
                   <p className="text-[11px] font-bold text-accent mb-1">
                     Development Scope
                   </p>
-                  <p className="text-xs text-text-secondary leading-relaxed">
+                  <p className="text-xs text-text-secondary leading-relaxed text-justify">
                     {project.devRelevance}
                   </p>
                 </div>
@@ -235,7 +235,7 @@ function ProjectCard({ project, index }) {
                   <p className="text-[11px] font-bold text-accent mb-1">
                     Quality Assurance Scope
                   </p>
-                  <p className="text-xs text-text-secondary leading-relaxed">
+                  <p className="text-xs text-text-secondary leading-relaxed text-justify">
                     {project.qaRelevance}
                   </p>
                 </div>
@@ -281,7 +281,7 @@ export default function Projects() {
             Systems & Engineering Projects
           </h2>
 
-          <p className="text-sm sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-6">
+          <p className="text-sm sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-6 text-justify">
             Web-based information systems, government digital workflows, and software quality
             assurance delivered for institutional, academic, and team-based initiatives.
           </p>

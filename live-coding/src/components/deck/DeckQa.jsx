@@ -274,7 +274,7 @@ export default function DeckQa() {
                   {deckData.headline}
                 </p>
 
-                <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-4 print:text-[11.5px] print:mb-3 max-w-2xl text-justify lg:text-left print:text-left">
+                <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-4 print:text-[11.5px] print:mb-3 max-w-2xl text-justify print:text-justify">
                   {deckData.tagline}. Focused on functional verification, black-box testing techniques, structured STLC documentation, and cross-functional defect resolution.
                 </p>
 
