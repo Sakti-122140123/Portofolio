@@ -3,7 +3,14 @@ node_modules/
 
 # Build output
 dist/
+build/
 .vercel/
+.vite/
+
+# Cache & previews
+.eslintcache
+.playwright-mcp/
+cv-render-previews/
 
 # Environment variables
 .env

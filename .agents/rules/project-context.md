@@ -2,25 +2,39 @@
 
 ## Tentang proyek
 
-- Website portfolio pribadi saya sebagai developer, dibangun dengan Next.js / React.
-- Tujuan: menunjukkan pengalaman proyek nyata kepada recruiter dan klien.
-- Untuk semua pekerjaan UI, gunakan skill modern-frontend-design.
+- Website portfolio pribadi Sakti Mujahid Imani sebagai Software Engineer, dibangun dengan **Vite 8 + React 19 (SPA)** dan **Tailwind CSS v4**.
+- Tujuan: Menunjukkan keahlian teknis dan portofolio proyek nyata kepada recruiter, tech lead, dan klien.
+- Untuk semua pekerjaan UI, pegang teguh skill `modern-frontend-design` (gaya minimalis editorial, bersih, tanpa AI slop).
 
-## Aturan proyek
+## Arsitektur web & deck
 
-- Deteksi sendiri versi Next.js, jenis router (App Router atau Pages Router), TypeScript, dan cara styling dari `package.json` dan struktur folder. Jangan berasumsi.
-- Pisahkan konten (teks, data proyek, link) dari komponen tampilan, simpan sebagai data terstruktur agar mudah diedit.
-- Gunakan Server Components secara default, `"use client"` hanya jika perlu interaktivitas.
-- Semua warna, ukuran font, dan spacing lewat design token, bukan nilai hardcode berulang.
+1. **Halaman Utama (`/`)**: General Portfolio — merangkum seluruh spektrum pengalaman (Web Development, Institutional Systems, QA & Testing, Multimodal ML Research, dan Pengalaman Akademik/Asisten Praktikum).
+2. **Specialized Pitch Decks**:
+   - `/deck-webdev`: Khusus posisi Web Developer / Full-Stack Engineer.
+   - `/deck-qa`: Khusus posisi Manual QA / Software Testing Specialist.
+   - Kedua deck dioptimalkan untuk presentasi layar (16:9) dan **cetak PDF landscape A4** (`@media print`, 297mm x 210mm per slide).
 
-## Aturan konten
+## Aturan teknis & styling
 
-- Teks portfolio dalam bahasa Inggris, profesional tapi santai, singkat.
-- Fokus pada proyek nyata dan peran saya (apa yang dibangun, teknologi, dampak), bukan daftar skill atau pencapaian akademik.
-- Jangan membuat klaim, angka, testimoni, atau pengalaman yang tidak saya berikan. Jika butuh isi, tanyakan ke saya.
-- Jangan memakai kalimat pembuka formal seperti "Fresh graduate in ...".
+- Stack resmi: React 19, Vite 8, Tailwind CSS v4 (`@import "tailwindcss"`), Framer Motion 12, Lucide React.
+- **Bukan Next.js**: Proyek ini adalah client-side SPA. Jangan memakai Server Components atau directive `"use client"`.
+- Semua warna, border, dan spacing menggunakan CSS variables / token yang sudah ada di `src/index.css`.
+- Desain *engineer-first*: Hindari dekorasi murahan seperti neon glow blob, fake browser mockup 3 titik, dan pinging animations. Gunakan tipografi tegas, hairline border 1px, dan font monospace untuk metadata teknis.
+
+## Aturan konten & copywriting
+
+- Teks portfolio dalam bahasa Inggris, profesional, autentik, dan langsung ke poin (*de-jargonized*).
+- Setiap proyek harus memiliki deskripsi dan metrik yang unik serta realistis (jangan menduplikasi teks antar proyek, dan jangan gunakan klaim berlebihan seperti "100% test pass rate").
+- Jangan membuat klaim, angka, atau pengalaman fiktif. Jika butuh data riil, gunakan data yang sudah ada di `src/data/`.
+
+## Aturan sertifikat
+
+- Sertifikat yang kurang relevan (webinar 1 jam, tryout, non-teknis) **dijadikan comment `//`, jangan dihapus**.
+- Halaman utama menampilkan banyak sertifikat berbobot (Dicoding teknis, Asisten Praktikum ITERA, HMIF, DBS, Hibah, Digistar).
+- Di kedua deck (`/deck-qa` dan `/deck-webdev`), **hanya cantumkan 5–6 sertifikat yang strictly relevan** dengan bidang masing-masing.
 
 ## Sebelum selesai
 
-- Jalankan lint dan build, lalu perbaiki error dari perubahan saya.
-- Untuk perubahan UI, cek tampilan mobile (±375px) dan desktop.
+- Jalankan `npm --prefix live-coding run lint` dan pastikan 0 errors.
+- Jalankan `npm --prefix live-coding run build` dan pastikan build sukses.
+- Cek responsivitas mobile (375px) dan desktop (1280px), serta preview cetak PDF pada kedua deck.

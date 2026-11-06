@@ -1,13 +1,6 @@
 // HERO — bagian pertama yang dilihat user (full screen, minimalis & elegan)
 import { motion } from "framer-motion";
-import {
-  ArrowDown,
-  Mail,
-  FileText,
-  ExternalLink,
-  MapPin,
-  CheckCircle2,
-} from "lucide-react";
+import { ArrowDown, Mail, FileText, ExternalLink } from "lucide-react";
 import profile from "../../data/profile";
 import { GithubIcon, LinkedinIcon } from "../icons/SocialIcons";
 
@@ -17,7 +10,7 @@ export default function Hero() {
       id="hero"
       className="min-h-screen flex items-center relative overflow-hidden pt-20 pb-16 lg:py-0"
     >
-      {/* background ambient halus */}
+      {/* background — subtle dot grid tanpa neon glow */}
       <div className="absolute inset-0 bg-bg pointer-events-none">
         <div
           className="absolute inset-0 opacity-[0.035]"
@@ -27,31 +20,21 @@ export default function Hero() {
             backgroundSize: "36px 36px",
           }}
         />
-        <div
-          className="absolute top-0 right-1/4 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
-          }}
-        />
       </div>
 
       <div className="section-container relative z-10 w-full py-8 sm:py-12">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-14">
           {/* KOLOM KIRI — Typography & Information */}
           <div className="flex-1 max-w-2xl text-left">
-            {/* Status Pill */}
+            {/* Status Badge — clean, tanpa pinging dot */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-border text-xs font-medium text-text-secondary shadow-2xs mb-5"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-border text-xs font-mono text-text-secondary mb-5"
             >
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-              </span>
-              <span>Available for Opportunities · Jakarta / Remote</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              <span>Jakarta, Indonesia · Open to Opportunities</span>
             </motion.div>
 
             {/* Sub-label Institusi */}
@@ -94,28 +77,28 @@ export default function Hero() {
               {profile.subheadline}
             </motion.p>
 
-            {/* Proof Points / Credibility Strip */}
+            {/* Proof Points / Credibility Strip — tanpa ikon centang berlebihan */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.32 }}
-              className="flex flex-wrap items-center gap-x-5 gap-y-2 py-2.5 px-4 rounded-xl bg-surface/80 border border-border backdrop-blur-xs mb-8 max-w-xl"
+              className="flex flex-wrap items-center gap-x-4 gap-y-2 py-2.5 px-4 rounded-xl bg-surface border border-border mb-8 max-w-xl"
             >
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 size={14} className="text-accent" />
-                <span className="text-xs font-bold text-text">11,000+ Users</span>
-                <span className="text-[11px] text-text-muted">ITERA System</span>
+                <span className="w-1 h-1 rounded-full bg-accent" />
+                <span className="text-xs font-semibold text-text">11,000+ Users</span>
+                <span className="text-[11px] text-text-muted font-mono">ITERA</span>
               </div>
               <div className="hidden sm:block h-3.5 w-px bg-border" />
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 size={14} className="text-accent" />
-                <span className="text-xs font-bold text-text">2 Systems</span>
-                <span className="text-[11px] text-text-muted">Diskominfo</span>
+                <span className="w-1 h-1 rounded-full bg-accent" />
+                <span className="text-xs font-semibold text-text">2 Government Systems</span>
+                <span className="text-[11px] text-text-muted font-mono">Diskominfo</span>
               </div>
               <div className="hidden sm:block h-3.5 w-px bg-border" />
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 size={14} className="text-accent" />
-                <span className="text-xs font-bold text-text">Full-Stack & QA</span>
+                <span className="w-1 h-1 rounded-full bg-accent" />
+                <span className="text-xs font-semibold text-text">Full-Stack & QA</span>
               </div>
             </motion.div>
 
@@ -130,7 +113,7 @@ export default function Hero() {
                 href="#projects"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white text-xs sm:text-sm font-semibold rounded-lg hover:bg-accent-hover transition-all shadow-xs"
               >
-                <span>Explore Projects</span>
+                <span>Explore All Projects</span>
                 <ArrowDown size={15} />
               </a>
               <a
@@ -195,7 +178,7 @@ export default function Hero() {
             className="shrink-0"
           >
             <div className="relative group">
-              <div className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border border-border bg-surface shadow-md">
+              <div className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border border-border bg-surface">
                 <img
                   src="/foto/profile.jpg"
                   alt={profile.name}
@@ -206,9 +189,9 @@ export default function Hero() {
                 />
               </div>
 
-              {/* Floating Badge */}
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-surface/95 backdrop-blur-md border border-border shadow-xs flex items-center gap-1.5 text-[11px] font-medium text-text-secondary whitespace-nowrap">
-                <MapPin size={12} className="text-accent" />
+              {/* Floating Badge — monospace subtle */}
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-surface border border-border shadow-xs flex items-center gap-1.5 text-[11px] font-mono text-text-secondary whitespace-nowrap">
+                <span className="w-1 h-1 rounded-full bg-accent" />
                 <span>Jakarta, Indonesia</span>
               </div>
             </div>

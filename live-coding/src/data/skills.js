@@ -65,7 +65,7 @@ const certificates = [
   { name: "Belajar Penggunaan Generative AI", category: "Dicoding", path: "https://drive.google.com/uc?export=download&id=1lESWxxBRPS0TeCknPiOv-qpkDB8j2-Qd" },
   { name: "Belajar Prinsip Pemrograman SOLID", category: "Dicoding", path: "https://drive.google.com/uc?export=download&id=1Zh-b5h9Gqkb4Gf7xucYsJp059VcI-K2l" },
   { name: "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)", category: "Dicoding", path: "https://drive.google.com/uc?export=download&id=1FvzvWs1ydx1eLc-y0h3fPVs4BA3AMI1v" },
-  { name: "Financial Literacy 101", category: "Dicoding", path: "https://drive.google.com/uc?export=download&id=1Ev2e2yrNYb8LoYCJiRRmUv3iIHd_H0cN" },
+  // { name: "Financial Literacy 101", category: "Dicoding", path: "https://drive.google.com/uc?export=download&id=1Ev2e2yrNYb8LoYCJiRRmUv3iIHd_H0cN" }, // kurang relevan untuk tech portfolio
   { name: "Machine Learning Terapan", category: "Dicoding", path: "https://drive.google.com/uc?export=download&id=1vctSxXUzCi6gg6w4D9bUloKczzH2TF0W" },
   { name: "Membangun Aplikasi Gen AI dengan Microsoft Azure", category: "Dicoding", path: "https://drive.google.com/uc?export=download&id=1TpCZtqgt2W0eMbpCNeMN05vQjiP4UoEA" },
   { name: "Membangun Sistem Machine Learning", category: "Dicoding", path: "https://drive.google.com/uc?export=download&id=1uFMR7BWtdYQUbUBB-ENXmcsb4nVdblZ_" },
@@ -106,18 +106,18 @@ const certificates = [
   { name: "Sertifikat Himpunan", category: "Organization", path: "/sertifikat/himpunan/Himpunan 2.pdf" },
 
   // ========== SEMINARS & WORKSHOPS ==========
-  { name: "Sertifikat Webinar Kewirausahaan", category: "Seminars & Workshops", path: "/sertifikat/seminar/Sakti Mujahid Imani - Sertifikat Webinar Kewirausahaan.pdf" },
-  { name: "Tryout Merdeka 2022", category: "Seminars & Workshops", path: "/sertifikat/seminar/E-CERTIF_Sakti Mujahid Imani_TO MERDEKA 2022.pdf" },
-  { name: "National Investor Summit KSPM FEB UI", category: "Seminars & Workshops", path: "/sertifikat/seminar/E-Certificate National Investor Summit KSPM FEB UI - Sakti Mujahid Imani.pdf" },
-  { name: "Workshop BUMN 2022 — Strategi Pengembangan Softskill", category: "Seminars & Workshops", path: "/sertifikat/seminar/Sertifikat Peserta BUMN 2022 Sakti Mujahid Imani.pdf" },
+  // { name: "Sertifikat Webinar Kewirausahaan", category: "Seminars & Workshops", path: "/sertifikat/seminar/Sakti Mujahid Imani - Sertifikat Webinar Kewirausahaan.pdf" }, // kurang relevan untuk tech portfolio
+  // { name: "Tryout Merdeka 2022", category: "Seminars & Workshops", path: "/sertifikat/seminar/E-CERTIF_Sakti Mujahid Imani_TO MERDEKA 2022.pdf" }, // kurang relevan untuk tech portfolio
+  // { name: "National Investor Summit KSPM FEB UI", category: "Seminars & Workshops", path: "/sertifikat/seminar/E-Certificate National Investor Summit KSPM FEB UI - Sakti Mujahid Imani.pdf" }, // kurang relevan untuk tech portfolio
+  // { name: "Workshop BUMN 2022 — Strategi Pengembangan Softskill", category: "Seminars & Workshops", path: "/sertifikat/seminar/Sertifikat Peserta BUMN 2022 Sakti Mujahid Imani.pdf" }, // kurang relevan untuk tech portfolio
   { name: "SMKI Foreg II 2023", category: "Seminars & Workshops", path: "/sertifikat/seminar/Sakti Mujahid Imani Sertifikat SMKI Foreg II 2023.pdf" },
   { name: "LOGINAR 2024", category: "Seminars & Workshops", path: "/sertifikat/seminar/SERTIFIKAT LOGINAR-222.pdf" },
   { name: "DevCoach — Machine Learning & Computer Vision", category: "Seminars & Workshops", path: "/sertifikat/seminar/devcoach-160-machine-learning-melihat-dunia-dengan-ai-eksplorasi-computer-vision-certificate.pdf" },
   { name: "Digdaya x Hackathon 2026 — Webinar Series", category: "Seminars & Workshops", path: "/sertifikat/seminar/digdaya-x-hackathon-2026-webinar-series-10-rethinking-the-ledger-membangun-sistem-keuangan-modern-yang-immutable-dan-scalable-certificate.pdf" },
   { name: "Virtual Roadshow METC x IMPHNEN — Hackathon & Datathon", category: "Seminars & Workshops", path: "/sertifikat/seminar/virtual-roadshow-metc-x-imphnen-h2w-tips-dan-trik-menjadi-pemenang-hackathon-dan-datathon-dengan-bantuan-generative-ai-certificate.pdf" },
-  { name: "Participant Certificate", category: "Seminars & Workshops", path: "/sertifikat/seminar/Sakti Mujahid Imani_Participant Certificate.pdf" },
-  { name: "Webinar Sertifikat (1)", category: "Seminars & Workshops", path: "/sertifikat/seminar/Sakti Mujahid Imani (1).png" },
-  { name: "Webinar — Sustainability of Digital Media as Marketing Communication Tools", category: "Seminars & Workshops", path: "/sertifikat/seminar/SAKTI MUJAHID IMANI-2.png" },
+  // { name: "Participant Certificate", category: "Seminars & Workshops", path: "/sertifikat/seminar/Sakti Mujahid Imani_Participant Certificate.pdf" }, // judul terlalu generik
+  // { name: "Webinar Sertifikat (1)", category: "Seminars & Workshops", path: "/sertifikat/seminar/Sakti Mujahid Imani (1).png" }, // judul terlalu generik
+  // { name: "Webinar — Sustainability of Digital Media as Marketing Communication Tools", category: "Seminars & Workshops", path: "/sertifikat/seminar/SAKTI MUJAHID IMANI-2.png" }, // kurang relevan untuk tech portfolio
 
   // ========== OTHERS ==========
   { name: "Coding Camp 2025 by DBS Foundation", category: "Others", path: "https://drive.google.com/uc?export=download&id=1yicxVySID6XzEPXHFPLpwK435mQU5ShR" },
@@ -126,8 +126,8 @@ const certificates = [
   { name: "Data Analytics — RevoU", category: "Others", path: "https://drive.google.com/uc?export=download&id=1QZxh13paKkCpkx5u1YvwExsMohq_d7hv" },
   { name: "Digistar by Telkom Indonesia", category: "Others", path: "https://drive.google.com/uc?export=download&id=14vDFIjoUgpyUHW9nmwt-bLLfGoql3OFc" },
   { name: "DFIR Foundations — Blue Cape Security", category: "Others", path: "https://drive.google.com/uc?export=download&id=1Bovqvf3f9UNIx2OTm7KIHah7NpaWo1Nl" },
-  { name: "Panitia PPLK 2023", category: "Others", path: "https://drive.google.com/uc?export=download&id=1TY9AVLGrHXglSOTVc9OaROCU4CDuH3p8" },
-  { name: "Tahfidz Juz 30", category: "Others", path: "/sertifikat/lainnya/Sakti Mujahid Imani Juz 30.jpg" },
+  // { name: "Panitia PPLK 2023", category: "Others", path: "https://drive.google.com/uc?export=download&id=1TY9AVLGrHXglSOTVc9OaROCU4CDuH3p8" }, // kurang relevan untuk tech portfolio
+  // { name: "Tahfidz Juz 30", category: "Others", path: "/sertifikat/lainnya/Sakti Mujahid Imani Juz 30.jpg" }, // kurang relevan untuk tech portfolio
 ];
 
 export { skills, certificates };

@@ -17,5 +17,12 @@ export default defineConfig([
       globals: globals.browser,
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
+    rules: {
+      // komponen React / motion dipakai di JSX, bukan sebagai variabel biasa
+      'no-unused-vars': ['error', {
+        varsIgnorePattern: '^[A-Z_]|motion',
+        argsIgnorePattern: '^_',
+      }],
+    },
   },
 ])

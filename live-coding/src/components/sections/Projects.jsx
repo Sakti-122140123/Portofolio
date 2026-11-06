@@ -5,148 +5,40 @@ import {
   ChevronDown,
   ChevronUp,
   Layers,
-  FileCheck2,
-  Building2,
-  TrendingUp,
-  Cpu,
   CheckCircle2,
 } from "lucide-react";
 import projects from "../../data/projects";
 
-// Mockup arsitektural elegan untuk proyek yang screenshot aslinya belum diunggah
-function ProjectMockupPlaceholder({ project }) {
-  if (project.id === "simamang") {
-    return (
-      <div className="w-full h-full bg-gradient-to-br from-blue-950/20 via-surface to-bg p-4 flex flex-col justify-between select-none">
-        <div className="flex items-center justify-between border-b border-border/60 pb-2">
-          <div className="flex items-center gap-2">
-            <Building2 size={14} className="text-accent" />
-            <span className="text-[11px] font-semibold text-text">
-              Diskominfo · Portal Magang
-            </span>
-          </div>
-          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-500 font-medium">
-            Active System
-          </span>
-        </div>
-        <div className="grid grid-cols-3 gap-2 my-auto">
-          <div className="p-2 rounded-lg bg-surface border border-border/80 text-center">
-            <p className="text-[10px] text-text-muted">Total Applicants</p>
-            <p className="text-sm font-bold text-text">50+ Interns</p>
-          </div>
-          <div className="p-2 rounded-lg bg-surface border border-border/80 text-center">
-            <p className="text-[10px] text-text-muted">Workflow Role</p>
-            <p className="text-sm font-bold text-accent">Admin & User</p>
-          </div>
-          <div className="p-2 rounded-lg bg-surface border border-border/80 text-center">
-            <p className="text-[10px] text-text-muted">Test Pass Rate</p>
-            <p className="text-sm font-bold text-emerald-500">100% Verified</p>
-          </div>
-        </div>
-        <div className="flex items-center justify-between text-[10px] text-text-muted pt-1">
-          <span>Backend: Laravel REST API</span>
-          <span>UI: React.js Responsive</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (project.id === "simas") {
-    return (
-      <div className="w-full h-full bg-gradient-to-br from-cyan-950/20 via-surface to-bg p-4 flex flex-col justify-between select-none">
-        <div className="flex items-center justify-between border-b border-border/60 pb-2">
-          <div className="flex items-center gap-2">
-            <FileCheck2 size={14} className="text-cyan-500" />
-            <span className="text-[11px] font-semibold text-text">
-              SIMAS · Diskominfo E-Surat
-            </span>
-          </div>
-          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/15 text-cyan-500 font-medium">
-            30+ OPD Connected
-          </span>
-        </div>
-        <div className="space-y-1.5 my-auto">
-          <div className="p-2 rounded-lg bg-surface/90 border border-border flex items-center justify-between text-xs">
-            <span className="font-medium text-text">Disposisi Surat Masuk OPD</span>
-            <span className="text-[10px] text-emerald-500 font-semibold">Tervalidasi EP & BVA</span>
-          </div>
-          <div className="p-2 rounded-lg bg-surface/90 border border-border flex items-center justify-between text-xs">
-            <span className="font-medium text-text">Pelacakan Alur Verifikasi Multi-User</span>
-            <span className="text-[10px] text-accent font-semibold">Role Matrix OK</span>
-          </div>
-        </div>
-        <div className="flex items-center justify-between text-[10px] text-text-muted pt-1">
-          <span>Stack: Laravel · React · MySQL</span>
-          <span>Verification: Postman & UAT</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (project.id === "casheye") {
-    return (
-      <div className="w-full h-full bg-gradient-to-br from-emerald-950/20 via-surface to-bg p-4 flex flex-col justify-between select-none">
-        <div className="flex items-center justify-between border-b border-border/60 pb-2">
-          <div className="flex items-center gap-2">
-            <TrendingUp size={14} className="text-emerald-500" />
-            <span className="text-[11px] font-semibold text-text">
-              CashEye · Financial Analytics
-            </span>
-          </div>
-          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-500 font-medium">
-            Personal Finance
-          </span>
-        </div>
-        <div className="grid grid-cols-2 gap-2 my-auto">
-          <div className="p-2.5 rounded-lg bg-surface border border-border">
-            <p className="text-[10px] text-text-muted">Monthly Cashflow</p>
-            <p className="text-sm font-bold text-text">Income vs Expense</p>
-            <div className="mt-1 h-1.5 rounded-full bg-border overflow-hidden">
-              <div className="h-full bg-emerald-500 rounded-full w-3/4" />
-            </div>
-          </div>
-          <div className="p-2.5 rounded-lg bg-surface border border-border">
-            <p className="text-[10px] text-text-muted">UI Architecture</p>
-            <p className="text-sm font-bold text-accent">React SPA</p>
-            <p className="text-[10px] text-text-muted mt-1">GitHub Pages Deployed</p>
-          </div>
-        </div>
-        <div className="flex items-center justify-between text-[10px] text-text-muted pt-1">
-          <span>Interactive Charts & Categorization</span>
-          <span>Responsive Dashboard UI</span>
-        </div>
-      </div>
-    );
-  }
-
-  // Kyuubi MML
+// Tampilan arsitektural untuk proyek tanpa screenshot — tanpa fake browser chrome
+function ProjectArchitectureCard({ project }) {
   return (
-    <div className="w-full h-full bg-gradient-to-br from-violet-950/20 via-surface to-bg p-4 flex flex-col justify-between select-none">
-      <div className="flex items-center justify-between border-b border-border/60 pb-2">
-        <div className="flex items-center gap-2">
-          <Cpu size={14} className="text-violet-500" />
-          <span className="text-[11px] font-semibold text-text">
-            Kyuubi · Music Emotion Recognition
-          </span>
-        </div>
-        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-violet-500/15 text-violet-500 font-medium">
-          Multimodal ML
+    <div className="w-full h-full bg-bg p-4 flex flex-col justify-between select-none">
+      {/* Header teknis */}
+      <div className="flex items-center justify-between border-b border-border pb-2">
+        <span className="text-[11px] font-semibold text-text">
+          {project.name}
+        </span>
+        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-accent-lighter text-accent font-medium">
+          {project.category}
         </span>
       </div>
-      <div className="p-2.5 rounded-lg bg-surface border border-border my-auto">
-        <div className="flex items-center justify-between text-[11px] mb-1.5">
-          <span className="text-text font-medium">Late Fusion Architecture</span>
-          <span className="text-violet-500 font-mono text-[10px]">3 Data Streams</span>
+
+      {/* Metrics Grid */}
+      {project.metrics && project.metrics.length > 0 && (
+        <div className="grid grid-cols-3 gap-2 my-auto">
+          {project.metrics.map((metric, i) => (
+            <div key={i} className="p-2 rounded-lg bg-surface border border-border text-center">
+              <p className="text-[10px] text-text-muted">{metric.label}</p>
+              <p className="text-xs font-bold text-text">{metric.value}</p>
+            </div>
+          ))}
         </div>
-        <div className="grid grid-cols-3 gap-1.5 text-center text-[10px]">
-          <div className="p-1 rounded bg-bg border border-border">Audio (Librosa)</div>
-          <div className="p-1 rounded bg-bg border border-border">Lyrics (NLP)</div>
-          <div className="p-1 rounded bg-bg border border-border">MIDI Data</div>
-        </div>
-      </div>
-      <div className="flex items-center justify-between text-[10px] text-text-muted pt-1">
-        <span>Stack: Python · Scikit-learn · Librosa</span>
-        <span>Academic Research & Experimentation</span>
+      )}
+
+      {/* Footer teknis */}
+      <div className="flex items-center justify-between text-[10px] text-text-muted font-mono pt-1 border-t border-border/50">
+        <span>{project.techStack.slice(0, 3).join(" · ")}</span>
+        <span>{project.role}</span>
       </div>
     </div>
   );
@@ -155,52 +47,40 @@ function ProjectMockupPlaceholder({ project }) {
 function ProjectCard({ project, index }) {
   const [expanded, setExpanded] = useState(false);
 
-  // Parse hostname untuk visual URL bar
-  let displayUrl = "project.local";
-  if (project.link) {
-    try {
-      displayUrl = new URL(project.link).hostname;
-    } catch {
-      displayUrl = project.link;
-    }
-  }
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay: index * 0.08 }}
-      className="group bg-surface rounded-2xl border border-border hover:border-accent/40 transition-all duration-300 overflow-hidden shadow-xs hover:shadow-md flex flex-col"
+      className="group bg-surface rounded-2xl border border-border hover:border-accent/40 transition-all duration-300 overflow-hidden flex flex-col"
     >
-      {/* Top Browser Chrome & Visual Window */}
-      <div className="border-b border-border/80 bg-bg-alt/50">
-        {/* Browser Top Bar */}
-        <div className="flex items-center justify-between px-3.5 py-2 bg-surface border-b border-border/60">
-          <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-rose-400/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/80" />
+      {/* Visual Frame — tanpa browser chrome tiruan */}
+      <div className="border-b border-border">
+        {/* Technical Header Bar — mengganti dots macOS */}
+        <div className="flex items-center justify-between px-4 py-2 bg-bg border-b border-border/60">
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] font-mono text-accent font-semibold uppercase tracking-wider">
+              {project.category}
+            </span>
           </div>
-          <div className="px-3 py-0.5 rounded-md bg-bg border border-border/80 text-[10px] font-mono text-text-muted truncate max-w-[190px] sm:max-w-[240px]">
-            {displayUrl}
-          </div>
-          <div className="w-7 text-right">
+          <div className="flex items-center gap-2">
             {project.link && (
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-muted hover:text-accent transition-colors"
+                className="inline-flex items-center gap-1 text-[10px] font-mono text-text-muted hover:text-accent transition-colors"
                 aria-label={`Open ${project.name}`}
               >
-                <ExternalLink size={12} />
+                <span className="hidden sm:inline">{new URL(project.link).hostname}</span>
+                <ExternalLink size={11} />
               </a>
             )}
           </div>
         </div>
 
-        {/* Visual Frame Container (16:9 uniform format) */}
+        {/* Visual Frame Container (16:9) */}
         <div className="relative aspect-[16/9] w-full overflow-hidden bg-bg">
           {project.image ? (
             <img
@@ -210,13 +90,8 @@ function ProjectCard({ project, index }) {
               loading="lazy"
             />
           ) : (
-            <ProjectMockupPlaceholder project={project} />
+            <ProjectArchitectureCard project={project} />
           )}
-
-          {/* Category Chip Overlay */}
-          <div className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-md bg-surface/90 backdrop-blur-md border border-border/80 text-[10px] font-semibold text-text shadow-2xs">
-            {project.category || "Web Project"}
-          </div>
         </div>
       </div>
 
@@ -272,7 +147,7 @@ function ProjectCard({ project, index }) {
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-0.5 text-[11px] font-medium text-text-secondary bg-surface rounded-md border border-border"
+                className="px-2.5 py-0.5 text-[11px] font-mono font-medium text-text-secondary bg-bg rounded-md border border-border"
               >
                 {tech}
               </span>
@@ -286,7 +161,7 @@ function ProjectCard({ project, index }) {
             onClick={() => setExpanded(!expanded)}
             className="inline-flex items-center gap-1.5 text-xs font-medium text-text-secondary hover:text-accent transition-colors cursor-pointer"
           >
-            <span>{expanded ? "Hide Details" : "View Details & Architecture"}</span>
+            <span>{expanded ? "Hide Details" : "View Details"}</span>
             {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
           </button>
 
@@ -399,16 +274,16 @@ export default function Projects() {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-lighter text-accent text-xs font-semibold uppercase tracking-wider mb-3">
             <Layers size={13} />
-            <span>Curated Portfolio</span>
+            <span>Portfolio</span>
           </div>
 
           <h2 className="text-2xl sm:text-4xl font-extrabold text-text tracking-tight mb-3">
-            Featured Systems & Engineering Projects
+            Systems & Engineering Projects
           </h2>
 
           <p className="text-sm sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-6">
-            A comprehensive look at web-based information systems, automated workflows,
-            and software quality assurance delivered for government, academic, and personal initiatives.
+            Web-based information systems, government digital workflows, and software quality
+            assurance delivered for institutional, academic, and team-based initiatives.
           </p>
 
           {/* Filter Tabs */}

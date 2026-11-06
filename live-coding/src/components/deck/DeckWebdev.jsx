@@ -28,9 +28,19 @@ function SlideHeader({ label, title }) {
   );
 }
 
+// sertifikat yang relevan untuk deck web developer
+const webdevCertIds = [
+  "Belajar Back-End Pemula dengan JavaScript",
+  "Belajar Dasar Structured Query Language (SQL)",
+  "Belajar Prinsip Pemrograman SOLID",
+  "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
+  "Dasar Rekayasa Perangkat Lunak - Semester Genap, Teknik Informatika ITERA (2024/2025)",
+];
+
 export default function DeckWebdev() {
   const handlePrint = () => window.print();
   const featured = projects.filter((p) => p.featured);
+  const webdevCerts = certificates.filter((c) => webdevCertIds.includes(c.name));
 
   return (
     <>
@@ -289,7 +299,7 @@ export default function DeckWebdev() {
                 Certifications & Programs
               </h3>
               <div className="space-y-2.5 sm:space-y-3 print:space-y-1.5">
-                {certificates.slice(0, 5).map((cert, i) => (
+                {webdevCerts.map((cert, i) => (
                   <div
                     key={i}
                     className="p-3 bg-bg rounded-lg border border-border print:p-2"
