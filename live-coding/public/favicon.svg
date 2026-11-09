@@ -1,4 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#2563EB"/>
-  <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="18" fill="white">S</text>
+  <defs>
+    <linearGradient id="sGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0B0F19"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7.5" fill="url(#bgGrad)"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="7" fill="none" stroke="#3B82F6" stroke-width="1" stroke-opacity="0.45"/>
+  <!-- Bold Geometric S -->
+  <path d="M 19.5 11 C 19.5 9 18 7.5 15.5 7.5 L 12.5 7.5 C 10 7.5 8.5 9 8.5 11.2 C 8.5 14.2 11 15.3 14.5 16 C 18 16.7 20.5 17.8 20.5 20.8 C 20.5 23 19 24.5 16 24.5 L 12 24.5 C 9.5 24.5 8 23 8 21" 
+        fill="none" 
+        stroke="url(#sGrad)" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  <!-- Accent Dot (signature SMI. brand dot) -->
+  <circle cx="23" cy="23.5" r="1.8" fill="#3B82F6"/>
 </svg>
