@@ -178,14 +178,14 @@ export default function Hero() {
             className="shrink-0"
           >
             <div className="relative group">
-              <div className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border border-border bg-surface">
+              <div className="w-56 sm:w-64 lg:w-72 aspect-[3/4] rounded-2xl overflow-hidden border border-border bg-surface shadow-xs">
                 <img
                   src="/foto/profile.jpg"
                   alt={profile.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102"
                   loading="eager"
                   width="288"
-                  height="288"
+                  height="384"
                 />
               </div>
 
