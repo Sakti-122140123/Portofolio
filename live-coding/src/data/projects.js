@@ -126,7 +126,7 @@ const projects = [
   },
   {
     id: "afenter-pcd",
-    name: "AFEnter — Smart Parking Detection",
+    name: "AFEnter - Smart Parking Detection",
     category: "Computer Vision & Web App",
     image: "/projects/afenter.png",
     shortDescription:
