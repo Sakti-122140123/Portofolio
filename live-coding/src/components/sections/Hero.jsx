@@ -172,12 +172,12 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* KOLOM KANAN — Portrait Card (Klik untuk beralih foto profil) */}
+          {/* KOLOM KANAN — Portrait (Klik untuk beralih foto profil, menyatu dengan background) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="shrink-0"
+            className="shrink-0 flex items-center justify-center"
           >
             <button
               type="button"
@@ -189,28 +189,35 @@ export default function Hero() {
               className="relative group text-left cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent rounded-2xl block select-none"
               title="Klik untuk beralih foto profil"
               aria-label={`Foto profil saat ini: ${
-                photoVariant === "transparent" ? "Transparan" : "Jas Formal"
+                photoVariant === "transparent" ? "Transparan Kasual" : "Transparan Jas Formal"
               }. Klik untuk beralih.`}
             >
-              <div className="w-56 sm:w-64 lg:w-72 aspect-[3/4] rounded-2xl overflow-hidden border border-border bg-surface shadow-xs relative">
+              {/* Kontainer foto tanpa border dan tanpa background — menyatu langsung ke halaman */}
+              <div className="w-56 sm:w-64 lg:w-72 aspect-[3/4] relative flex items-end justify-center">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={photoVariant}
                     src={
                       photoVariant === "transparent"
                         ? "/foto/profile-transparent.png"
-                        : "/foto/profile.jpg"
+                        : "/foto/profile-casual-transparent.png"
                     }
                     alt={
                       photoVariant === "transparent"
                         ? `${profile.name} (Transparan)`
-                        : profile.name
+                        : `${profile.name} (Jas Formal)`
                     }
                     initial={{ opacity: 0, scale: 0.98 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.98 }}
                     transition={{ duration: 0.2 }}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102"
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102 drop-shadow-sm"
+                    style={{
+                      WebkitMaskImage:
+                        "linear-gradient(to bottom, black 82%, transparent 100%)",
+                      maskImage:
+                        "linear-gradient(to bottom, black 82%, transparent 100%)",
+                    }}
                     loading="eager"
                     width="288"
                     height="384"
