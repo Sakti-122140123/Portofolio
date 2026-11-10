@@ -236,11 +236,11 @@ function ProjectCard({ project, index }) {
                 </ul>
               </div>
 
-              {/* Technical & QA Relevance */}
+              {/* Technical Architecture & System Verification */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 <div className="p-3 rounded-lg bg-surface border border-border">
                   <p className="text-[11px] font-bold text-accent mb-1">
-                    Development Scope
+                    Technical Implementation & Architecture
                   </p>
                   <p className="text-xs text-text-secondary leading-relaxed text-justify">
                     {project.devRelevance}
@@ -248,7 +248,7 @@ function ProjectCard({ project, index }) {
                 </div>
                 <div className="p-3 rounded-lg bg-surface border border-border">
                   <p className="text-[11px] font-bold text-accent mb-1">
-                    Quality Assurance Scope
+                    Verification, Quality & Impact
                   </p>
                   <p className="text-xs text-text-secondary leading-relaxed text-justify">
                     {project.qaRelevance}
@@ -266,23 +266,24 @@ function ProjectCard({ project, index }) {
 export default function Projects() {
   const [filter, setFilter] = useState("all");
 
-  const webProjectIds = ["harmony", "simamang", "simas", "casheye", "afenter-pcd", "bike-sharing-dashboard"];
-  const qaProjectIds = ["harmony", "simamang", "simas", "afenter-pcd"];
+  const filterGroups = {
+    web: ["harmony", "simamang", "simas", "casheye"],
+    ai: ["afenter-pcd", "kyuubi-mml"],
+    data: ["bike-sharing-dashboard", "kyuubi-mml"],
+  };
 
   const filteredProjects = projects.filter((project) => {
-    if (filter === "web") {
-      return webProjectIds.includes(project.id);
-    }
-    if (filter === "qa") {
-      return qaProjectIds.includes(project.id);
-    }
+    if (filter === "web") return filterGroups.web.includes(project.id);
+    if (filter === "ai") return filterGroups.ai.includes(project.id);
+    if (filter === "data") return filterGroups.data.includes(project.id);
     return true; // "all"
   });
 
   const filterTabs = [
     { id: "all", label: `All Projects (${projects.length})` },
-    { id: "web", label: `Web Applications (${webProjectIds.length})` },
-    { id: "qa", label: `Quality Assurance & Systems (${qaProjectIds.length})` },
+    { id: "web", label: `Web & Systems (${filterGroups.web.length})` },
+    { id: "ai", label: `Computer Vision & AI (${filterGroups.ai.length})` },
+    { id: "data", label: `Data Analytics (${filterGroups.data.length})` },
   ];
 
   return (
@@ -302,12 +303,12 @@ export default function Projects() {
           </div>
 
           <h2 className="text-2xl sm:text-4xl font-extrabold text-text tracking-tight mb-3">
-            Systems & Engineering Projects
+            Featured Projects & Systems
           </h2>
 
           <p className="text-sm sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-6 text-justify">
-            Web-based information systems, government digital workflows, and software quality
-            assurance delivered for institutional, academic, and team-based initiatives.
+            A comprehensive portfolio spanning enterprise web applications, government digital workflows,
+            computer vision, and data analytics across institutional, academic, and team initiatives.
           </p>
 
           {/* Filter Tabs */}
