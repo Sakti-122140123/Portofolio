@@ -1,10 +1,12 @@
 // HERO — bagian pertama yang dilihat user (full screen, minimalis & elegan)
-import { motion } from "framer-motion";
-import { ArrowDown, Mail, FileText, ExternalLink } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowDown, Mail, FileText, ExternalLink, RefreshCw } from "lucide-react";
 import profile from "../../data/profile";
 import { GithubIcon, LinkedinIcon } from "../icons/SocialIcons";
 
 export default function Hero() {
+  const [photoVariant, setPhotoVariant] = useState("default"); // "default" (/foto/profile.jpg) | "transparent" (/foto/profile-transparent.png)
   return (
     <section
       id="hero"
@@ -170,31 +172,64 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* KOLOM KANAN — Portrait Card */}
+          {/* KOLOM KANAN — Portrait Card (Klik untuk beralih foto profil) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="shrink-0"
           >
-            <div className="relative group">
-              <div className="w-56 sm:w-64 lg:w-72 aspect-[3/4] rounded-2xl overflow-hidden border border-border bg-surface shadow-xs">
-                <img
-                  src="/foto/profile.jpg"
-                  alt={profile.name}
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102"
-                  loading="eager"
-                  width="288"
-                  height="384"
-                />
+            <button
+              type="button"
+              onClick={() =>
+                setPhotoVariant((prev) =>
+                  prev === "default" ? "transparent" : "default"
+                )
+              }
+              className="relative group text-left cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent rounded-2xl block select-none"
+              title="Klik untuk beralih foto profil"
+              aria-label={`Foto profil saat ini: ${
+                photoVariant === "transparent" ? "Transparan" : "Jas Formal"
+              }. Klik untuk beralih.`}
+            >
+              <div className="w-56 sm:w-64 lg:w-72 aspect-[3/4] rounded-2xl overflow-hidden border border-border bg-surface shadow-xs relative">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={photoVariant}
+                    src={
+                      photoVariant === "transparent"
+                        ? "/foto/profile-transparent.png"
+                        : "/foto/profile.jpg"
+                    }
+                    alt={
+                      photoVariant === "transparent"
+                        ? `${profile.name} (Transparan)`
+                        : profile.name
+                    }
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
+                    transition={{ duration: 0.2 }}
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102"
+                    loading="eager"
+                    width="288"
+                    height="384"
+                  />
+                </AnimatePresence>
+
+                {/* Indikator hover halus di sudut atas foto */}
+                <div className="absolute top-2.5 right-2.5 px-2 py-1 rounded-md bg-surface/85 backdrop-blur-xs text-[10px] font-mono text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none flex items-center gap-1 border border-border shadow-xs">
+                  <RefreshCw size={10} className="text-accent" />
+                  <span>Ganti Foto</span>
+                </div>
               </div>
 
               {/* Floating Badge — monospace subtle */}
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-surface border border-border shadow-xs flex items-center gap-1.5 text-[11px] font-mono text-text-secondary whitespace-nowrap">
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-surface border border-border shadow-xs flex items-center gap-1.5 text-[11px] font-mono text-text-secondary whitespace-nowrap pointer-events-none">
                 <span className="w-1 h-1 rounded-full bg-accent" />
                 <span>Jakarta, Indonesia</span>
               </div>
-            </div>
+            </button>
           </motion.div>
         </div>
       </div>
