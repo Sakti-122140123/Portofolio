@@ -8,6 +8,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import projects from "../../data/projects";
+import { GithubIcon } from "../icons/SocialIcons";
 
 // Tampilan arsitektural untuk proyek tanpa screenshot — tanpa fake browser chrome
 function ProjectArchitectureCard({ project }) {
@@ -165,17 +166,31 @@ function ProjectCard({ project, index }) {
             {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
           </button>
 
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs font-semibold text-accent hover:text-accent-hover transition-colors"
-            >
-              <span>Live Site</span>
-              <ExternalLink size={12} />
-            </a>
-          )}
+          <div className="flex items-center gap-3">
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-xs font-medium text-text-muted hover:text-text transition-colors"
+                aria-label={`GitHub repository for ${project.name}`}
+              >
+                <GithubIcon size={13} />
+                <span>Repository</span>
+              </a>
+            )}
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-xs font-semibold text-accent hover:text-accent-hover transition-colors"
+              >
+                <span>Live Site</span>
+                <ExternalLink size={12} />
+              </a>
+            )}
+          </div>
         </div>
       </div>
 
@@ -251,15 +266,24 @@ function ProjectCard({ project, index }) {
 export default function Projects() {
   const [filter, setFilter] = useState("all");
 
+  const webProjectIds = ["harmony", "simamang", "simas", "casheye", "afenter-pcd"];
+  const qaProjectIds = ["harmony", "simamang", "simas", "afenter-pcd"];
+
   const filteredProjects = projects.filter((project) => {
     if (filter === "web") {
-      return ["harmony", "simamang", "simas", "casheye"].includes(project.id);
+      return webProjectIds.includes(project.id);
     }
     if (filter === "qa") {
-      return ["harmony", "simamang", "simas"].includes(project.id);
+      return qaProjectIds.includes(project.id);
     }
     return true; // "all"
   });
+
+  const filterTabs = [
+    { id: "all", label: `All Projects (${projects.length})` },
+    { id: "web", label: `Web Applications (${webProjectIds.length})` },
+    { id: "qa", label: `Quality Assurance & Systems (${qaProjectIds.length})` },
+  ];
 
   return (
     <section id="projects" className="section-padding bg-surface/50 border-t border-border">
@@ -288,11 +312,7 @@ export default function Projects() {
 
           {/* Filter Tabs */}
           <div className="flex flex-wrap items-center gap-2">
-            {[
-              { id: "all", label: "All Projects (5)" },
-              { id: "web", label: "Web Applications (4)" },
-              { id: "qa", label: "Quality Assurance & Systems (3)" },
-            ].map((tab) => (
+            {filterTabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setFilter(tab.id)}

@@ -35,7 +35,7 @@ const projects = [
     id: "simamang",
     name: "SIMAMANG",
     category: "Government Information System",
-    image: null,
+    image: "/projects/simamang.png",
     shortDescription:
       "Official internship management portal for Dinas Kominfo Kota Bandar Lampung — managing public registration, document verification, intern scoring, and administrative reporting for municipal internship programs.",
     role: "Quality Assurance & Developer",
@@ -66,7 +66,7 @@ const projects = [
     id: "simas",
     name: "SIMAS",
     category: "Government Workflow & Archiving",
-    image: null,
+    image: "/projects/simas.png",
     shortDescription:
       "Inter-agency digital correspondence system for Dinas Kominfo Kota Bandar Lampung — supporting official document disposition, hierarchical approval chains, and institutional e-archiving across 30+ municipal government agencies (OPD).",
     role: "Quality Assurance & Developer",
@@ -97,7 +97,7 @@ const projects = [
     id: "casheye",
     name: "CashEye",
     category: "Frontend Web Application",
-    image: null,
+    image: "/projects/casheye.png",
     shortDescription:
       "Team-built personal finance tracker built with React — featuring transaction categorization, income vs expense analytics, and a responsive dashboard for real-time cashflow monitoring.",
     role: "Developer & Documentation Lead",
@@ -122,6 +122,38 @@ const projects = [
     relevance:
       "Led a team project from design through deployment, managing documentation and ensuring the final product met functional requirements.",
     link: "https://wahyuapriansyah1.github.io/protofolio-casheye/",
+    featured: true,
+  },
+  {
+    id: "afenter-pcd",
+    name: "AFEnter — Smart Parking Detection",
+    category: "Computer Vision & Web App",
+    image: null,
+    shortDescription:
+      "Automated motorcycle parking detection system for Institut Teknologi Sumatera (ITERA) campus — analyzing slot availability across 243 images using an 11-stage digital image processing pipeline deployed on Streamlit.",
+    role: "Project Manager & Developer",
+    techStack: ["Python", "Streamlit", "OpenCV", "NumPy", "Digital Image Processing"],
+    metrics: [
+      { label: "Dataset Scale", value: "243 Campus Images" },
+      { label: "Pipeline Scope", value: "11 Processing Stages" },
+      { label: "Campus Coverage", value: "6 ITERA Locations" },
+    ],
+    description:
+      "AFEnter is a digital image processing and computer vision project developed to support the smart campus initiative at Institut Teknologi Sumatera. The system automatically detects empty and occupied motorcycle parking slots across key campus facilities (GK-1, GK-2, Labtek 1 & 3, Building C & E) without requiring physical IoT sensors. As Project Manager, I led the project lifecycle, sprint coordination, and technical documentation, while co-developing the 11-stage image processing pipeline (grayscale conversion, adaptive thresholding, morphological filtering, and contour detection) deployed to an interactive Streamlit dashboard.",
+    keyContribution: [
+      "Led the project as Project Manager, coordinating milestone planning, task distribution, and documentation across the team",
+      "Co-developed the 11-stage image processing pipeline using OpenCV and Python to segment and detect parking slot occupancy",
+      "Collected and preprocessed a dataset of 243 real campus motorcycle parking images across diverse lighting and occupancy conditions",
+      "Deployed and integrated the detection workflow into an interactive Streamlit web application for real-time visual inspection",
+    ],
+    devRelevance:
+      "Built a computer vision web application in Python using OpenCV for image manipulation and contour analysis, integrated with a responsive Streamlit dashboard.",
+    qaRelevance:
+      "Evaluated detection accuracy and boundary behavior across 243 test images under diverse lighting conditions, shadow variations, and parking density levels.",
+    relevance:
+      "Demonstrated technical leadership and end-to-end delivery of an applied computer vision project from campus dataset collection to cloud deployment.",
+    link: "https://afenter.streamlit.app/",
+    github: "https://github.com/Sakti-122140123/Afenter_PCD",
     featured: true,
   },
   {
