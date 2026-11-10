@@ -128,7 +128,7 @@ const projects = [
     id: "afenter-pcd",
     name: "AFEnter — Smart Parking Detection",
     category: "Computer Vision & Web App",
-    image: null,
+    image: "/projects/afenter.png",
     shortDescription:
       "Automated motorcycle parking detection system for Institut Teknologi Sumatera (ITERA) campus — analyzing slot availability across 243 images using an 11-stage digital image processing pipeline deployed on Streamlit.",
     role: "Project Manager & Developer",
@@ -154,6 +154,38 @@ const projects = [
       "Demonstrated technical leadership and end-to-end delivery of an applied computer vision project from campus dataset collection to cloud deployment.",
     link: "https://afenter.streamlit.app/",
     github: "https://github.com/Sakti-122140123/Afenter_PCD",
+    featured: true,
+  },
+  {
+    id: "bike-sharing-dashboard",
+    name: "Bike Sharing Analytics Dashboard",
+    category: "Data Analytics & Dashboard",
+    image: "/projects/sepeda.png",
+    shortDescription:
+      "Interactive data analytics dashboard exploring Washington D.C. bike-sharing rental patterns across 2011–2012 — analyzing weather conditions, seasonal trends, and user behavior metrics built with Pandas, Seaborn, and Streamlit.",
+    role: "Data Analyst & Developer",
+    techStack: ["Python", "Pandas", "Streamlit", "Seaborn", "Matplotlib"],
+    metrics: [
+      { label: "Dataset Span", value: "2011–2012 Records" },
+      { label: "Analysis Focus", value: "Weather & Seasonality" },
+      { label: "Dashboard Tech", value: "Python · Streamlit" },
+    ],
+    description:
+      "An end-to-end data analysis and visualization project analyzing the Capital Bikeshare dataset from Washington D.C. (2011–2012). The project follows the complete data analysis pipeline: data gathering, assessment, cleaning, exploratory data analysis (EDA), and interactive visualization. The deployed Streamlit dashboard provides users with real-time dynamic filters (date ranges, weather patterns, and seasonal factors) to inspect hourly and daily rental velocity between casual and registered users.",
+    keyContribution: [
+      "Performed end-to-end data cleaning, handling missing values, datatype casting, and outlier inspection across 17,000+ hourly bike records",
+      "Conducted exploratory data analysis (EDA) to evaluate correlations between weather severity (temperature, humidity, windspeed) and rental demand",
+      "Engineered visual charts using Seaborn and Matplotlib to illustrate seasonal rental peaks and weekday vs weekend behavior differences",
+      "Built and deployed an interactive, production-ready Streamlit dashboard with custom sidebar date and category filters on Streamlit Cloud",
+    ],
+    devRelevance:
+      "Developed an interactive data application in Python using Pandas for analytical querying and Streamlit for dynamic dashboard UI.",
+    qaRelevance:
+      "Validated data integrity during aggregation steps, verified filter boundary edge cases, and checked metric calculation consistency.",
+    relevance:
+      "Demonstrates strong data wrangling, exploratory analysis, and clear visual communication of insights through interactive web dashboards.",
+    link: "https://submission-sakti-codingcamp2025.streamlit.app/",
+    github: "https://github.com/Sakti-122140123/Analisis_Data_Dengan_Python",
     featured: true,
   },
   {

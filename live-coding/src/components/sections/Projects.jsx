@@ -266,7 +266,7 @@ function ProjectCard({ project, index }) {
 export default function Projects() {
   const [filter, setFilter] = useState("all");
 
-  const webProjectIds = ["harmony", "simamang", "simas", "casheye", "afenter-pcd"];
+  const webProjectIds = ["harmony", "simamang", "simas", "casheye", "afenter-pcd", "bike-sharing-dashboard"];
   const qaProjectIds = ["harmony", "simamang", "simas", "afenter-pcd"];
 
   const filteredProjects = projects.filter((project) => {
